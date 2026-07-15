@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Basics — A Classroom Introduction | Vanderbilt</title>
+<meta name="description" content="An interactive classroom introduction to the fundamentals of artificial intelligence — what AI is, how machines learn, neural networks, language models, prompting, and responsible use.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="assets/img/favicon-96.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-96.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Inter:wght@400;500;600&family=Antonio:wght@700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#s-agenda">Skip to content</a>
+
+<!-- reading progress -->
+<div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="AI Basics — Vanderbilt, home">
+    <img src="assets/img/vu-v-icon.png" alt="" width="34" height="31">
+    <span style="display:flex;flex-direction:column">
+      <b>AI&nbsp;Basics</b>
+      <span>Vanderbilt&nbsp;· Classroom</span>
+    </span>
+  </a>
+  <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navlinks">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <nav class="nav__links" id="navlinks" aria-label="Sections">
+    <a href="#s-what">What AI Is</a>
+    <a href="#s-learn">How It Learns</a>
+    <a href="#s-llm">Language Models</a>
+    <a href="#s-prompt">Prompting</a>
+    <a href="#s-ethics">Ethics</a>
+    <a class="btn" href="#s-recap">Take the Quiz</a>
+  </nav>
+</header>
+
+<!-- deck dot rail + control bar -->
+<div class="dots" id="dots" role="navigation" aria-label="Slide navigation"></div>
+<div class="deckbar" role="group" aria-label="Presentation controls">
+  <button id="deckPrev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+  <span class="deckbar__count" id="deckCount">1 / 14</span>
+  <button id="deckNext" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+</div>
+
+<main class="deck" id="top">
+
+  <!-- ============ 1 · HERO ============ -->
+  <section class="slide on-dark hero" id="s-hero" data-title="Welcome">
+    <canvas class="hero__canvas" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Vanderbilt · Classroom Series</p>
+      <h1 class="h-hero" data-reveal>Understanding AI,<br><em class="gold-text">from the ground up.</em></h1>
+      <p class="lead" data-reveal style="margin-top:1.5rem">No code. No math. Just a clear picture of what these systems really are — and how they work.</p>
+      <div class="hero__cta" data-reveal>
+        <a class="btn" href="#s-what">Begin the lesson</a>
+        <a class="btn btn--ghost" href="#s-recap">Jump to the quiz</a>
+      </div>
+      <div class="hero__meta" data-reveal>
+        <div><b>8</b> Core concepts</div>
+        <div><b>45</b> Minutes</div>
+        <div><b>0</b> Prerequisites</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2 · AGENDA ============ -->
+  <section class="slide on-cream" id="s-agenda" data-title="The plan">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>What we'll cover</p>
+      <h2 class="h2" data-reveal>Eight ideas, in <em>order</em>.</h2>
+      <ol class="agenda">
+        <li data-reveal><span class="num">01</span><div><h3>What AI actually is</h3><p>Cutting through the hype: AI, machine learning, and deep learning, defined and distinguished.</p></div></li>
+        <li data-reveal><span class="num">02</span><div><h3>How machines learn</h3><p>Data, patterns, and the three fundamental ways a model is trained.</p></div></li>
+        <li data-reveal><span class="num">03</span><div><h3>Inside a neural network</h3><p>The structure behind modern AI, activated one layer at a time.</p></div></li>
+        <li data-reveal><span class="num">04</span><div><h3>Language models</h3><p>How tools like ChatGPT generate text — one word at a time.</p></div></li>
+        <li data-reveal><span class="num">05</span><div><h3>Steering the output</h3><p>Temperature, randomness, and why the same question gives different answers.</p></div></li>
+        <li data-reveal><span class="num">06</span><div><h3>Prompting well</h3><p>The anatomy of a request that actually gets useful results.</p></div></li>
+        <li data-reveal><span class="num">07</span><div><h3>Strengths &amp; limits</h3><p>What AI does well, where it breaks, and what a "hallucination" is.</p></div></li>
+        <li data-reveal><span class="num">08</span><div><h3>Using AI responsibly</h3><p>Bias, privacy, and academic integrity in everyday use.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 3 · WHAT IS AI (rings) ============ -->
+  <section class="slide on-light" id="s-what" data-count data-title="What AI is">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Section 01 · Definitions</p>
+      <h2 class="h2" data-reveal>It isn't one thing.<br>It's <em>nested</em>.</h2>
+      <p class="lead" data-reveal style="margin-bottom:2.5rem">"AI" is a family of techniques, each one a more specialized way of doing the one around it. Tap a ring to see where it fits.</p>
+      <div class="venn">
+        <div class="rings" data-reveal role="group" aria-label="AI concept rings — select one">
+          <div class="ring" data-ring="ai" aria-pressed="false">Artificial Intelligence</div>
+          <div class="ring" data-ring="ml" aria-pressed="false">Machine Learning</div>
+          <div class="ring" data-ring="dl" aria-pressed="false">Deep Learning</div>
+          <div class="ring" data-ring="gen" aria-pressed="false">Gen&nbsp;AI</div>
+        </div>
+        <div class="venn__detail card" id="ringDetail" data-reveal aria-live="polite">
+          <span class="tag">Start here</span>
+          <h3>Four terms, one hierarchy</h3>
+          <p>People use these words interchangeably, but they nest inside one another. Select a ring on the left to see what each layer actually means — and how generative tools like ChatGPT sit at the very center.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4 · MANIFESTO ============ -->
+  <section class="slide on-cream manifesto" id="s-belief" data-title="One idea">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>The core idea</p>
+      <p>AI does not follow rules a person wrote. It studies mountains of examples and writes its own.</p>
+    </div>
+  </section>
+
+  <!-- ============ 5 · HOW MACHINES LEARN ============ -->
+  <section class="slide on-dark" id="s-learn" data-count data-title="How it learns">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Section 02 · Training</p>
+      <h2 class="h2" data-reveal>Machines learn by <em>example</em>.</h2>
+      <p class="lead" data-reveal>Instead of being told every rule, a model is shown data until it can spot the pattern on its own. There are three main ways to teach it.</p>
+
+      <div class="grid grid-3" style="margin-top:2.5rem">
+        <div class="card" data-reveal>
+          <span class="tag">Supervised</span>
+          <h3>Learn from labeled answers</h3>
+          <p class="muted">Show the model thousands of emails marked "spam" or "not spam." It learns the traits that separate them, then labels new mail on its own.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">Unsupervised</span>
+          <h3>Find hidden structure</h3>
+          <p class="muted">Hand the model raw customer data with no labels. It groups similar shoppers together, revealing segments no one defined in advance.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">Reinforcement</span>
+          <h3>Learn by reward</h3>
+          <p class="muted">Let the model act, then reward good moves and penalize bad ones. Over millions of tries it learns to win — at games, or steering a robot.</p>
+        </div>
+      </div>
+
+      <div class="flow" data-reveal style="margin-top:2.5rem">
+        <svg viewBox="0 0 720 90" role="img" aria-label="Pipeline: Data leads to Training leads to Model leads to Prediction" style="max-width:720px;width:100%;height:auto">
+          <defs><marker id="arw" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6" fill="none" stroke="#CFAE70" stroke-width="1.5"/></marker></defs>
+          <g font-family="Antonio, Impact, sans-serif" font-size="15" fill="#fff" text-anchor="middle" letter-spacing="1">
+            <circle cx="70" cy="34" r="30" fill="#262626" stroke="#CFAE70" stroke-width="1.5"/><text x="70" y="39">DATA</text>
+            <line x1="102" y1="34" x2="196" y2="34" stroke="#CFAE70" stroke-width="1.5" marker-end="url(#arw)"/>
+            <circle cx="240" cy="34" r="34" fill="#262626" stroke="#CFAE70" stroke-width="1.5"/><text x="240" y="39" font-size="13">TRAINING</text>
+            <line x1="276" y1="34" x2="370" y2="34" stroke="#CFAE70" stroke-width="1.5" marker-end="url(#arw)"/>
+            <circle cx="414" cy="34" r="30" fill="#CFAE70" stroke="#CFAE70"/><text x="414" y="39" fill="#1C1C1C">MODEL</text>
+            <line x1="446" y1="34" x2="540" y2="34" stroke="#CFAE70" stroke-width="1.5" marker-end="url(#arw)"/>
+            <circle cx="600" cy="34" r="34" fill="#262626" stroke="#ECB748" stroke-width="1.5"/><text x="600" y="39" font-size="12">PREDICT</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6 · NEURAL NETWORKS ============ -->
+  <section class="slide on-light" id="s-nn" data-count data-title="Neural networks">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Section 03 · Architecture</p>
+      <h2 class="h2" data-reveal>Layers that <em>learn</em>.</h2>
+      <div class="split">
+        <div data-reveal>
+          <p class="lead">A neural network passes information through layers of tiny units called <em>neurons</em>. Each connection has a <em>weight</em> — a dial the network tunes during training. Early layers catch simple features; later layers combine them into an answer.</p>
+          <p class="measure muted" style="margin-top:1rem">Press <b>Run</b> to send a signal forward through the network, left to right, and watch each layer light up as it activates.</p>
+        </div>
+        <div class="nn on-dark card" id="nn" data-reveal style="background:#1c1c1c">
+          <svg role="img" aria-label="A four-layer neural network diagram"></svg>
+          <div class="nn__controls">
+            <button class="btn" id="nnRun">Run the network</button>
+            <span class="nn__status" id="nnStatus" aria-live="polite">Ready</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7 · LLMs ============ -->
+  <section class="slide on-dark" id="s-llm" data-count data-title="Language models">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Section 04 · Language Models</p>
+      <h2 class="h2" data-reveal>It predicts the <em>next word</em>.</h2>
+      <div class="split">
+        <div data-reveal>
+          <p class="lead">A large language model has read a huge slice of the internet and learned one skill extremely well: given some text, guess what comes next. It breaks language into <em>tokens</em> (word-chunks) and assigns every possible next token a probability.</p>
+          <p class="measure" style="margin-top:1rem;color:rgba(255,255,255,.82)">Build a sentence yourself. At each step, the model offers candidates with a probability. Pick one and watch it continue.</p>
+        </div>
+        <div class="predict" id="predict" data-reveal>
+          <div class="predict__sentence" id="predictSentence" aria-live="polite"></div>
+          <div class="predict__options" id="predictOptions" role="group" aria-label="Next-token choices"></div>
+          <p class="predict__hint" id="predictHint"></p>
+          <button class="btn btn--ghost" id="predictReset" style="margin-top:1rem">Start over</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8 · TEMPERATURE ============ -->
+  <section class="slide on-cream" id="s-temp" data-count data-title="Randomness">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Section 05 · Randomness</p>
+      <h2 class="h2" data-reveal>Same question,<br><em>different answers</em>.</h2>
+      <div class="split">
+        <div data-reveal>
+          <p class="lead">A setting called <em>temperature</em> controls how adventurous the model is when it picks the next word. Low temperature plays it safe and repeatable. High temperature takes creative risks — and can wander off.</p>
+          <p class="measure muted" style="margin-top:1rem">Drag the slider. The answer to "Why is the sky blue?" rewrites itself as the temperature climbs.</p>
+        </div>
+        <div class="temp card" id="temp" data-reveal>
+          <p class="tag" id="tempVal">0.4 · Focused</p>
+          <p class="temp__readout" id="tempReadout"></p>
+          <input class="slider" type="range" id="tempSlider" min="0" max="120" value="30" aria-label="Model temperature">
+          <div class="slider-scale"><span>Precise</span><span>Balanced</span><span>Creative</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9 · PROMPTING ============ -->
+  <section class="slide on-light" id="s-prompt" data-count data-title="Prompting">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Section 06 · Prompting</p>
+      <h2 class="h2" data-reveal>Ask <em>precisely</em>.</h2>
+      <p class="lead" data-reveal style="margin-bottom:2rem">A vague question gets a vague answer. Strong prompts usually contain four parts. Hover or tap each one below to find it in the example.</p>
+      <div class="split" id="promptAnatomy">
+        <div class="prompt-box" data-reveal>
+          <span class="ppart" data-part="role">You are a patient biology tutor.</span>
+          <span class="ppart" data-part="context">I'm a first-year student who missed the lecture on photosynthesis.</span>
+          <span class="ppart" data-part="task">Explain how plants turn sunlight into energy</span>
+          <span class="ppart" data-part="format">in three short bullet points a beginner could follow.</span>
+        </div>
+        <div class="pkey" data-reveal>
+          <button data-target="role"><span class="sw" style="background:#B3C9CD"></span><span><b>Role</b><p class="muted">Tell the model who to be. It shapes tone and depth.</p></span></button>
+          <button data-target="context"><span class="sw" style="background:#8BA18E"></span><span><b>Context</b><p class="muted">Give the background it can't guess — who you are, what you know.</p></span></button>
+          <button data-target="task"><span class="sw" style="background:#CFAE70"></span><span><b>Task</b><p class="muted">State the one thing you actually want done. Be specific.</p></span></button>
+          <button data-target="format"><span class="sw" style="background:#ECB748"></span><span><b>Format</b><p class="muted">Say how the answer should look — length, structure, style.</p></span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10 · CAPABILITIES & LIMITS ============ -->
+  <section class="slide on-dark" id="s-limits" data-count data-title="Strengths & limits">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Section 07 · Reality Check</p>
+      <h2 class="h2" data-reveal>Powerful, <em>not magic</em>.</h2>
+      <div class="cols2" style="margin-top:1rem">
+        <div data-reveal>
+          <p class="tag">Genuinely good at</p>
+          <ul class="listcheck can">
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Drafting, summarizing, and rewriting text</li>
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Explaining concepts at any level</li>
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Translating and reformatting</li>
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Brainstorming and first drafts</li>
+          </ul>
+        </div>
+        <div data-reveal>
+          <p class="tag" style="background:#c76b5a;color:#1c1c1c">Unreliable at</p>
+          <ul class="listcheck cant">
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Facts, dates, and citations — verify everything</li>
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Exact arithmetic and counting</li>
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Recent events after its training cutoff</li>
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Knowing when it's wrong</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" data-reveal style="margin-top:2rem;border-color:rgba(236,183,72,.4)">
+        <span class="tag">Key term · Hallucination</span>
+        <p style="margin:.5rem 0 0;color:rgba(255,255,255,.85)">When a model states something false with total confidence, that's a <b>hallucination</b>. It isn't lying — it's predicting a plausible-sounding next word that happens to be wrong. This is exactly why a human has to check its work.</p>
+      </div>
+
+      <div class="quiz" data-quiz data-reveal style="margin-top:2.5rem">
+        <p class="quiz__q">Quick check: Your chatbot cites a study with a specific author and year. What should you do?</p>
+        <div class="quiz__options">
+          <button class="opt" data-correct="1" data-why="Models frequently invent realistic-looking citations. Always confirm sources independently."><span class="mark">A</span><span>Verify the citation exists before trusting it</span></button>
+          <button class="opt" data-correct="0" data-why="Confident phrasing is not evidence — models sound sure even when wrong."><span class="mark">B</span><span>Trust it — the detail means it's real</span></button>
+          <button class="opt" data-correct="0" data-why="Asking again often just produces another confident guess, not a verified fact."><span class="mark">C</span><span>Ask the model if it's sure, then trust that</span></button>
+        </div>
+        <p class="quiz__feedback" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 11 · ETHICS ============ -->
+  <section class="slide on-cream" id="s-ethics" data-count data-title="Responsibility">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Section 08 · Responsibility</p>
+      <h2 class="h2" data-reveal>Use it <em>well</em>.</h2>
+      <div class="grid grid-3" style="margin-top:2rem">
+        <div class="feature" data-reveal>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
+          <h3>Bias</h3>
+          <p class="muted">A model reflects the data it learned from — including society's blind spots. Its output can quietly repeat stereotypes. Read critically, especially about people.</p>
+        </div>
+        <div class="feature" data-reveal>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          <h3>Privacy</h3>
+          <p class="muted">Anything you paste may be stored or used to improve the tool. Never share personal, confidential, or student data you wouldn't post publicly.</p>
+        </div>
+        <div class="feature" data-reveal>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-2 6a4 4 0 0 0 8 0z"/><path d="M19 7l2 6a4 4 0 0 1-8 0z"/></svg>
+          <h3>Integrity</h3>
+          <p class="muted">AI is a thinking partner, not a ghostwriter. Follow your course policy, disclose your use, and make sure the final understanding is genuinely yours.</p>
+        </div>
+      </div>
+
+      <div class="quiz" data-quiz data-reveal style="margin-top:2rem">
+        <p class="quiz__q">Which of these is the safest thing to paste into a public AI chatbot?</p>
+        <div class="quiz__options">
+          <button class="opt" data-correct="1" data-why="General, non-identifying study material carries no privacy risk."><span class="mark">A</span><span>A general question about the French Revolution</span></button>
+          <button class="opt" data-correct="0" data-why="Classmates' personal data is exactly what should never be shared."><span class="mark">B</span><span>A spreadsheet of classmates' grades and IDs</span></button>
+          <button class="opt" data-correct="0" data-why="Unpublished private work can be retained by the service."><span class="mark">C</span><span>An unpublished manuscript you were asked to keep private</span></button>
+        </div>
+        <p class="quiz__feedback" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 12 · RECAP QUIZ ============ -->
+  <section class="slide on-light" id="s-recap" data-title="Recap quiz">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Check your understanding</p>
+      <h2 class="h2" data-reveal style="margin-bottom:2rem">The <em>recap</em>.</h2>
+      <div class="quiz" id="recap" data-reveal>
+        <div id="recapPanel">
+          <p class="quiz__progress" id="recapProgress"></p>
+          <p class="quiz__q" id="recapQ" style="margin-top:.5rem"></p>
+          <div class="quiz__options" id="recapOptions" role="group" aria-label="Answer choices"></div>
+          <p class="quiz__feedback" id="recapFeedback" aria-live="polite"></p>
+          <div class="quiz__nav">
+            <button class="btn btn--dark" id="recapNext" style="visibility:hidden">Next question</button>
+          </div>
+        </div>
+        <div id="recapResult" hidden aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 13 · GLOSSARY ============ -->
+  <section class="slide on-cream" id="s-glossary" data-title="Glossary">
+    <div class="wrap wrap-wide">
+      <p class="eyebrow" data-reveal>Reference · Flip to reveal</p>
+      <h2 class="h2" data-reveal style="margin-bottom:2rem">The <em>vocabulary</em>.</h2>
+      <div class="glossary">
+        <button class="flip" data-reveal aria-label="Algorithm, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Algorithm</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>A step-by-step set of instructions a computer follows to solve a problem.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Model, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Model</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>The trained system itself — the patterns learned from data, saved and reused to make predictions.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Training data, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Training&nbsp;Data</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>The examples a model studies to learn. Its quality and bias shape everything the model does.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Token, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Token</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>A chunk of text — often a word or part of a word — that a language model reads and predicts one at a time.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Parameter, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Parameter</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>One of the billions of internal "dials" a model tunes during training. More parameters, more capacity.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Neural network, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Neural&nbsp;Network</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>A model built from layers of connected units, loosely inspired by neurons in the brain.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="L L M, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>LLM</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Large Language Model — a neural network trained on vast text to predict and generate language.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Prompt, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Prompt</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>The instruction or question you give an AI. Better prompts produce better output.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Hallucination, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Hallucination</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Confident output that is simply false. A byproduct of predicting plausible text rather than checking facts.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Inference, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Inference</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Using a trained model to produce an answer — what happens every time you send a prompt.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Fine-tuning, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Fine-tuning</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Extra training that adapts a general model to a specific task, tone, or domain.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Bias, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Bias</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Systematic skew in output that mirrors imbalances in the training data. Worth watching for actively.</p></div></div></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 14 · CLOSING ============ -->
+  <section class="slide on-dark" id="s-close" data-title="Wrap-up">
+    <div class="wrap" style="text-align:center">
+      <img src="assets/img/vu-centered-white.png" alt="Vanderbilt University" width="120" height="125" style="margin:0 auto 2rem;width:clamp(96px,10vw,130px);height:auto" data-reveal>
+      <h2 class="h2 gold-text" data-reveal style="max-width:18ch;margin-inline:auto">Now you know how it <em>works</em>.</h2>
+      <p class="lead" data-reveal style="margin:1.25rem auto 0;color:rgba(255,255,255,.82)">The hype fades once you see the machinery. Keep experimenting — and keep a human in the loop.</p>
+      <div class="hero__cta" data-reveal style="justify-content:center;margin-top:2rem">
+        <a class="btn" href="#s-recap">Retake the quiz</a>
+        <a class="btn btn--ghost" href="#top">Back to start</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" aria-labelledby="footHead">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <img src="assets/img/vu-lockup-white.png" alt="Vanderbilt University" width="300" height="78" style="width:min(300px,80%);height:auto">
+        <p class="brandline" id="footHead">Intelligence, made understandable.</p>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="#s-what">What AI Is</a></li>
+          <li><a href="#s-learn">How It Learns</a></li>
+          <li><a href="#s-nn">Neural Networks</a></li>
+          <li><a href="#s-llm">Language Models</a></li>
+          <li><a href="#s-ethics">Responsible Use</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Keep Learning</h4>
+        <ul>
+          <li><a href="#s-glossary">Glossary</a></li>
+          <li><a href="#s-recap">Knowledge Check</a></li>
+          <li><a href="#s-prompt">Prompting Guide</a></li>
+          <li><a href="#top">Start Over</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>© <span id="year">2026</span> Vanderbilt University. For classroom instruction.</span>
+      <span>AI Basics · A facilitation tool</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
