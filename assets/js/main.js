@@ -559,7 +559,7 @@
         correct: 1, why: 'Structured prompts (role, context, task, format) drive better results.' },
       { q: 'Research on AI at work finds that the time it saves most often…',
         opts: ['Becomes guaranteed free time', 'Quietly refills with more tasks and faster expectations', 'Is tracked automatically by HR', 'Has no effect on workload'],
-        correct: 1, why: 'Workload creep is the default. Managers keep the gains by deciding, explicitly, where saved time goes.' }
+        correct: 1, why: 'Workload creep is the default. Teams keep the gains by deciding, explicitly, where saved time goes.' }
     ];
     var idx = 0, score = 0, locked = false;
     var qEl = $('#recapQ'), optEl2 = $('#recapOptions'), fbEl = $('#recapFeedback'),
