@@ -127,9 +127,9 @@ recoloring, stretching, or effects beyond the approved metallic treatment.
 
 - The QR library is `qrcode-generator` (MIT, Kazuhiko Arase), vendored at
   `assets/js/qrcode.js` — no network needed to render the code.
-- **Fonts** load from Google Fonts (per the FLH spec). Offline, the page falls
-  back to Times/Arial/Impact automatically. Ask if you'd like them self-hosted
-  for guaranteed offline classroom use.
+- **Fonts are self-hosted** in `assets/fonts/` (woff2, ~170 KB total, via the
+  Fontsource builds of the Google families) — the deck renders identically
+  with no internet in the classroom.
 - The next-token probabilities and temperature samples are **illustrative**, not
   live model output — they're teaching aids.
 - No frameworks and no network-dependent JS — one CSS file, one JS file, plus

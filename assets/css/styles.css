@@ -4,6 +4,25 @@
    Black + gold · Libre Caslon / Inter / Antonio · engraved, not bubbly
    ===================================================================== */
 
+/* ---------- 0. Self-hosted brand fonts (offline-proof) ---------- */
+@font-face { font-family: 'Libre Caslon Display'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('../fonts/libre-caslon-display-latin-400-normal.woff2') format('woff2'); }
+/* Display has no italic cut; serve Libre Caslon Text italic under the same family so <em> renders a true italic */
+@font-face { font-family: 'Libre Caslon Display'; font-style: italic; font-weight: 400; font-display: swap;
+  src: url('../fonts/libre-caslon-text-latin-400-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Libre Caslon Text'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('../fonts/libre-caslon-text-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Libre Caslon Text'; font-style: italic; font-weight: 400; font-display: swap;
+  src: url('../fonts/libre-caslon-text-latin-400-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('../fonts/inter-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap;
+  src: url('../fonts/inter-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap;
+  src: url('../fonts/inter-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Antonio'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('../fonts/antonio-latin-700-normal.woff2') format('woff2'); }
+
 /* ---------- 1. Tokens ---------- */
 :root {
   /* Core (90%) */
