@@ -1,8 +1,9 @@
 # AI Basics — A Classroom Introduction
 
 An interactive, single-page teaching site that introduces the fundamentals of
-artificial intelligence to a general audience. Built as a **facilitation tool**:
-project it in class, or share the link for self-paced review.
+artificial intelligence to **Vanderbilt managers and staff**. Built as a
+**facilitation tool**: project it in class while learners scan a QR code to
+follow along on their own devices, or share the link for self-paced review.
 
 It wears the **Vanderbilt "Futures Learning Hub" (FLH)** visual system — black &
 gold, Libre Caslon / Inter / Antonio, one-idea-per-screen pacing — re-purposed
@@ -23,6 +24,20 @@ python3 -m http.server 8000
 Opening `index.html` directly also works, but a server is recommended so the
 Google Fonts load cleanly.
 
+## Session flow
+
+1. **Welcome slide** — shown on the projector as people arrive. It renders a
+   **QR code automatically** from the page's own URL, so learners scan and
+   launch the experience on their devices. (No regeneration needed when you
+   deploy; to hard-code a different target, set
+   `data-url="https://your-url"` on the `#qrCard` div in `index.html`.)
+   When previewing from a local `file://` open, a placeholder appears instead.
+2. **Hero** — headline, four **learning objectives**, and an ambient
+   video background. Drop a `hero-loop.mp4` into `assets/video/` to enable the
+   video (see the README there); without it the hero falls back to the gold
+   particle field. Duotone + scrim are applied by CSS for text contrast.
+3. Sections 01–08, then the scored recap quiz and glossary.
+
 ## Presenting in class
 
 The page is a scrollable site **and** a keyboard-driven deck.
@@ -41,7 +56,7 @@ dark) for pacing.
 
 ## The interactive teaching tools
 
-| Slide | Tool | What students do |
+| Slide | Tool | What learners do |
 |---|---|---|
 | What AI Is | **Nested rings** | Tap AI → ML → Deep Learning → Gen AI to see how the terms nest |
 | Neural Networks | **Activatable network** | Press *Run* and watch a signal propagate layer by layer |
@@ -65,7 +80,7 @@ All interactions are keyboard-accessible, have visible focus states, use
 5. Steering the output — temperature and randomness
 6. Prompting well — the four parts of a strong prompt
 7. Strengths & limits — capabilities, failure modes, hallucination
-8. Using AI responsibly — bias, privacy, academic integrity
+8. Using AI responsibly — bias, privacy, accountability at work
 
 To edit copy, open `index.html` — each `<section class="slide">` is one screen.
 Quiz questions live in `assets/js/main.js` (the `QUESTIONS` array for the recap;
@@ -104,10 +119,12 @@ recoloring, stretching, or effects beyond the approved metallic treatment.
 
 ## Notes / limitations
 
+- The QR library is `qrcode-generator` (MIT, Kazuhiko Arase), vendored at
+  `assets/js/qrcode.js` — no network needed to render the code.
 - **Fonts** load from Google Fonts (per the FLH spec). Offline, the page falls
   back to Times/Arial/Impact automatically. Ask if you'd like them self-hosted
   for guaranteed offline classroom use.
 - The next-token probabilities and temperature samples are **illustrative**, not
   live model output — they're teaching aids.
-- No third-party JS libraries; the whole thing is ~1 CSS + 1 JS file for easy
-  Lighthouse scores and offline reliability.
+- No frameworks and no network-dependent JS — one CSS file, one JS file, plus
+  the vendored QR encoder. Easy Lighthouse scores, works offline.

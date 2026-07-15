@@ -193,10 +193,69 @@ em, .italic { font-style: italic; }
 .nav__toggle { display: none; background: none; border: 0; color: #fff; padding: 8px; }
 .nav__toggle svg { width: 26px; height: 26px; }
 
+/* ---------- 5b. Welcome / QR ---------- */
+.welcome { padding-top: calc(var(--nav-h) + 1.5rem); padding-bottom: 1.5rem; }
+.welcome .wrap > img { margin-bottom: 1rem !important; }
+.welcome .qr-card { margin-top: 1.25rem; }
+.welcome .lead { margin-top: 1rem !important; }
+.welcome .eyebrow { margin-bottom: .9rem; }
+.welcome .h2 { font-size: clamp(1.75rem, 3.6vw, 2.9rem); }
+.welcome .lead { font-size: clamp(1rem, 1.5vw, 1.15rem); }
+.welcome .hero__meta { margin-top: 1.5rem; }
+.welcome .hero__meta b { font-size: 1.35rem; }
+.welcome .hero__cta { margin-top: 1.5rem; }
+/* short viewports (720p projectors): keep the whole welcome on one screen */
+@media (max-height: 800px) and (min-width: 861px) {
+  .welcome .hero__meta { display: none; }
+  .welcome .h2 { font-size: clamp(1.4rem, 2.8vw, 2.1rem); }
+  .welcome .wrap > img { width: 44px !important; margin-bottom: .75rem !important; }
+  .welcome .qr-card__code { width: clamp(140px, 24vh, 200px); }
+  .welcome .lead { display: none; }
+}
+.qr-card {
+  display: inline-block; background: var(--vu-white); border-radius: var(--radius);
+  border: 1px solid rgba(207,174,112,.55); padding: 1.1rem 1.1rem .8rem;
+  margin-top: 2rem; box-shadow: 0 0 0 6px rgba(207,174,112,.08), 0 20px 60px rgba(0,0,0,.45);
+}
+.qr-card__code { width: clamp(180px, 22vh, 250px); height: auto; margin-inline: auto; }
+.qr-card__code svg { display: block; width: 100%; height: auto; }
+.qr-card__url, .on-dark .qr-card__url {
+  margin: .6rem 0 0; font-family: var(--font-condensed); font-weight: 700;
+  text-transform: uppercase; letter-spacing: .05em; font-size: .8rem; color: var(--vu-oak);
+  word-break: break-all;
+}
+
 /* ---------- 6. Hero ---------- */
 .hero { text-align: left; }
+.hero__video {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  z-index: 0; opacity: .38; filter: grayscale(1) sepia(.35) hue-rotate(-8deg) saturate(1.4) brightness(.8);
+}
+.hero__scrim {
+  position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(105deg, rgba(28,28,28,.92) 0%, rgba(28,28,28,.55) 55%, rgba(28,28,28,.75) 100%);
+}
 .hero__canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; opacity: .55; }
 .hero .wrap { position: relative; z-index: 1; }
+
+/* learning objectives block */
+.objectives {
+  margin-top: 2.25rem; max-width: 640px;
+  border-left: 2px solid var(--vu-gold-flat); padding-left: 1.5rem;
+}
+.objectives__label {
+  font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase;
+  letter-spacing: .04em; font-size: .82rem; color: var(--vu-gold-flat); margin: 0 0 .75rem;
+}
+.objectives__list { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; counter-reset: obj; }
+.objectives__list li {
+  counter-increment: obj; display: grid; grid-template-columns: auto 1fr; gap: .8rem;
+  font-size: 1.02rem; color: rgba(255,255,255,.85); align-items: baseline;
+}
+.objectives__list li::before {
+  content: counter(obj, decimal-leading-zero);
+  font-family: var(--font-condensed); font-weight: 700; font-size: .95rem; color: var(--vu-gold-flat);
+}
 .hero .h-hero { max-width: 16ch; }
 .hero__cta { margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap; }
 .hero__meta { margin-top: 2.75rem; display: flex; gap: 2.25rem; flex-wrap: wrap;
@@ -413,7 +472,7 @@ em, .italic { font-style: italic; }
 .dots button[aria-current="true"] { background: var(--vu-gold-flat); transform: scale(1.35); }
 .dots button:hover { background: rgba(207,174,112,.5); }
 
-.deckbar { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 90;
+.deckbar { position: fixed; right: clamp(12px, 2vw, 26px); bottom: 18px; z-index: 90;
   display: flex; align-items: center; gap: .35rem; background: rgba(28,28,28,.9); backdrop-filter: blur(6px);
   border: 1px solid rgba(207,174,112,.25); border-radius: 999px; padding: .35rem .5rem; }
 .deckbar button { width: 34px; height: 34px; border-radius: 50%; border: 0; background: transparent; color: #fff;

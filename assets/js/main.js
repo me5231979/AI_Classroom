@@ -37,6 +37,15 @@
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
     revEls.forEach(function (el) { revObs.observe(el); });
+    // elements already on screen at load (e.g. bottom of the opening slide)
+    // can sit inside the observer's excluded margin — reveal them directly
+    requestAnimationFrame(function () {
+      revEls.forEach(function (el) {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.classList.add('in'); revObs.unobserve(el);
+        }
+      });
+    });
   } else {
     revEls.forEach(function (el) { el.classList.add('in'); });
   }
@@ -79,6 +88,51 @@
     }, { threshold: 0.6 });
     $$('[data-count-to]').forEach(function (el) { cObs.observe(el); });
   } else { $$('[data-count-to]').forEach(function (el) { el.textContent = el.getAttribute('data-count-to') + (el.getAttribute('data-suffix') || ''); }); }
+
+  /* ---------- Welcome slide: QR code ---------- */
+  var qrBox = $('#qrBox');
+  if (qrBox && typeof qrcode === 'function') {
+    // Encode the deployed URL. Override by setting data-url on #qrCard
+    // (e.g. <div id="qrCard" data-url="https://your-deploy.vercel.app/">).
+    var qrCard = $('#qrCard');
+    var qrTarget = (qrCard && qrCard.getAttribute('data-url')) ||
+      (location.protocol === 'file:' ? '' : location.origin + location.pathname);
+    var qrUrlEl = $('#qrUrl');
+    if (qrTarget) {
+      try {
+        var qr = qrcode(0, 'M');
+        qr.addData(qrTarget);
+        qr.make();
+        qrBox.innerHTML = qr.createSvgTag({ scalable: true, margin: 2 });
+        if (qrUrlEl) qrUrlEl.textContent = qrTarget.replace(/^https?:\/\//, '').replace(/\/$/, '');
+      } catch (err) {
+        qrBox.parentElement.style.display = 'none';
+      }
+    } else {
+      // file:// preview — QR would point nowhere useful
+      if (qrUrlEl) qrUrlEl.textContent = 'QR appears when the site is hosted';
+      qrBox.innerHTML = '<div style="width:100%;aspect-ratio:1;display:grid;place-items:center;border:1px dashed #E4E4E4;color:#777;font-family:Inter,Arial,sans-serif;font-size:.8rem;padding:1rem;text-align:center">Deploy to generate the QR code</div>';
+    }
+  }
+
+  /* ---------- Hero video background with graceful fallback ---------- */
+  var heroVideo = $('#heroVideo');
+  if (heroVideo) {
+    var killVideo = function () { heroVideo.remove(); heroVideo = null; };
+    if (reduce) {
+      killVideo(); // reduced motion: static/canvas-off treatment
+    } else {
+      var src = heroVideo.querySelector('source');
+      if (src) src.addEventListener('error', killVideo);
+      heroVideo.addEventListener('error', killVideo);
+      // if no data loads shortly after page load, fall back silently
+      setTimeout(function () {
+        if (heroVideo && heroVideo.readyState === 0) killVideo();
+      }, 4000);
+      var p = heroVideo.play && heroVideo.play();
+      if (p && p.catch) p.catch(function () { /* autoplay blocked: poster/canvas remains */ });
+    }
+  }
 
   /* ---------- Hero ambient particles ---------- */
   var canvas = $('.hero__canvas');

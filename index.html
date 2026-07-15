@@ -27,7 +27,7 @@
     <img src="assets/img/vu-v-icon.png" alt="" width="34" height="31">
     <span style="display:flex;flex-direction:column">
       <b>AI&nbsp;Basics</b>
-      <span>Vanderbilt&nbsp;· Classroom</span>
+      <span>Vanderbilt&nbsp;· Managers</span>
     </span>
   </a>
   <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navlinks">
@@ -47,27 +47,57 @@
 <div class="dots" id="dots" role="navigation" aria-label="Slide navigation"></div>
 <div class="deckbar" role="group" aria-label="Presentation controls">
   <button id="deckPrev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
-  <span class="deckbar__count" id="deckCount">1 / 14</span>
+  <span class="deckbar__count" id="deckCount">1 / 15</span>
   <button id="deckNext" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
 </div>
 
 <main class="deck" id="top">
 
-  <!-- ============ 1 · HERO ============ -->
-  <section class="slide on-dark hero" id="s-hero" data-title="Welcome">
-    <canvas class="hero__canvas" aria-hidden="true"></canvas>
-    <div class="wrap">
-      <p class="eyebrow" data-reveal>Vanderbilt · Classroom Series</p>
-      <h1 class="h-hero" data-reveal>Understanding AI,<br><em class="gold-text">from the ground up.</em></h1>
-      <p class="lead" data-reveal style="margin-top:1.5rem">No code. No math. Just a clear picture of what these systems really are — and how they work.</p>
-      <div class="hero__cta" data-reveal>
-        <a class="btn" href="#s-what">Begin the lesson</a>
-        <a class="btn btn--ghost" href="#s-recap">Jump to the quiz</a>
+  <!-- ============ 0 · WELCOME / QR ============ -->
+  <section class="slide on-dark welcome" id="s-welcome" data-title="Scan to join">
+    <div class="wrap" style="text-align:center">
+      <img src="assets/img/vu-v-icon.png" alt="Vanderbilt V" width="72" height="66" style="margin:0 auto 1.75rem;width:clamp(56px,6vw,80px);height:auto" data-reveal>
+      <p class="eyebrow" data-reveal>Vanderbilt · Manager Learning Series</p>
+      <h1 class="h2" data-reveal style="max-width:20ch;margin-inline:auto">Welcome. Scan to bring this session <em class="gold-text">to your seat</em>.</h1>
+      <div class="qr-card" id="qrCard" data-reveal>
+        <div class="qr-card__code" id="qrBox" role="img" aria-label="QR code linking to this experience"></div>
+        <p class="qr-card__url" id="qrUrl"></p>
       </div>
-      <div class="hero__meta" data-reveal>
+      <p class="lead" data-reveal style="margin:1.5rem auto 0;max-width:44ch">Follow along on your own device — every demo here is hands-on. Or just watch the screen; we'll drive.</p>
+      <div class="hero__meta" data-reveal style="justify-content:center">
         <div><b>8</b> Core concepts</div>
         <div><b>45</b> Minutes</div>
         <div><b>0</b> Prerequisites</div>
+      </div>
+      <div class="hero__cta" data-reveal style="justify-content:center">
+        <a class="btn" href="#s-hero">We're ready — begin</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 1 · HERO ============ -->
+  <section class="slide on-dark hero" id="s-hero" data-title="Objectives">
+    <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="metadata" aria-hidden="true" poster="">
+      <source src="assets/video/hero-loop.mp4" type="video/mp4">
+    </video>
+    <canvas class="hero__canvas" aria-hidden="true"></canvas>
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>AI Basics · For Vanderbilt Managers</p>
+      <h1 class="h-hero" data-reveal>Understanding AI,<br><em class="gold-text">from the ground up.</em></h1>
+      <p class="lead" data-reveal style="margin-top:1.5rem">No code. No math. A working picture of what these systems are — so you can lead teams that use them well.</p>
+      <div class="objectives" data-reveal>
+        <p class="objectives__label">By the end of this session, you will be able to</p>
+        <ol class="objectives__list">
+          <li>Explain what AI, machine learning, and generative AI actually are — and how they differ</li>
+          <li>Describe how a language model produces an answer, and why answers vary</li>
+          <li>Write prompts that get useful, reliable results for everyday work</li>
+          <li>Judge when to trust AI output — and apply Vanderbilt-appropriate guardrails</li>
+        </ol>
+      </div>
+      <div class="hero__cta" data-reveal>
+        <a class="btn" href="#s-what">Begin the lesson</a>
+        <a class="btn btn--ghost" href="#s-recap">Jump to the quiz</a>
       </div>
     </div>
   </section>
@@ -85,7 +115,7 @@
         <li data-reveal><span class="num">05</span><div><h3>Steering the output</h3><p>Temperature, randomness, and why the same question gives different answers.</p></div></li>
         <li data-reveal><span class="num">06</span><div><h3>Prompting well</h3><p>The anatomy of a request that actually gets useful results.</p></div></li>
         <li data-reveal><span class="num">07</span><div><h3>Strengths &amp; limits</h3><p>What AI does well, where it breaks, and what a "hallucination" is.</p></div></li>
-        <li data-reveal><span class="num">08</span><div><h3>Using AI responsibly</h3><p>Bias, privacy, and academic integrity in everyday use.</p></div></li>
+        <li data-reveal><span class="num">08</span><div><h3>Using AI responsibly</h3><p>Bias, privacy, and accountability in everyday university work.</p></div></li>
       </ol>
     </div>
   </section>
@@ -231,10 +261,10 @@
       <p class="lead" data-reveal style="margin-bottom:2rem">A vague question gets a vague answer. Strong prompts usually contain four parts. Hover or tap each one below to find it in the example.</p>
       <div class="split" id="promptAnatomy">
         <div class="prompt-box" data-reveal>
-          <span class="ppart" data-part="role">You are a patient biology tutor.</span>
-          <span class="ppart" data-part="context">I'm a first-year student who missed the lecture on photosynthesis.</span>
-          <span class="ppart" data-part="task">Explain how plants turn sunlight into energy</span>
-          <span class="ppart" data-part="format">in three short bullet points a beginner could follow.</span>
+          <span class="ppart" data-part="role">You are an experienced internal-communications writer.</span>
+          <span class="ppart" data-part="context">My team of 12 moves to a new expense system next month, and several people are anxious about the change.</span>
+          <span class="ppart" data-part="task">Draft a short announcement email that explains the timeline and reassures the team</span>
+          <span class="ppart" data-part="format">in three brief paragraphs with a warm, direct tone.</span>
         </div>
         <div class="pkey" data-reveal>
           <button data-target="role"><span class="sw" style="background:#B3C9CD"></span><span><b>Role</b><p class="muted">Tell the model who to be. It shapes tone and depth.</p></span></button>
@@ -278,10 +308,10 @@
       </div>
 
       <div class="quiz" data-quiz data-reveal style="margin-top:2.5rem">
-        <p class="quiz__q">Quick check: Your chatbot cites a study with a specific author and year. What should you do?</p>
+        <p class="quiz__q">Quick check: An AI tool cites a university policy with a specific title and effective date. What should you do?</p>
         <div class="quiz__options">
-          <button class="opt" data-correct="1" data-why="Models frequently invent realistic-looking citations. Always confirm sources independently."><span class="mark">A</span><span>Verify the citation exists before trusting it</span></button>
-          <button class="opt" data-correct="0" data-why="Confident phrasing is not evidence — models sound sure even when wrong."><span class="mark">B</span><span>Trust it — the detail means it's real</span></button>
+          <button class="opt" data-correct="1" data-why="Models frequently invent realistic-looking citations. Confirm against the actual policy library before acting."><span class="mark">A</span><span>Verify the policy exists before acting on it</span></button>
+          <button class="opt" data-correct="0" data-why="Confident phrasing is not evidence — models sound sure even when wrong."><span class="mark">B</span><span>Trust it — the specific detail means it's real</span></button>
           <button class="opt" data-correct="0" data-why="Asking again often just produces another confident guess, not a verified fact."><span class="mark">C</span><span>Ask the model if it's sure, then trust that</span></button>
         </div>
         <p class="quiz__feedback" aria-live="polite"></p>
@@ -303,21 +333,21 @@
         <div class="feature" data-reveal>
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
           <h3>Privacy</h3>
-          <p class="muted">Anything you paste may be stored or used to improve the tool. Never share personal, confidential, or student data you wouldn't post publicly.</p>
+          <p class="muted">Anything you paste may be stored or used to improve the tool. Never share personnel records, student data, or confidential university business in unapproved tools.</p>
         </div>
         <div class="feature" data-reveal>
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-2 6a4 4 0 0 0 8 0z"/><path d="M19 7l2 6a4 4 0 0 1-8 0z"/></svg>
-          <h3>Integrity</h3>
-          <p class="muted">AI is a thinking partner, not a ghostwriter. Follow your course policy, disclose your use, and make sure the final understanding is genuinely yours.</p>
+          <h3>Accountability</h3>
+          <p class="muted">AI drafts; you decide. Disclose AI use where your unit's policy asks for it, review everything before it ships, and own the final output — the tool is never the author of record.</p>
         </div>
       </div>
 
       <div class="quiz" data-quiz data-reveal style="margin-top:2rem">
         <p class="quiz__q">Which of these is the safest thing to paste into a public AI chatbot?</p>
         <div class="quiz__options">
-          <button class="opt" data-correct="1" data-why="General, non-identifying study material carries no privacy risk."><span class="mark">A</span><span>A general question about the French Revolution</span></button>
-          <button class="opt" data-correct="0" data-why="Classmates' personal data is exactly what should never be shared."><span class="mark">B</span><span>A spreadsheet of classmates' grades and IDs</span></button>
-          <button class="opt" data-correct="0" data-why="Unpublished private work can be retained by the service."><span class="mark">C</span><span>An unpublished manuscript you were asked to keep private</span></button>
+          <button class="opt" data-correct="1" data-why="General, non-identifying content carries no privacy risk."><span class="mark">A</span><span>A general question about how to structure a meeting agenda</span></button>
+          <button class="opt" data-correct="0" data-why="Employee performance data is exactly what should never leave approved systems."><span class="mark">B</span><span>A spreadsheet of your team's performance ratings</span></button>
+          <button class="opt" data-correct="0" data-why="Confidential plans can be retained by the service — keep them in approved tools."><span class="mark">C</span><span>A draft of a confidential reorganization memo</span></button>
         </div>
         <p class="quiz__feedback" aria-live="polite"></p>
       </div>
@@ -410,12 +440,13 @@
       </div>
     </div>
     <div class="footer__legal">
-      <span>© <span id="year">2026</span> Vanderbilt University. For classroom instruction.</span>
+      <span>© <span id="year">2026</span> Vanderbilt University. A facilitation tool for manager learning.</span>
       <span>AI Basics · A facilitation tool</span>
     </div>
   </div>
 </footer>
 
+<script src="assets/js/qrcode.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
