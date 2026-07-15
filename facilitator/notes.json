@@ -1,11 +1,21 @@
 {
   "meta": {
     "program": "AI Basics — Vanderbilt Learning Series",
-    "totalMinutes": 60,
+    "totalMinutes": 91,
     "audience": "Vanderbilt staff, no technical prerequisites",
     "roomSetup": "Projector + presenter device; learners on their own devices via the Welcome-slide QR; tables of 3-6 for group activities.",
     "futureUse": "The facilitator version of the site will mirror the learner deck with these notes rendered in a rail to the right of each slide. Keys map to slide section ids.",
-    "postSession": "Two weeks out, send one line to attendees (or their managers): 'Did your first rep happen? Reply with one sentence.' That reply is your Kirkpatrick Level 3 evidence; collect and tally."
+    "postSession": "Two weeks out, send one line to attendees (or their managers): 'Did your first rep happen? Reply with one sentence.' That reply is your Kirkpatrick Level 3 evidence; collect and tally.",
+    "paths": {
+      "full": {
+        "minutes": 91,
+        "description": "Everything as designed: all activities, the in-class video hook, pair shares. Book a 90-minute slot; the sum includes realistic transitions inside each block."
+      },
+      "core": {
+        "minutes": 60,
+        "description": "The 60-minute slot: every simulator, every check, the Lab, the capstone, and ONE group activity of the facilitator's choice; other group activities and videos become follow-ups. Per-section cuts are in each coreNote."
+      }
+    }
   },
   "sections": [
     {
@@ -19,7 +29,9 @@
         "Confirm by show of hands that most of the room has the site open before advancing."
       ],
       "validate": "80%+ of the room has the deck open on a device.",
-      "watchFor": "Anyone without a device — pair them with a neighbor now so the later solo activities still work."
+      "watchFor": "Anyone without a device — pair them with a neighbor now so the later solo activities still work.",
+      "coreMinutes": 2,
+      "coreNote": "Core: one scan prompt, move on."
     },
     {
       "id": "s-hero",
@@ -31,7 +43,9 @@
         "Say: 'If any of these is the one you came for, tell me at the break and I'll go deeper there.'"
       ],
       "validate": "Objectives acknowledged; note which one the room cares most about.",
-      "watchFor": "Anxiety about being 'behind' on AI — name it: this session assumes zero background."
+      "watchFor": "Anxiety about being 'behind' on AI — name it: this session assumes zero background.",
+      "coreMinutes": 1,
+      "coreNote": "Core: read objectives 1, 3, 5 only."
     },
     {
       "id": "s-agenda",
@@ -42,12 +56,14 @@
         "Point out 09: 'We end with what AI does to your workload, not just what it can do.'"
       ],
       "validate": "None needed.",
-      "watchFor": ""
+      "watchFor": "",
+      "coreMinutes": 0,
+      "coreNote": "Core: skip; the progress bar orients."
     },
     {
       "id": "s-what",
       "title": "01 · What AI is (rings simulator)",
-      "minutes": 6,
+      "minutes": 7,
       "purpose": "Replace the fuzzy word 'AI' with a four-layer mental model.",
       "facilitate": [
         "Tap each ring outward-in on the projector; learners follow on their devices.",
@@ -55,12 +71,14 @@
         "Debrief one table's list; correct any tool mis-sorted with curiosity, not correction."
       ],
       "validate": "Inline quick check on the slide (generative-AI ring question) — watch the room's first-click accuracy; re-teach if wrong answers dominate.",
-      "watchFor": "People equating AI with only ChatGPT — the rings exist to break exactly that."
+      "watchFor": "People equating AI with only ChatGPT — the rings exist to break exactly that.",
+      "coreMinutes": 4,
+      "coreNote": "Core: rings + check; skip the group sort."
     },
     {
       "id": "s-learn",
       "title": "02 · How machines learn (ML trainer game)",
-      "minutes": 7,
+      "minutes": 8,
       "purpose": "The three training paradigms, anchored to workplace data.",
       "facilitate": [
         "Optional in-flow video: play the first 2 minutes of 'How Machines Learn' (embedded on the slide) as a hook; assign the rest as homework.",
@@ -69,12 +87,14 @@
         "Run the AS A GROUP activity: teams pick a dataset their unit already produces and match a learning type to it."
       ],
       "validate": "ML trainer score visible per learner (3/4+ = got it); group share-out names a plausible dataset + type pairing.",
-      "watchFor": "The supervised/unsupervised distinction is the common stumble — the tell is 'were there labels?'"
+      "watchFor": "The supervised/unsupervised distinction is the common stumble — the tell is 'were there labels?'",
+      "coreMinutes": 4,
+      "coreNote": "Core: trainer with hand-votes; assign video and group match as follow-ups."
     },
     {
       "id": "s-nn",
       "title": "03 · Neural networks (run-the-network)",
-      "minutes": 5,
+      "minutes": 6,
       "purpose": "Demystify 'the black box': learning = weight adjustment, which is why explainability is hard.",
       "facilitate": [
         "Press Run on the projector; narrate each layer as it lights.",
@@ -82,7 +102,9 @@
         "Collect one vendor question per table — these are gold for your AI-procurement conversations."
       ],
       "validate": "Inline quick check (what changes during training) + each table produces a vendor question.",
-      "watchFor": "Don't let the math-curious drag the room into gradient descent. The 3Blue1Brown series link now lives in this section's Go deeper for exactly them."
+      "watchFor": "Don't let the math-curious drag the room into gradient descent. The 3Blue1Brown series link now lives in this section's Go deeper for exactly them.",
+      "coreMinutes": 4,
+      "coreNote": "Core: run the network + check; skip the vendor discussion."
     },
     {
       "id": "s-llm",
@@ -95,7 +117,9 @@
         "Close the section with the embedded 8-minute 3Blue1Brown LLM video if time allows, or assign it — it consolidates the token predictor exercise."
       ],
       "validate": "Ask 2-3 volunteers to read their task + check aloud; recap-quiz question 2 covers the concept.",
-      "watchFor": "'So it's just autocomplete?' — yes, and: scale makes prediction surprisingly capable. Both halves are true."
+      "watchFor": "'So it's just autocomplete?' — yes, and: scale makes prediction surprisingly capable. Both halves are true.",
+      "coreMinutes": 5,
+      "coreNote": "Core: keep the solo note; it feeds Section 07."
     },
     {
       "id": "s-temp",
@@ -108,7 +132,9 @@
         "Point at the 'later today' line: the real two-chat experiment happens after the Toolkit slide introduces the tools."
       ],
       "validate": "Inline quick check (policy summary = low temperature); volunteers describe what differed between their two answers.",
-      "watchFor": "Clarify most tools hide the dial — the words 'standard answer' vs 'ten wild options' ARE the dial."
+      "watchFor": "Clarify most tools hide the dial — the words 'standard answer' vs 'ten wild options' ARE the dial.",
+      "coreMinutes": 2,
+      "coreNote": "Core: slider demo + check only."
     },
     {
       "id": "s-prompt",
@@ -121,7 +147,9 @@
         "Run the ON YOUR OWN activity (5 min): a real email, four parts, two refinements. Neighbor screen-swap if time allows."
       ],
       "validate": "Screen-swap peer review; ask for one 'move I'm stealing' from the room. Recap questions 5 covers structure.",
-      "watchFor": "Perfectionists writing one giant prompt — push iteration: 'correct it like you'd coach a new hire.'"
+      "watchFor": "Perfectionists writing one giant prompt — push iteration: 'correct it like you'd coach a new hire.'",
+      "coreMinutes": 5,
+      "coreNote": "Core: 3-minute draft instead of 5; skip screen-swap."
     },
     {
       "id": "s-lab",
@@ -135,7 +163,9 @@
         "Debrief: which single upgrade moved your score most? (It's almost always Context.)"
       ],
       "validate": "Learners reach 11-12/12 within two runs; ask for a show of hands. The per-slot coaching is the reteach.",
-      "watchFor": "Anyone gaming it by picking all C's without reading — ask them to say WHY the strong context wins."
+      "watchFor": "Anyone gaming it by picking all C's without reading — ask them to say WHY the strong context wins.",
+      "coreMinutes": 5,
+      "coreNote": "Core: one projector build + one personal build."
     },
     {
       "id": "s-limits",
@@ -148,12 +178,14 @@
         "Run the AS A GROUP activity: tables surface their Section-04 notes, pick the highest-stakes one, assign the check and an owner."
       ],
       "validate": "Inline check + each table states task/check/owner aloud. This is the session's core transfer moment — don't rush it.",
-      "watchFor": "Cynics ('so it's useless') and enthusiasts ('it's always right') — the answer to both is the verification habit."
+      "watchFor": "Cynics ('so it's useless') and enthusiasts ('it's always right') — the answer to both is the verification habit.",
+      "coreMinutes": 4,
+      "coreNote": "Core: keep; this is the transfer spine."
     },
     {
       "id": "s-ethics",
       "title": "08 · Responsible use",
-      "minutes": 6,
+      "minutes": 7,
       "purpose": "Bias, privacy, accountability — as team norms, not abstractions.",
       "facilitate": [
         "Run the inline privacy check first — it's a safe failure that opens the conversation.",
@@ -161,7 +193,9 @@
         "Ask two tables to read their sentence; note convergence."
       ],
       "validate": "Every table produces a policy sentence and names who takes it to their team meeting.",
-      "watchFor": "Questions about specific Vanderbilt policy — point to official university AI guidance rather than improvising."
+      "watchFor": "Questions about specific Vanderbilt policy — point to official university AI guidance rather than improvising.",
+      "coreMinutes": 4,
+      "coreNote": "Core: 4-minute policy sentence; one table reads theirs."
     },
     {
       "id": "s-toolkit",
@@ -175,7 +209,9 @@
         "Run the inline check (staffing-plan question) as a room vote before revealing."
       ],
       "validate": "Inline check first-click accuracy; then cold-call one scenario per table: 'donor thank-you letter — which tool?'",
-      "watchFor": "'But I already pasted X into ChatGPT once' confessions — respond with the fix (report per policy, change practice), not shame. Point to VU AI Guidance + Data Classification Policy."
+      "watchFor": "'But I already pasted X into ChatGPT once' confessions — respond with the fix (report per policy, change practice), not shame. Point to VU AI Guidance + Data Classification Policy.",
+      "coreMinutes": 5,
+      "coreNote": "Core: keep; read the red list verbatim regardless."
     },
     {
       "id": "s-wellbeing",
@@ -188,7 +224,9 @@
         "Run the ON YOUR OWN self-check. Say explicitly: 'This one is private. Nothing is shared.'"
       ],
       "validate": "Do NOT collect answers — validation here is the recap-quiz wellbeing question only. Privacy is the point.",
-      "watchFor": "This section can surface real strain. If someone discloses distress, connect them to EAP resources after the session — never process it in the room."
+      "watchFor": "This section can surface real strain. If someone discloses distress, connect them to EAP resources after the session — never process it in the room.",
+      "coreMinutes": 3,
+      "coreNote": "Core: patterns + EAP card; self-check as homework."
     },
     {
       "id": "s-recap",
@@ -200,7 +238,9 @@
         "Ask for a show of hands: 5+ correct. Revisit the most-missed question live."
       ],
       "validate": "Quiz score = the session's learning evidence. 5/6 room-wide is the pass signal; below that, reteach the weakest section using its simulator.",
-      "watchFor": "Keep it light — this validates the teaching, not the learner."
+      "watchFor": "Keep it light — this validates the teaching, not the learner.",
+      "coreMinutes": 4,
+      "coreNote": "Core: keep whole."
     },
     {
       "id": "s-plan",
@@ -216,18 +256,22 @@
         "If someone picks a red-level task, that is a win, not a failure: the plan tells them to stop. Praise it out loud."
       ],
       "validate": "Scan the room for plan cards on screens; show of hands for 'copied and pasted it somewhere real.' The plan IS the session's performance assessment.",
-      "watchFor": "Vague tasks ('email') produce vague plans. Push for one specific recurring artifact: 'the Thursday status note to my director.'"
+      "watchFor": "Vague tasks ('email') produce vague plans. Push for one specific recurring artifact: 'the Thursday status note to my director.'",
+      "coreMinutes": 6,
+      "coreNote": "Core: keep whole; this is the payoff."
     },
     {
       "id": "s-glossary",
       "title": "Glossary",
-      "minutes": 2,
+      "minutes": 1,
       "purpose": "Reference, not teaching. Flip two or three live.",
       "facilitate": [
         "Skip live, or flip 'hallucination' as a 20-second callback. This is reference for later, not teaching."
       ],
       "validate": "None — reference material.",
-      "watchFor": ""
+      "watchFor": "",
+      "coreMinutes": 0,
+      "coreNote": "Core: skip; reference only."
     },
     {
       "id": "s-close",
@@ -241,7 +285,9 @@
         "Kirkpatrick L1, fist-to-five: 'Was this worth your hour? Zero to five fingers up, right now.' Note the room's number in your own log."
       ],
       "validate": "Show of hands: who enrolled or bookmarked? Fist-to-five reaction score. Three spoken commitments.",
-      "watchFor": ""
+      "watchFor": "",
+      "coreMinutes": 2,
+      "coreNote": "Core: enroll ask + one commitment."
     }
   ]
 }
