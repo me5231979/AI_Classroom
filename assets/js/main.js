@@ -118,19 +118,22 @@
   /* ---------- Hero video background with graceful fallback ---------- */
   var heroVideo = $('#heroVideo');
   if (heroVideo) {
-    var killVideo = function () { heroVideo.remove(); heroVideo = null; };
+    var killVideo = function () { if (heroVideo) { heroVideo.remove(); heroVideo = null; } };
     if (reduce) {
       killVideo(); // reduced motion: static/canvas-off treatment
     } else {
-      var src = heroVideo.querySelector('source');
-      if (src) src.addEventListener('error', killVideo);
-      heroVideo.addEventListener('error', killVideo);
-      // if no data loads shortly after page load, fall back silently
+      // the <video> falls through its <source> list on its own; only give up
+      // when the LAST source has failed (NETWORK_NO_SOURCE = 3)
+      var sources = heroVideo.querySelectorAll('source');
+      var last = sources[sources.length - 1];
+      if (last) last.addEventListener('error', killVideo);
+      // slow-network guard: if nothing has loaded after a while and the
+      // element reports no usable source, fall back silently
       setTimeout(function () {
-        if (heroVideo && heroVideo.readyState === 0) killVideo();
-      }, 4000);
+        if (heroVideo && heroVideo.readyState === 0 && heroVideo.networkState === 3) killVideo();
+      }, 8000);
       var p = heroVideo.play && heroVideo.play();
-      if (p && p.catch) p.catch(function () { /* autoplay blocked: poster/canvas remains */ });
+      if (p && p.catch) p.catch(function () { /* autoplay blocked: canvas remains */ });
     }
   }
 

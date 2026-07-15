@@ -32,11 +32,17 @@ Google Fonts load cleanly.
    deploy; to hard-code a different target, set
    `data-url="https://your-url"` on the `#qrCard` div in `index.html`.)
    When previewing from a local `file://` open, a placeholder appears instead.
-2. **Hero** — headline, four **learning objectives**, and an ambient
-   video background. Drop a `hero-loop.mp4` into `assets/video/` to enable the
-   video (see the README there); without it the hero falls back to the gold
-   particle field. Duotone + scrim are applied by CSS for text contrast.
-3. Sections 01–08, then the scored recap quiz and glossary.
+2. **Hero** — headline, four **learning objectives**, and an ambient video
+   background **generated with Higgsfield** (gold light threads on black),
+   streamed from its CDN. To self-host instead, download the mp4 from the CDN
+   URL in `index.html` and save it as `assets/video/hero-loop.mp4` — the local
+   file automatically takes priority. Duotone + scrim applied by CSS.
+3. Sections 01–08 — each is one projected **slide**, with a **"Go deeper"**
+   expander underneath holding the content layer: practical workplace framing
+   plus an *Ask the room* / *Try this* facilitation prompt for discussion.
+4. Scored recap quiz, flip-card glossary, then **"Press play"** — curated
+   videos to watch in class or after (featuring Vanderbilt's Dr. Jules White's
+   Coursera course on prompt engineering, 3Blue1Brown, CGP Grey, Karpathy).
 
 ## Presenting in class
 

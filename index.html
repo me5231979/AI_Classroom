@@ -39,6 +39,7 @@
     <a href="#s-llm">Language Models</a>
     <a href="#s-prompt">Prompting</a>
     <a href="#s-ethics">Ethics</a>
+    <a href="#s-watch">Watch</a>
     <a class="btn" href="#s-recap">Take the Quiz</a>
   </nav>
 </header>
@@ -47,7 +48,7 @@
 <div class="dots" id="dots" role="navigation" aria-label="Slide navigation"></div>
 <div class="deckbar" role="group" aria-label="Presentation controls">
   <button id="deckPrev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
-  <span class="deckbar__count" id="deckCount">1 / 15</span>
+  <span class="deckbar__count" id="deckCount">1 / 16</span>
   <button id="deckNext" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
 </div>
 
@@ -77,8 +78,10 @@
 
   <!-- ============ 1 · HERO ============ -->
   <section class="slide on-dark hero" id="s-hero" data-title="Objectives">
-    <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="metadata" aria-hidden="true" poster="">
+    <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+      <!-- prefer a self-hosted file when present; fall back to the generated ambient loop on the Higgsfield CDN -->
       <source src="assets/video/hero-loop.mp4" type="video/mp4">
+      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_3CCurpI0FW75YAnAl4Hbz3vPdBv/hf_20260715_181810_72931df9-db1c-478b-89f4-9f5d32bed690.mp4" type="video/mp4">
     </video>
     <canvas class="hero__canvas" aria-hidden="true"></canvas>
     <div class="hero__scrim" aria-hidden="true"></div>
@@ -139,6 +142,14 @@
           <p>People use these words interchangeably, but they nest inside one another. Select a ring on the left to see what each layer actually means — and how generative tools like ChatGPT sit at the very center.</p>
         </div>
       </div>
+
+      <details class="deeper" data-reveal>
+        <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
+        <div class="deeper__body">
+          <div><h4>In practice</h4><p>Rule-based AI runs your out-of-office replies and expense-flag thresholds. Machine learning ranks your inbox, filters spam, and forecasts demand. Deep learning transcribes your meetings and unlocks your phone. Generative AI drafts your emails. You already manage with AI every day — the new part is that it now <em>writes</em>.</p></div>
+          <div class="deeper__ask"><h4>Ask the room</h4><p>"Which tools your team touches daily are quietly using machine learning? Name three."</p></div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -189,6 +200,14 @@
           </g>
         </svg>
       </div>
+
+      <details class="deeper" data-reveal>
+        <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
+        <div class="deeper__body">
+          <div><h4>In practice</h4><ul><li><b>Supervised, at work:</b> a ticket router trained on last year’s categorized help requests.</li><li><b>Unsupervised, at work:</b> clustering open-ended survey comments into themes nobody predefined.</li><li><b>Reinforcement, at work:</b> a scheduling assistant that improves as invites get accepted or declined.</li></ul></div>
+          <div class="deeper__ask"><h4>Ask the room</h4><p>"What labeled examples does your unit already produce as a byproduct of normal work — and what could a model learn from them?"</p></div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -210,6 +229,14 @@
           </div>
         </div>
       </div>
+
+      <details class="deeper" data-reveal>
+        <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
+        <div class="deeper__body">
+          <div><h4>In practice</h4><p>No engineer writes “pointy ears = cat.” The network invents its own features by adjusting millions of weights until its guesses stop being wrong. That’s why even its builders often can’t fully explain one specific decision — the logic lives in the weights, not in readable rules. It’s also why “audit the code” is the wrong ask; “audit the training data and the outcomes” is the right one.</p></div>
+          <div class="deeper__ask"><h4>Ask the room</h4><p>"If a model denies something consequential — an application, a request — what should ‘explain the decision’ mean when the logic is millions of weights?"</p></div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -230,6 +257,14 @@
           <button class="btn btn--ghost" id="predictReset" style="margin-top:1rem">Start over</button>
         </div>
       </div>
+
+      <details class="deeper" data-reveal>
+        <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
+        <div class="deeper__body">
+          <div><h4>In practice</h4><p>Two implications for work. First: the model has no database of facts — knowledge is baked in at training time, so it can’t “look up” your org chart or yesterday’s announcement unless you paste it in. Second: it never decides to stop and check — it just keeps predicting. Tools that search the web or your documents first (“retrieval”) bolt that checking on.</p></div>
+          <div class="deeper__ask"><h4>Ask the room</h4><p>"Where would confident next-word prediction fail you at work this week — if you didn’t verify it?"</p></div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -250,6 +285,14 @@
           <div class="slider-scale"><span>Precise</span><span>Balanced</span><span>Creative</span></div>
         </div>
       </div>
+
+      <details class="deeper" data-reveal>
+        <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
+        <div class="deeper__body">
+          <div><h4>In practice</h4><p>Match the dial to the task. Summarizing a policy, drafting minutes, extracting action items: <b>low</b> — you want the same right answer every time. Naming a program, brainstorming formats, writing a fresh opener: <b>higher</b> — you want surprises. Many tools hide the dial, but you can steer it with words: “give me the standard answer” vs. “give me ten wild options.”</p></div>
+          <div class="deeper__ask"><h4>Try this</h4><p>"Ask your AI tool the same question twice and compare the answers. The gap between them is the randomness."</p></div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -273,6 +316,14 @@
           <button data-target="format"><span class="sw" style="background:#ECB748"></span><span><b>Format</b><p class="muted">Say how the answer should look — length, structure, style.</p></span></button>
         </div>
       </div>
+
+      <details class="deeper" data-reveal>
+        <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
+        <div class="deeper__body">
+          <div><h4>In practice</h4><p>The fastest upgrade is iteration, not perfection. Treat the first answer as a draft from a capable new hire: “shorter,” “warmer,” “as a table,” “now for an audience of deans.” Each correction becomes context the model keeps for the rest of the conversation. And save your best prompts — a prompt that works is a reusable asset, like a good email template.</p></div>
+          <div class="deeper__ask"><h4>Try this</h4><p>"Take one real email you owe this week. Write it with role, context, task, and format — then refine it twice. Compare it to what you’d have written alone."</p></div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -316,6 +367,14 @@
         </div>
         <p class="quiz__feedback" aria-live="polite"></p>
       </div>
+
+      <details class="deeper" data-reveal>
+        <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
+        <div class="deeper__body">
+          <div><h4>In practice</h4><p>A working verification habit: <b>(1)</b> a fact, date, number, name, or citation — check the source. <b>(2)</b> a summary of a document you provided — spot-check two claims against the original. <b>(3)</b> a draft — you’re the editor; nothing ships unread. The model is a brilliant first-draft machine and an unreliable reference librarian.</p></div>
+          <div class="deeper__ask"><h4>Ask the room</h4><p>"What’s the highest-stakes place someone on your team could paste an unverified AI answer today — and what’s the check?"</p></div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -351,6 +410,14 @@
         </div>
         <p class="quiz__feedback" aria-live="polite"></p>
       </div>
+
+      <details class="deeper" data-reveal>
+        <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
+        <div class="deeper__body">
+          <div><h4>In practice</h4><p>Guardrails that scale for a team: use university-approved AI tools for anything touching university data; when in doubt, treat a prompt like a public post; agree where disclosure is expected (external communications, evaluations, anything signed with your name); and keep a human accountable for every output — “the AI wrote it” is never an acceptable answer.</p></div>
+          <div class="deeper__ask"><h4>Try this</h4><p>"Draft one sentence of team policy: ‘On our team, we use AI for ___, never for ___, and we disclose when ___.’"</p></div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -396,7 +463,47 @@
     </div>
   </section>
 
-  <!-- ============ 14 · CLOSING ============ -->
+  <!-- ============ 14 · WATCH ============ -->
+  <section class="slide on-light" id="s-watch" data-title="Watch">
+    <div class="wrap wrap-wide">
+      <p class="eyebrow" data-reveal>Watch · In class and after</p>
+      <h2 class="h2" data-reveal style="margin-bottom:2rem">Press <em>play</em>.</h2>
+      <div class="watch">
+        <a class="vidcard vidcard--feature" href="https://www.coursera.org/learn/prompt-engineering" target="_blank" rel="noopener" data-reveal>
+          <div class="vidcard__top"><span class="vidcard__src">Coursera · Vanderbilt · Dr. Jules White</span><span class="vidcard__dur">~18 hrs · Free to audit</span></div>
+          <h3>Prompt Engineering for ChatGPT</h3>
+          <p>Vanderbilt’s own Dr. Jules White teaches the definitive course on getting real work out of AI — prompt patterns you can apply the same day. The natural next step after this session (pairs with Section 06).</p>
+          <span class="vidcard__link">Watch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="vidcard" href="https://www.youtube.com/watch?v=R9OHn5ZF4Uo" target="_blank" rel="noopener" data-reveal>
+          <div class="vidcard__top"><span class="vidcard__src">CGP Grey · YouTube</span><span class="vidcard__dur">9 min</span></div>
+          <h3>How Machines Learn</h3>
+          <p>The friendliest possible explanation of training and evolution-style learning. Pairs with Section 02.</p>
+          <span class="vidcard__link">Watch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="vidcard" href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank" rel="noopener" data-reveal>
+          <div class="vidcard__top"><span class="vidcard__src">3Blue1Brown · YouTube</span><span class="vidcard__dur">18 min</span></div>
+          <h3>But what is a neural network?</h3>
+          <p>The classic visual walk through layers, weights, and activations. Pairs with Section 03.</p>
+          <span class="vidcard__link">Watch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="vidcard" href="https://www.youtube.com/watch?v=wjZofJX0v4M" target="_blank" rel="noopener" data-reveal>
+          <div class="vidcard__top"><span class="vidcard__src">3Blue1Brown · YouTube</span><span class="vidcard__dur">8 min</span></div>
+          <h3>Large language models, explained briefly</h3>
+          <p>Next-word prediction, visualized beautifully in eight minutes. Pairs with Section 04.</p>
+          <span class="vidcard__link">Watch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a class="vidcard" href="https://www.youtube.com/watch?v=zjkBMFhNj_g" target="_blank" rel="noopener" data-reveal>
+          <div class="vidcard__top"><span class="vidcard__src">Andrej Karpathy · YouTube</span><span class="vidcard__dur">1 hr</span></div>
+          <h3>Intro to Large Language Models</h3>
+          <p>The celebrated deep-dive lecture for when you want the whole picture. Best after class.</p>
+          <span class="vidcard__link">Watch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 15 · CLOSING ============ -->
   <section class="slide on-dark" id="s-close" data-title="Wrap-up">
     <div class="wrap" style="text-align:center">
       <img src="assets/img/vu-centered-white.png" alt="Vanderbilt University" width="120" height="125" style="margin:0 auto 2rem;width:clamp(96px,10vw,130px);height:auto" data-reveal>
@@ -435,6 +542,7 @@
           <li><a href="#s-glossary">Glossary</a></li>
           <li><a href="#s-recap">Knowledge Check</a></li>
           <li><a href="#s-prompt">Prompting Guide</a></li>
+          <li><a href="#s-watch">Videos to Watch</a></li>
           <li><a href="#top">Start Over</a></li>
         </ul>
       </div>
