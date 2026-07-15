@@ -1,8 +1,8 @@
 {
   "meta": {
-    "program": "AI Basics — Vanderbilt Manager Learning Series",
+    "program": "AI Basics — Vanderbilt Learning Series",
     "totalMinutes": 60,
-    "audience": "Vanderbilt managers and staff, no technical prerequisites",
+    "audience": "Vanderbilt staff, no technical prerequisites",
     "roomSetup": "Projector + presenter device; learners on their own devices via the Welcome-slide QR; tables of 3-6 for group activities.",
     "futureUse": "The facilitator version of the site will mirror the learner deck with these notes rendered in a rail to the right of each slide. Keys map to slide section ids."
   },
@@ -81,7 +81,7 @@
         "Collect one vendor question per table — these are gold for your AI-procurement conversations."
       ],
       "validate": "Inline quick check (what changes during training) + each table produces a vendor question.",
-      "watchFor": "Don't let the math-curious drag the room into gradient descent — park it to the Watch list (3Blue1Brown series)."
+      "watchFor": "Don't let the math-curious drag the room into gradient descent. The 3Blue1Brown series link now lives in this section's Go deeper for exactly them."
     },
     {
       "id": "s-llm",
@@ -103,7 +103,8 @@
       "purpose": "Why identical prompts give different answers — and how to steer it with words.",
       "facilitate": [
         "Drag the slider live from Precise to Creative; read both extremes aloud.",
-        "Run the ON YOUR OWN activity: same question twice in their real AI tool, compare."
+        "Run the ON YOUR OWN activity (in-experience): learners place the slider for their own work task, read both extremes, and write the steering words for each.",
+        "Point at the 'later today' line: the real two-chat experiment happens after the Toolkit slide introduces the tools."
       ],
       "validate": "Inline quick check (policy summary = low temperature); volunteers describe what differed between their two answers.",
       "watchFor": "Clarify most tools hide the dial — the words 'standard answer' vs 'ten wild options' ARE the dial."
@@ -206,32 +207,22 @@
       "minutes": 2,
       "purpose": "Reference, not teaching. Flip two or three live.",
       "facilitate": [
-        "Flip 'hallucination' and 'token' as a callback; leave the rest for self-paced review."
+        "Skip live, or flip 'hallucination' as a 20-second callback. This is reference for later, not teaching."
       ],
       "validate": "None — reference material.",
       "watchFor": ""
     },
     {
-      "id": "s-watch",
-      "title": "Watch list",
-      "minutes": 2,
-      "purpose": "Route continued learning; anchor Jules White as the next step.",
-      "facilitate": [
-        "Point at the featured card: 'Free to audit, taught by Vanderbilt faculty, and it goes ten times deeper on today's Section 06.'",
-        "Assign one video as homework if this is a series."
-      ],
-      "validate": "Ask who's enrolling / watching what — commitments made aloud stick.",
-      "watchFor": ""
-    },
-    {
       "id": "s-close",
       "title": "Closing",
-      "minutes": 1,
-      "purpose": "Land the plane: hype fades when you see the machinery; keep a human in the loop.",
+      "minutes": 3,
+      "purpose": "Land the plane with ONE committed next step: Jules White's course, enrolled before they leave the page.",
       "facilitate": [
+        "Point at the featured card: 'Free to audit, taught by Vanderbilt faculty, ten times deeper on today's Section 06.'",
+        "Ask people to open it and enroll now if they mean it. Watching them do it beats hoping they will.",
         "Close with one ask: 'Tell me one thing you'll do differently this week.' Take three answers and end."
       ],
-      "validate": "Verbal commitments = the session's transfer evidence.",
+      "validate": "Show of hands: who enrolled or bookmarked? Plus the three spoken commitments.",
       "watchFor": ""
     }
   ]

@@ -24,7 +24,7 @@ sync whenever slides change.
 | 02 | How machines learn | 7 | **ML trainer game** (4 scenarios) + group dataset match | Trainer score 3/4+ |
 | 03 | Neural networks | 5 | **Run-the-network** + vendor-question discussion | Inline check (weights) |
 | 04 | Language models | 6 | **Token predictor** + solo trust/check note | Volunteers share; recap Q2 |
-| 05 | Temperature | 4 | **Slider** + same-question-twice experiment | Inline check (low temp) |
+| 05 | Temperature | 4 | **Slider** + place-the-slider + steering words | Inline check (low temp) |
 | 06 | Prompting | 8 | **Anatomy highlighter** + real-email prompt practice | Peer screen-swap; recap Q5 |
 | — | **Prompt Lab** | 7 | **Simulator: build a prompt, run it, graded outcome /12 + coaching** | 11+/12 within two runs |
 | 07 | Strengths & limits | 6 | Group risk-ranking (uses Section 04 notes) | Inline check + task/check/owner stated |
@@ -32,7 +32,7 @@ sync whenever slides change.
 | — | **Your toolkit** | 6 | Amplify/Copilot/ChatGPT routing + 🟢🟡🔴 data levels | Inline check + table cold-calls |
 | 09 | Wellbeing | 5 | Private self-check (never shared) | Recap wellbeing question only |
 | — | Recap quiz | 4 | **Scored 6-question quiz** | 5/6 room-wide = pass signal |
-| — | Glossary / Watch / Close | 5 | Flip cards; homework commitment | Verbal commitments |
+| — | Glossary / Close | 4 | Flip cards (reference); ONE next step: enroll in Jules White | Enrollment hands + spoken commitments |
 
 ## Validation model
 

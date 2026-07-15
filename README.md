@@ -1,7 +1,7 @@
 # AI Basics — A Classroom Introduction
 
 An interactive, single-page teaching site that introduces the fundamentals of
-artificial intelligence to **Vanderbilt managers and staff**. Built as a
+artificial intelligence to **Vanderbilt staff**. Built as a
 **facilitation tool**: project it in class while learners scan a QR code to
 follow along on their own devices, or share the link for self-paced review.
 
@@ -42,9 +42,10 @@ Google Fonts load cleanly.
    expander underneath holding the content layer: practical workplace framing
    plus a labeled, timed activity — **As a group** (discussion with clear
    steps) or **On your own** (individual practice/reflection).
-4. Scored recap quiz, flip-card glossary, then **"Press play"** — curated
-   videos to watch in class or after (featuring Vanderbilt's Dr. Jules White's
-   Coursera course on prompt engineering, 3Blue1Brown, CGP Grey, Karpathy).
+4. Scored recap quiz, flip-card glossary (reference), then a closing with ONE
+   next step: Dr. Jules White's Coursera course, featured as the single
+   call to action. Teaching videos are embedded in-flow (Sections 02 and 04);
+   deeper links live inside the relevant "Go deeper" panels.
 
 ## Presenting in class
 
