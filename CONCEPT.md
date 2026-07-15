@@ -1,29 +1,35 @@
-# All Hands on Deck
-### Classroom training where the deck is live and everyone's hands are on it
+# Learning on Demand
 
-The slide deck is dead. In its place: one live, interactive website. The
-facilitator projects it like a deck. Learners scan a QR code and the same
-experience opens on their phones and laptops. Now nobody watches the class.
-Everybody plays it: simulators, labs, checks, and a capstone plan they build
-and keep. The link from class is also the takeaway, so the material never
-gets lost in a drive.
+## What it is, in plain terms
 
-Every program builds two synchronized editions from one source:
+A class is a website instead of a slide deck.
 
-- **The learner edition** is the class. One idea per screen, something to do
-  on every one of them, in person, virtual, or self-paced off the same URL.
-- **The facilitator edition** is the same deck with a scripted rail beside
-  every slide (say this, do this, ask this, expect these answers) built on
-  the ATD facilitator-guide framework. Any Navigator can pull it from the
-  library and deliver it cold.
+The teacher puts it on the big screen. Learners scan a QR code and open the
+same thing on their phone or laptop. When there's an activity, they do it
+right there on their device: try the simulators, answer the quiz questions,
+build their own plan. They leave class with the link, so the material stays
+with them.
 
-Because both editions come from one source, the guide can never drift from
-the course. Measurement is built in (checks, scored recap, capstone, and a
-two-week follow-up). And since a program is just web files, no LMS, no
-licenses, nothing to install, AI-assisted authoring means the library grows
-on demand: full programs with matching facilitator guides in days, not
-quarters.
+Every class also comes in a teacher's version: the same screens with notes
+down the side saying what to say, what to do, what to ask, and how long each
+part takes. Anyone on the team can pick up a course and teach it, even one
+they've never seen before.
 
-**Pilot:** AI Basics, Vanderbilt Learning Series.
-Learner: https://me5231979.github.io/AI_Classroom/ ·
-Facilitator: https://me5231979.github.io/AI_Classroom/facilitator/
+There's nothing to install and no software to buy. A course is just a link.
+That means we can build new courses quickly and keep a library of them, ready
+to teach in person or over Zoom, whenever a team needs one.
+
+## Why it's better than slides
+
+- People do things during class instead of just listening.
+- The handout, the deck, and the teacher's guide are one thing, so nothing
+  goes out of date.
+- Quizzes and a final plan are built in, so we can tell whether it worked.
+- Any trained facilitator can deliver any course in the library.
+
+## See it
+
+The first course is **AI Basics** for Vanderbilt staff.
+
+- Class version: https://me5231979.github.io/AI_Classroom/
+- Teacher version: https://me5231979.github.io/AI_Classroom/facilitator/
