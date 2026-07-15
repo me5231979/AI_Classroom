@@ -385,6 +385,73 @@
     });
   });
 
+  /* ---------- INTERACTIVE: ML trainer (Section 02 play) ---------- */
+  var trainer = $('#mlTrainer');
+  if (trainer) {
+    var TRAINER = [
+      { q: 'Sort incoming HR emails into “benefits,” “payroll,” or “leave” — trained on thousands of past emails that staff already tagged.',
+        answer: 0, why: 'Labeled examples in, labels predicted out — that’s supervised learning.' },
+      { q: 'Take 2,000 open-ended survey comments and group them into themes nobody defined in advance.',
+        answer: 1, why: 'No labels, just structure discovered in raw data — unsupervised learning.' },
+      { q: 'A building-energy program tries settings, gets rewarded when energy drops and comfort complaints stay low, and improves over thousands of tries.',
+        answer: 2, why: 'Act, get rewarded or penalized, improve — reinforcement learning.' },
+      { q: 'Predict which admitted students will enroll, trained on ten years of records marked “enrolled” or “didn’t.”',
+        answer: 0, why: 'Historical outcomes are the labels — supervised learning again. Most workplace ML is.' }
+    ];
+    var LABELS = ['Supervised', 'Unsupervised', 'Reinforcement'];
+    var tIdx = 0, tScore = 0, tLocked = false;
+    var tQ = $('#trainQ'), tOpt = $('#trainOptions'), tFb = $('#trainFeedback'),
+        tProg = $('#trainProgress'), tNext = $('#trainNext'), tRes = $('#trainResult');
+    function tRender() {
+      tLocked = false;
+      var S = TRAINER[tIdx];
+      tProg.textContent = 'Scenario ' + (tIdx + 1) + ' of ' + TRAINER.length;
+      tQ.textContent = S.q;
+      tFb.textContent = '';
+      tNext.style.visibility = 'hidden';
+      tNext.textContent = tIdx === TRAINER.length - 1 ? 'See result' : 'Next scenario';
+      tOpt.innerHTML = '';
+      LABELS.forEach(function (label, i) {
+        var b = document.createElement('button');
+        b.className = 'opt';
+        b.innerHTML = '<span class="mark">' + String.fromCharCode(65 + i) + '</span><span>' + label + ' learning</span>';
+        b.addEventListener('click', function () {
+          if (tLocked) return; tLocked = true;
+          var right = i === S.answer;
+          if (right) tScore++;
+          $$('.opt', tOpt).forEach(function (o, oi) {
+            o.setAttribute('disabled', 'true');
+            if (oi === S.answer) o.classList.add('correct');
+          });
+          if (!right) b.classList.add('wrong');
+          tFb.textContent = (right ? '✓ ' : '✗ ') + S.why;
+          tFb.style.color = right ? 'var(--vu-gold-flat)' : '#c76b5a';
+          tNext.style.visibility = 'visible';
+        });
+        tOpt.appendChild(b);
+      });
+    }
+    tNext.addEventListener('click', function () {
+      tIdx++;
+      if (tIdx >= TRAINER.length) {
+        $('#mlTrainer .quiz__nav').style.display = 'none';
+        tQ.textContent = ''; tOpt.innerHTML = ''; tProg.textContent = ''; tFb.textContent = '';
+        tRes.hidden = false;
+        tRes.innerHTML = '<div class="quiz__score gold-text">' + tScore + ' / ' + TRAINER.length + '</div>' +
+          '<p style="margin-top:.75rem;color:rgba(255,255,255,.85)">' +
+          (tScore >= 3 ? 'You think like an ML engineer — you matched the training method to the data available.'
+                       : 'Close — the tell is the data: labels → supervised, no labels → unsupervised, rewards → reinforcement.') +
+          '</p><button class="btn btn--ghost" id="trainRetry" style="margin-top:1rem">Run it again</button>';
+        $('#trainRetry').addEventListener('click', function () {
+          tIdx = 0; tScore = 0; tRes.hidden = true;
+          $('#mlTrainer .quiz__nav').style.display = '';
+          tRender();
+        });
+      } else tRender();
+    });
+    tRender();
+  }
+
   /* ---------- INTERACTIVE: scored recap quiz ---------- */
   var recap = $('#recap');
   if (recap) {

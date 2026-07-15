@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "program": "AI Basics — Vanderbilt Manager Learning Series",
+    "totalMinutes": 50,
+    "audience": "Vanderbilt managers and staff, no technical prerequisites",
+    "roomSetup": "Projector + presenter device; learners on their own devices via the Welcome-slide QR; tables of 3-6 for group activities.",
+    "futureUse": "The facilitator version of the site will mirror the learner deck with these notes rendered in a rail to the right of each slide. Keys map to slide section ids."
+  },
+  "sections": [
+    {
+      "id": "s-welcome",
+      "title": "Welcome / QR",
+      "minutes": 3,
+      "purpose": "Get every learner into the experience on their own device before you start.",
+      "facilitate": [
+        "Have this slide projected as people arrive.",
+        "Say: 'Scan the code — everything we do today is hands-on, and this puts the controls in your hands.'",
+        "Confirm by show of hands that most of the room has the site open before advancing."
+      ],
+      "validate": "80%+ of the room has the deck open on a device.",
+      "watchFor": "Anyone without a device — pair them with a neighbor now so the later solo activities still work."
+    },
+    {
+      "id": "s-hero",
+      "title": "Objectives",
+      "minutes": 2,
+      "purpose": "Set the contract: four objectives, no code, no math.",
+      "facilitate": [
+        "Read the four objectives aloud — they are the assessment map for the recap quiz.",
+        "Say: 'If any of these is the one you came for, tell me at the break and I'll go deeper there.'"
+      ],
+      "validate": "Objectives acknowledged; note which one the room cares most about.",
+      "watchFor": "Anxiety about being 'behind' on AI — name it: this session assumes zero background."
+    },
+    {
+      "id": "s-agenda",
+      "title": "The plan",
+      "minutes": 1,
+      "purpose": "Orient: nine ideas in order, ending with wellbeing — not just capability.",
+      "facilitate": ["Point out 09: 'We end with what AI does to your workload, not just what it can do.'"],
+      "validate": "None needed.",
+      "watchFor": ""
+    },
+    {
+      "id": "s-what",
+      "title": "01 · What AI is (rings simulator)",
+      "minutes": 6,
+      "purpose": "Replace the fuzzy word 'AI' with a four-layer mental model.",
+      "facilitate": [
+        "Tap each ring outward-in on the projector; learners follow on their devices.",
+        "Run the AS A GROUP activity (5 min): teams list daily tools, sort them into layers, report their top three.",
+        "Debrief one table's list; correct any tool mis-sorted with curiosity, not correction."
+      ],
+      "validate": "Inline quick check on the slide (generative-AI ring question) — watch the room's first-click accuracy; re-teach if wrong answers dominate.",
+      "watchFor": "People equating AI with only ChatGPT — the rings exist to break exactly that."
+    },
+    {
+      "id": "s-learn",
+      "title": "02 · How machines learn (ML trainer game)",
+      "minutes": 7,
+      "purpose": "The three training paradigms, anchored to workplace data.",
+      "facilitate": [
+        "Walk the three cards, then say: 'Now you be the ML engineer.'",
+        "Run the PLAY widget (4 scenarios) together on the projector — vote by hands for each scenario before revealing.",
+        "Run the AS A GROUP activity: teams pick a dataset their unit already produces and match a learning type to it."
+      ],
+      "validate": "ML trainer score visible per learner (3/4+ = got it); group share-out names a plausible dataset + type pairing.",
+      "watchFor": "The supervised/unsupervised distinction is the common stumble — the tell is 'were there labels?'"
+    },
+    {
+      "id": "s-nn",
+      "title": "03 · Neural networks (run-the-network)",
+      "minutes": 5,
+      "purpose": "Demystify 'the black box': learning = weight adjustment, which is why explainability is hard.",
+      "facilitate": [
+        "Press Run on the projector; narrate each layer as it lights.",
+        "Run the AS A GROUP discussion on explainability (vendor question).",
+        "Collect one vendor question per table — these are gold for your AI-procurement conversations."
+      ],
+      "validate": "Inline quick check (what changes during training) + each table produces a vendor question.",
+      "watchFor": "Don't let the math-curious drag the room into gradient descent — park it to the Watch list (3Blue1Brown series)."
+    },
+    {
+      "id": "s-llm",
+      "title": "04 · Language models (token predictor)",
+      "minutes": 6,
+      "purpose": "One idea: it predicts the next word. Everything else follows.",
+      "facilitate": [
+        "Build the sentence live on the projector — pick the low-probability word once ('banana') for the laugh and the lesson.",
+        "Run the ON YOUR OWN activity: each person writes their tempted-to-trust task and its 30-second check. Tell them to keep the note for Section 07."
+      ],
+      "validate": "Ask 2-3 volunteers to read their task + check aloud; recap-quiz question 2 covers the concept.",
+      "watchFor": "'So it's just autocomplete?' — yes, and: scale makes prediction surprisingly capable. Both halves are true."
+    },
+    {
+      "id": "s-temp",
+      "title": "05 · Temperature (slider)",
+      "minutes": 4,
+      "purpose": "Why identical prompts give different answers — and how to steer it with words.",
+      "facilitate": [
+        "Drag the slider live from Precise to Creative; read both extremes aloud.",
+        "Run the ON YOUR OWN activity: same question twice in their real AI tool, compare."
+      ],
+      "validate": "Inline quick check (policy summary = low temperature); volunteers describe what differed between their two answers.",
+      "watchFor": "Clarify most tools hide the dial — the words 'standard answer' vs 'ten wild options' ARE the dial."
+    },
+    {
+      "id": "s-prompt",
+      "title": "06 · Prompting (anatomy + Persona Pattern)",
+      "minutes": 8,
+      "purpose": "The four-part prompt; credit Vanderbilt's Dr. Jules White for the Persona Pattern.",
+      "facilitate": [
+        "Hover each part of the example prompt on the projector.",
+        "Name-drop deliberately: 'The role line is the Persona Pattern — invented and taught by our own Dr. Jules White. His course is on the Watch slide.'",
+        "Run the ON YOUR OWN activity (5 min): a real email, four parts, two refinements. Neighbor screen-swap if time allows."
+      ],
+      "validate": "Screen-swap peer review; ask for one 'move I'm stealing' from the room. Recap questions 5 covers structure.",
+      "watchFor": "Perfectionists writing one giant prompt — push iteration: 'correct it like you'd coach a new hire.'"
+    },
+    {
+      "id": "s-limits",
+      "title": "07 · Strengths & limits (hallucination)",
+      "minutes": 6,
+      "purpose": "Calibrated trust: brilliant drafter, unreliable librarian.",
+      "facilitate": [
+        "Walk both columns; define hallucination with the key-term card.",
+        "Run the inline check (policy citation) together.",
+        "Run the AS A GROUP activity: tables surface their Section-04 notes, pick the highest-stakes one, assign the check and an owner."
+      ],
+      "validate": "Inline check + each table states task/check/owner aloud. This is the session's core transfer moment — don't rush it.",
+      "watchFor": "Cynics ('so it's useless') and enthusiasts ('it's always right') — the answer to both is the verification habit."
+    },
+    {
+      "id": "s-ethics",
+      "title": "08 · Responsible use",
+      "minutes": 6,
+      "purpose": "Bias, privacy, accountability — as team norms, not abstractions.",
+      "facilitate": [
+        "Run the inline privacy check first — it's a safe failure that opens the conversation.",
+        "Run the AS A GROUP activity (7 min): draft the one-sentence team policy; stress-test it against the three cards.",
+        "Ask two tables to read their sentence; note convergence."
+      ],
+      "validate": "Every table produces a policy sentence and names who takes it to their team meeting.",
+      "watchFor": "Questions about specific Vanderbilt policy — point to official university AI guidance rather than improvising."
+    },
+    {
+      "id": "s-wellbeing",
+      "title": "09 · Wellbeing (keeping the time AI saves)",
+      "minutes": 5,
+      "purpose": "AI intensifies work by default; managers decide whether savings become breathing room. EAP is the safety net.",
+      "facilitate": [
+        "Present the three patterns; cite the HBR research.",
+        "Read the 'If work feels heavier, say so' card verbatim — the EAP mention matters and should be said out loud.",
+        "Run the ON YOUR OWN self-check. Say explicitly: 'This one is private. Nothing is shared.'"
+      ],
+      "validate": "Do NOT collect answers — validation here is the recap-quiz wellbeing question only. Privacy is the point.",
+      "watchFor": "This section can surface real strain. If someone discloses distress, connect them to EAP resources after the session — never process it in the room."
+    },
+    {
+      "id": "s-recap",
+      "title": "Recap quiz",
+      "minutes": 4,
+      "purpose": "Validate the four objectives with six scored questions.",
+      "facilitate": [
+        "Everyone takes it on their own device; you take it on the projector last.",
+        "Ask for a show of hands: 5+ correct. Revisit the most-missed question live."
+      ],
+      "validate": "Quiz score = the session's learning evidence. 5/6 room-wide is the pass signal; below that, reteach the weakest section using its simulator.",
+      "watchFor": "Keep it light — this validates the teaching, not the learner."
+    },
+    {
+      "id": "s-glossary",
+      "title": "Glossary",
+      "minutes": 2,
+      "purpose": "Reference, not teaching. Flip two or three live.",
+      "facilitate": ["Flip 'hallucination' and 'token' as a callback; leave the rest for self-paced review."],
+      "validate": "None — reference material.",
+      "watchFor": ""
+    },
+    {
+      "id": "s-watch",
+      "title": "Watch list",
+      "minutes": 2,
+      "purpose": "Route continued learning; anchor Jules White as the next step.",
+      "facilitate": [
+        "Point at the featured card: 'Free to audit, taught by Vanderbilt faculty, and it goes ten times deeper on today's Section 06.'",
+        "Assign one video as homework if this is a series."
+      ],
+      "validate": "Ask who's enrolling / watching what — commitments made aloud stick.",
+      "watchFor": ""
+    },
+    {
+      "id": "s-close",
+      "title": "Closing",
+      "minutes": 1,
+      "purpose": "Land the plane: hype fades when you see the machinery; keep a human in the loop.",
+      "facilitate": ["Close with one ask: 'Tell me one thing you'll do differently this week.' Take three answers and end."],
+      "validate": "Verbal commitments = the session's transfer evidence.",
+      "watchFor": ""
+    }
+  ]
+}

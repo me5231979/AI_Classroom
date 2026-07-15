@@ -151,6 +151,16 @@
         </div>
       </div>
 
+      
+      <div class="quiz" data-quiz data-reveal style="margin-top:2rem">
+        <p class="quiz__q">Quick check: A tool that writes a fresh, original paragraph on demand belongs in which ring?</p>
+        <div class="quiz__options">
+          <button class="opt" data-correct="1" data-why="Creating new content is the generative layer, which runs on deep learning, inside ML, inside AI."><span class="mark">A</span><span>Generative AI — the innermost ring</span></button>
+          <button class="opt" data-correct="0" data-why="Rules can only replay what a person wrote. Producing new text requires the generative core."><span class="mark">B</span><span>Rule-based AI — the outermost ring</span></button>
+          <button class="opt" data-correct="0" data-why="Generating original language is the signature capability of modern generative AI."><span class="mark">C</span><span>It isn’t AI at all</span></button>
+        </div>
+        <p class="quiz__feedback" aria-live="polite"></p>
+      </div>
       <details class="deeper" data-reveal>
         <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
         <div class="deeper__body">
@@ -214,6 +224,18 @@
         </svg>
       </div>
 
+      <div class="quiz" id="mlTrainer" data-reveal style="margin-top:2.5rem">
+        <p class="eyebrow" style="margin-bottom:.5rem">Play · You be the ML engineer</p>
+        <p class="quiz__progress" id="trainProgress"></p>
+        <p class="quiz__q" id="trainQ" style="margin-top:.4rem"></p>
+        <div class="quiz__options" id="trainOptions" role="group" aria-label="Learning type choices"></div>
+        <p class="quiz__feedback" id="trainFeedback" aria-live="polite"></p>
+        <div class="quiz__nav">
+          <button class="btn" id="trainNext" style="visibility:hidden">Next scenario</button>
+        </div>
+        <div id="trainResult" hidden aria-live="polite"></div>
+      </div>
+
       <details class="deeper" data-reveal>
         <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
         <div class="deeper__body">
@@ -248,6 +270,16 @@
         </div>
       </div>
 
+      
+      <div class="quiz" data-quiz data-reveal style="margin-top:2rem">
+        <p class="quiz__q">Quick check: During training, what actually changes inside the network?</p>
+        <div class="quiz__options">
+          <button class="opt" data-correct="1" data-why="Learning is millions of small adjustments to connection weights until predictions stop being wrong."><span class="mark">A</span><span>The weights on the connections</span></button>
+          <button class="opt" data-correct="0" data-why="The data stays fixed during a training pass — it’s the weights that move."><span class="mark">B</span><span>The training data</span></button>
+          <button class="opt" data-correct="0" data-why="The architecture is chosen up front; training tunes the weights inside it."><span class="mark">C</span><span>The number of layers</span></button>
+        </div>
+        <p class="quiz__feedback" aria-live="polite"></p>
+      </div>
       <details class="deeper" data-reveal>
         <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
         <div class="deeper__body">
@@ -314,6 +346,16 @@
         </div>
       </div>
 
+      
+      <div class="quiz" data-quiz data-reveal style="margin-top:2rem">
+        <p class="quiz__q">Quick check: Your team needs the exact same policy summary every time it’s generated. Which setting?</p>
+        <div class="quiz__options">
+          <button class="opt" data-correct="1" data-why="Repeatable, precise tasks want low randomness — the safest next word every time."><span class="mark">A</span><span>Low temperature</span></button>
+          <button class="opt" data-correct="0" data-why="High temperature invites variety — great for brainstorming, wrong for consistency."><span class="mark">B</span><span>High temperature</span></button>
+          <button class="opt" data-correct="0" data-why="Temperature is exactly the dial that controls answer-to-answer variation."><span class="mark">C</span><span>Temperature doesn’t affect this</span></button>
+        </div>
+        <p class="quiz__feedback" aria-live="polite"></p>
+      </div>
       <details class="deeper" data-reveal>
         <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
         <div class="deeper__body">

@@ -177,7 +177,7 @@ em, .italic { font-style: italic; }
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(207,174,112,.2);
 }
-.nav__brand { display: flex; align-items: center; gap: .6rem; color: var(--vu-white); flex-shrink: 0; }
+.nav__brand { display: flex; align-items: center; gap: 1.1rem; color: var(--vu-white); flex-shrink: 0; padding-left: .35rem; }
 .nav__brand svg { width: 34px; height: 34px; }
 .nav__brand b { font-family: var(--font-serif); font-weight: 400; font-size: 1.15rem; letter-spacing: .01em; }
 .nav__brand span { font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase;
