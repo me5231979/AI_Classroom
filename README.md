@@ -47,6 +47,19 @@ Google Fonts load cleanly.
    call to action. Teaching videos are embedded in-flow (Sections 02 and 04);
    deeper links live inside the relevant "Go deeper" panels.
 
+## The facilitator edition
+
+A second build lives at **/facilitator/** — the same experience with a
+facilitator-notes rail on the right of every slide (purpose, Full/Core
+timing, step-by-step choreography, validation, watch-fors, and the 60-minute
+cut). Its welcome-slide QR encodes the **learner** URL, so projecting the
+facilitator edition lets the room scan straight into the clean learner site.
+Regenerate after editing `index.html` or `facilitator/notes.json`:
+
+```bash
+python3 tools/build-facilitator.py
+```
+
 ## Presenting in class
 
 The page is a scrollable site **and** a keyboard-driven deck.
