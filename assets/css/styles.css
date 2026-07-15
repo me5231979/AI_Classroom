@@ -597,6 +597,25 @@ em, .italic { font-style: italic; }
 .dl--yellow { background: rgba(236,183,72,.14); border: 1px solid var(--vu-highlight); }
 .dl--red    { background: rgba(199,107,90,.12); border: 1px solid #c76b5a; }
 
+/* ---------- 16e. My AI Plan capstone ---------- */
+.plan { margin-top: 1.75rem; }
+.plan__form { display: grid; gap: 1.4rem; max-width: 860px; }
+.plan__field label, .plan__label { display: block; font-size: 1.02rem; margin-bottom: .6rem; }
+.plan__field input[type="text"] {
+  width: 100%; font-family: var(--font-sans); font-size: 1.05rem; color: var(--vu-black);
+  background: var(--vu-white); border: 1px solid var(--vu-gray-light); border-radius: var(--radius);
+  padding: .85rem 1rem;
+}
+.plan__field input[type="text"]:focus { outline: 3px solid var(--vu-highlight); outline-offset: 1px; border-color: var(--vu-gold-flat); }
+.plan__chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+.plan__chips .opt { width: auto; grid-template-columns: 1fr; padding: .7rem 1rem; font-size: .95rem; }
+.plan__chips .opt[aria-pressed="true"] { border-color: var(--vu-gold-flat); background: rgba(207,174,112,.16); }
+.plan__out-grid { display: grid; gap: .9rem; margin-top: 1rem; }
+.plan__out-grid .row { display: grid; grid-template-columns: 130px 1fr; gap: 1rem; font-size: .98rem; color: rgba(255,255,255,.85); }
+.plan__out-grid .row b { color: var(--vu-gold-flat); font-family: var(--font-condensed); text-transform: uppercase; letter-spacing: .05em; font-weight: 700; font-size: .8rem; padding-top: 2px; }
+.plan__prompt { font-family: var(--font-serif); font-size: 1.05rem; line-height: 1.55; border-left: 2px solid var(--vu-gold-flat); padding-left: 1rem; margin: .5rem 0; color: rgba(255,255,255,.92); white-space: pre-line; }
+@media (max-width: 640px) { .plan__out-grid .row { grid-template-columns: 1fr; gap: .15rem; } }
+
 /* ---------- 17. Reveal animation ---------- */
 [data-reveal] { opacity: 0; transform: translateY(24px); }
 [data-reveal].in { opacity: 1; transform: none; transition: opacity .5s var(--ease), transform .5s var(--ease); }

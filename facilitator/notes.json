@@ -202,6 +202,22 @@
       "watchFor": "Keep it light — this validates the teaching, not the learner."
     },
     {
+      "id": "s-plan",
+      "title": "My AI plan (capstone builder)",
+      "minutes": 7,
+      "purpose": "Convert the whole session into one personal, committed plan: real task, right tool by data level, starter prompt, verification check, and where the saved hour goes.",
+      "facilitate": [
+        "Frame it: 'Everything today was practice. This is the real thing: one task, one tool, one plan.'",
+        "Build one on the projector with a volunteer's task so the room sees the flow (60 seconds).",
+        "Everyone builds their own, on their own, ~4 min. Remind them nothing is saved or sent; it lives on their screen.",
+        "Have them hit Copy and paste the plan somewhere they will see Monday: notes app, email to self, Teams.",
+        "Pairs: read your first line to your neighbor. 90 seconds.",
+        "If someone picks a red-level task, that is a win, not a failure: the plan tells them to stop. Praise it out loud."
+      ],
+      "validate": "Scan the room for plan cards on screens; show of hands for 'copied and pasted it somewhere real.' The plan IS the session's performance assessment.",
+      "watchFor": "Vague tasks ('email') produce vague plans. Push for one specific recurring artifact: 'the Thursday status note to my director.'"
+    },
+    {
       "id": "s-glossary",
       "title": "Glossary",
       "minutes": 2,

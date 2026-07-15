@@ -55,7 +55,7 @@
 <div class="dots" id="dots" role="navigation" aria-label="Slide navigation"></div>
 <div class="deckbar" role="group" aria-label="Presentation controls">
   <button id="deckPrev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
-  <span class="deckbar__count" id="deckCount">1 / 18</span>
+  <span class="deckbar__count" id="deckCount">1 / 19</span>
   <button id="deckNext" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
 </div>
 
@@ -675,6 +675,55 @@
     </div>
   </section>
 
+  <!-- ============ 12b · MY AI PLAN (capstone) ============ -->
+  <section class="slide on-cream" id="s-plan" data-title="My AI plan">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Capstone · My AI plan</p>
+      <h2 class="h2" data-reveal>Now make it <em>yours</em>.</h2>
+      <p class="lead" data-reveal>You know how it works. Build a one-week plan to put AI on one real task of your own, using everything from today.</p>
+      <p class="why" data-reveal><b>Why this matters:</b> a plan written in the room is ten times more likely to happen than a good intention carried out the door. Nothing you type here is saved or sent anywhere; it lives only on your screen.</p>
+
+      <div class="plan" id="aiPlan" data-reveal>
+        <div class="plan__form">
+          <div class="plan__field">
+            <label for="planTask"><b>1 · The task.</b> One thing you do every week that eats time:</label>
+            <input type="text" id="planTask" maxlength="120" placeholder="e.g. writing the weekly status summary for my director" autocomplete="off">
+          </div>
+          <div class="plan__field">
+            <span class="plan__label"><b>2 · What kind of work is it?</b></span>
+            <div class="plan__chips" id="planKind" role="group" aria-label="Task type">
+              <button class="opt" data-kind="draft"><span>Drafting or summarizing</span></button>
+              <button class="opt" data-kind="organize"><span>Organizing or analyzing</span></button>
+              <button class="opt" data-kind="replies"><span>Routine replies</span></button>
+              <button class="opt" data-kind="ideas"><span>Brainstorming or planning</span></button>
+            </div>
+          </div>
+          <div class="plan__field">
+            <span class="plan__label"><b>3 · What data does it touch?</b> Be honest; this decides the tool.</span>
+            <div class="plan__chips" id="planData" role="group" aria-label="Data level">
+              <button class="opt" data-level="green"><span>🟢 Public or generic</span></button>
+              <button class="opt" data-level="yellow"><span>🟡 Internal university content</span></button>
+              <button class="opt" data-level="red"><span>🔴 Sensitive (FERPA, HIPAA, personnel, donors)</span></button>
+            </div>
+          </div>
+          <div class="plan__field">
+            <span class="plan__label"><b>4 · The hour it saves goes to…</b></span>
+            <div class="plan__chips" id="planBank" role="group" aria-label="Where savings go">
+              <button class="opt" data-bank="deep"><span>Deeper, harder work</span></button>
+              <button class="opt" data-bank="breathe"><span>Breathing room</span></button>
+              <button class="opt" data-bank="learn"><span>Learning time</span></button>
+            </div>
+          </div>
+          <div class="lab__runrow">
+            <button class="btn btn--dark" id="planBuild" disabled>Build my plan</button>
+            <span class="quiz__progress" id="planStatus">Fill in all four parts</span>
+          </div>
+        </div>
+        <div class="lab__outcome" id="planOut" hidden aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ 13 · GLOSSARY ============ -->
   <section class="slide on-cream" id="s-glossary" data-title="Glossary">
     <div class="wrap wrap-wide">
@@ -709,7 +758,7 @@
         <p>Vanderbilt's own course goes ten times deeper on what you practiced today, including the Persona Pattern. Enroll before you leave this page; commitments made now actually happen.</p>
         <span class="vidcard__link">Enroll <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
       </a>
-      <p class="why" data-reveal style="margin:1.5rem auto 0;max-width:52ch;text-align:center"><b>Before you go:</b> say out loud one thing you'll do differently this week. Spoken commitments stick.</p>
+      <p class="why" data-reveal style="margin:1.5rem auto 0;max-width:52ch;text-align:center"><b>Before you go:</b> read the first line of your AI plan out loud. Spoken commitments stick.</p>
       <div class="hero__cta" data-reveal style="justify-content:center;margin-top:1.75rem">
         <a class="btn" href="#s-recap">Retake the quiz</a>
         <a class="btn btn--ghost" href="#top">Back to start</a>

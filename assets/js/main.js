@@ -538,6 +538,81 @@
     });
   }
 
+  /* ---------- INTERACTIVE: My AI Plan capstone ---------- */
+  var planEl = $('#aiPlan');
+  if (planEl) {
+    var pick = { kind: null, level: null, bank: null };
+    var taskIn = $('#planTask'), buildBtn = $('#planBuild'), statusEl2 = $('#planStatus'), outEl2 = $('#planOut');
+    function planReady() {
+      var ok = taskIn.value.trim().length >= 8 && pick.kind && pick.level && pick.bank;
+      buildBtn.disabled = !ok;
+      statusEl2.textContent = ok ? 'Ready, build it' : 'Fill in all four parts';
+      return ok;
+    }
+    taskIn.addEventListener('input', planReady);
+    [['#planKind','kind','data-kind'], ['#planData','level','data-level'], ['#planBank','bank','data-bank']].forEach(function (cfg) {
+      var group = $(cfg[0]);
+      $$('.opt', group).forEach(function (b) {
+        b.addEventListener('click', function () {
+          pick[cfg[1]] = b.getAttribute(cfg[2]);
+          $$('.opt', group).forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+          outEl2.hidden = true;
+          planReady();
+        });
+      });
+    });
+    var KIND = {
+      draft:    { role: 'an experienced writer who knows my field', task: 'draft it so I can edit rather than start from blank', fmt: 'matching the length and tone I normally use' },
+      organize: { role: 'a careful analyst', task: 'organize it and surface the three things worth my attention', fmt: 'as a short structured summary with headings' },
+      replies:  { role: 'a professional and warm correspondent', task: 'draft a reply that answers the question and closes the loop', fmt: 'in three sentences or fewer, ready to personalize' },
+      ideas:    { role: 'a sharp thinking partner', task: 'give me ten distinct options before I pick a direction', fmt: 'as a numbered list, one line each' }
+    };
+    var LEVEL = {
+      green:  { tool: 'ChatGPT, Amplify, or Copilot (green-level content works anywhere approved)', warn: '' },
+      yellow: { tool: 'Amplify, or Copilot signed in with your VU account (keep internal content inside Vanderbilt protections)', warn: '' },
+      red:    { tool: 'Stop: this task touches red-level data, which never goes in a generative AI tool.', warn: 'Plan B: strip out every name, ID, and sensitive detail first, or pick a different task for your first week.' }
+    };
+    var BANK = {
+      deep: 'the deeper work you never get to',
+      breathe: 'actual breathing room. Do not backfill it',
+      learn: 'learning time (start with the Jules White course on the closing slide)'
+    };
+    buildBtn.addEventListener('click', function () {
+      if (!planReady()) return;
+      var task = taskIn.value.trim();
+      var k = KIND[pick.kind], l = LEVEL[pick.level];
+      var prompt = 'You are ' + k.role + '. Context: [one or two lines about who this is for and what they need]. My task: ' + task + '. Please ' + k.task + ', ' + k.fmt + '.';
+      var rows = '' +
+        '<div class="row"><b>My task</b><span>' + task.replace(/</g,'&lt;') + '</span></div>' +
+        '<div class="row"><b>Tool</b><span>' + l.tool + (l.warn ? '<br><span style="color:#ECB748">' + l.warn + '</span>' : '') + '</span></div>' +
+        (pick.level !== 'red' ? '<div class="row"><b>Starter prompt</b><span class="plan__prompt">' + prompt.replace(/</g,'&lt;') + '</span></div>' : '') +
+        '<div class="row"><b>My check</b><span>Before anything ships: verify every fact, name, and number against the source. I am the editor; nothing goes out unread.</span></div>' +
+        '<div class="row"><b>Saved time</b><span>The first hour this saves goes to ' + BANK[pick.bank] + '.</span></div>' +
+        '<div class="row"><b>First rep</b><span>I will try this once within the next two workdays.</span></div>';
+      outEl2.innerHTML = '<span class="tag">My AI plan · this week</span>' +
+        '<div class="plan__out-grid">' + rows + '</div>' +
+        '<div class="lab__runrow" style="margin-top:1.25rem">' +
+        '<button class="btn" id="planCopy">Copy my plan</button>' +
+        '<span class="quiz__progress" id="planCopied" style="color:rgba(255,255,255,.6)">Paste it somewhere you will see on Monday</span></div>';
+      outEl2.hidden = false;
+      $('#planCopy').addEventListener('click', function () {
+        var text = 'MY AI PLAN (AI Basics, Vanderbilt)\n' +
+          'Task: ' + task + '\n' +
+          'Tool: ' + l.tool + (l.warn ? ' ' + l.warn : '') + '\n' +
+          (pick.level !== 'red' ? 'Starter prompt: ' + prompt + '\n' : '') +
+          'My check: verify every fact, name, and number before anything ships.\n' +
+          'Saved time goes to: ' + BANK[pick.bank] + '.\n' +
+          'First rep: within two workdays.';
+        (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function () {
+          $('#planCopied').textContent = 'Copied. Paste it into notes, email, or Teams now.';
+        }, function () {
+          $('#planCopied').textContent = 'Select the plan text above and copy it manually.';
+        });
+      });
+      outEl2.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+    });
+  }
+
   /* ---------- INTERACTIVE: scored recap quiz ---------- */
   var recap = $('#recap');
   if (recap) {

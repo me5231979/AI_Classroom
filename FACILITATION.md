@@ -32,6 +32,7 @@ sync whenever slides change.
 | — | **Your toolkit** | 6 | Amplify/Copilot/ChatGPT routing + 🟢🟡🔴 data levels | Inline check + table cold-calls |
 | 09 | Wellbeing | 5 | Private self-check (never shared) | Recap wellbeing question only |
 | — | Recap quiz | 4 | **Scored 6-question quiz** | 5/6 room-wide = pass signal |
+| — | **My AI plan** | 7 | **Capstone builder: task + tool routing + starter prompt + check + time bank** | Plan copied somewhere real; first line read aloud |
 | — | Glossary / Close | 4 | Flip cards (reference); ONE next step: enroll in Jules White | Enrollment hands + spoken commitments |
 
 ## Validation model
