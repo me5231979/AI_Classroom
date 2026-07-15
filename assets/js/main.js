@@ -115,25 +115,34 @@
     }
   }
 
-  /* ---------- Hero video background with graceful fallback ---------- */
+  /* ---------- Hero video: 3-clip montage with graceful fallback ---------- */
   var heroVideo = $('#heroVideo');
   if (heroVideo) {
     var killVideo = function () { if (heroVideo) { heroVideo.remove(); heroVideo = null; } };
     if (reduce) {
-      killVideo(); // reduced motion: static/canvas-off treatment
+      killVideo(); // reduced motion: canvas-off treatment
     } else {
-      // the <video> falls through its <source> list on its own; only give up
-      // when the LAST source has failed (NETWORK_NO_SOURCE = 3)
-      var sources = heroVideo.querySelectorAll('source');
-      var last = sources[sources.length - 1];
-      if (last) last.addEventListener('error', killVideo);
-      // slow-network guard: if nothing has loaded after a while and the
-      // element reports no usable source, fall back silently
-      setTimeout(function () {
-        if (heroVideo && heroVideo.readyState === 0 && heroVideo.networkState === 3) killVideo();
-      }, 8000);
-      var p = heroVideo.play && heroVideo.play();
-      if (p && p.catch) p.catch(function () { /* autoplay blocked: canvas remains */ });
+      var playlist = [];
+      try { playlist = JSON.parse(heroVideo.getAttribute('data-playlist') || '[]'); } catch (e) {}
+      if (!playlist.length) {
+        killVideo();
+      } else {
+        var clip = 0, failures = 0;
+        function playClip(i) {
+          if (!heroVideo) return;
+          clip = ((i % playlist.length) + playlist.length) % playlist.length;
+          heroVideo.src = playlist[clip];
+          var p = heroVideo.play && heroVideo.play();
+          if (p && p.catch) p.catch(function () { /* autoplay blocked; canvas remains */ });
+        }
+        heroVideo.addEventListener('ended', function () { failures = 0; playClip(clip + 1); });
+        heroVideo.addEventListener('error', function () {
+          failures++;
+          if (failures >= playlist.length) { killVideo(); }   // every clip failed
+          else { playClip(clip + 1); }                         // skip the bad clip
+        });
+        playClip(0);
+      }
     }
   }
 
@@ -394,7 +403,10 @@
         correct: 1, why: 'Models can state false information fluently and confidently.' },
       { q: 'The most reliable way to improve an AI’s answer is to…',
         opts: ['Ask louder', 'Give clear context, task, and desired format', 'Use more emojis', 'Repeat the same prompt'],
-        correct: 1, why: 'Structured prompts (role, context, task, format) drive better results.' }
+        correct: 1, why: 'Structured prompts (role, context, task, format) drive better results.' },
+      { q: 'Research on AI at work finds that the time it saves most often…',
+        opts: ['Becomes guaranteed free time', 'Quietly refills with more tasks and faster expectations', 'Is tracked automatically by HR', 'Has no effect on workload'],
+        correct: 1, why: 'Workload creep is the default. Managers keep the gains by deciding — explicitly — where saved time goes.' }
     ];
     var idx = 0, score = 0, locked = false;
     var qEl = $('#recapQ'), optEl2 = $('#recapOptions'), fbEl = $('#recapFeedback'),

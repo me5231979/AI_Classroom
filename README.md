@@ -32,14 +32,16 @@ Google Fonts load cleanly.
    deploy; to hard-code a different target, set
    `data-url="https://your-url"` on the `#qrCard` div in `index.html`.)
    When previewing from a local `file://` open, a placeholder appears instead.
-2. **Hero** — headline, four **learning objectives**, and an ambient video
-   background **generated with Higgsfield** (gold light threads on black),
-   streamed from its CDN. To self-host instead, download the mp4 from the CDN
-   URL in `index.html` and save it as `assets/video/hero-loop.mp4` — the local
-   file automatically takes priority. Duotone + scrim applied by CSS.
-3. Sections 01–08 — each is one projected **slide**, with a **"Go deeper"**
+2. **Hero** — headline, four **learning objectives**, and a **Higgsfield-generated
+   3-clip montage** (staff at AI workstations → campus walk with tablets →
+   lab wall-screen review) cycling ~15s per clip, streamed from the CDN with
+   duotone + scrim applied by CSS. Clip URLs live in the hero `<video>`'s
+   `data-playlist` attribute; a failed clip is skipped, and if all fail the
+   gold particle canvas takes over.
+3. Sections 01–09 — each is one projected **slide**, with a **"Go deeper"**
    expander underneath holding the content layer: practical workplace framing
-   plus an *Ask the room* / *Try this* facilitation prompt for discussion.
+   plus a labeled, timed activity — **As a group** (discussion with clear
+   steps) or **On your own** (individual practice/reflection).
 4. Scored recap quiz, flip-card glossary, then **"Press play"** — curated
    videos to watch in class or after (featuring Vanderbilt's Dr. Jules White's
    Coursera course on prompt engineering, 3Blue1Brown, CGP Grey, Karpathy).
@@ -87,6 +89,8 @@ All interactions are keyboard-accessible, have visible focus states, use
 6. Prompting well — the four parts of a strong prompt
 7. Strengths & limits — capabilities, failure modes, hallucination
 8. Using AI responsibly — bias, privacy, accountability at work
+9. Keeping the time AI saves — workload creep, wellbeing, EAP resources
+   (grounded in the HBR intensification research, mirroring the FLH learn site)
 
 To edit copy, open `index.html` — each `<section class="slide">` is one screen.
 Quiz questions live in `assets/js/main.js` (the `QUESTIONS` array for the recap;
