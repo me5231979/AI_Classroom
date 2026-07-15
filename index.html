@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Basics — A Classroom Introduction | Vanderbilt</title>
-<meta name="description" content="An interactive classroom introduction to the fundamentals of artificial intelligence — what AI is, how machines learn, neural networks, language models, prompting, and responsible use.">
+<title>AI Basics: A Classroom Introduction | Vanderbilt</title>
+<meta name="description" content="An interactive classroom introduction to the fundamentals of artificial intelligence: what AI is, how machines learn, neural networks, language models, prompting, and responsible use.">
 <link rel="canonical" href="https://me5231979.github.io/AI_Classroom/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="AI Basics — Vanderbilt Manager Learning Series">
+<meta property="og:title" content="AI Basics | Vanderbilt Manager Learning Series">
 <meta property="og:description" content="An interactive, hands-on introduction to AI for Vanderbilt managers: how it works, how to prompt it, and how to use it responsibly.">
 <meta property="og:url" content="https://me5231979.github.io/AI_Classroom/">
 <meta property="og:image" content="https://me5231979.github.io/AI_Classroom/assets/img/social-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AI Basics — Vanderbilt Manager Learning Series">
+<meta name="twitter:title" content="AI Basics | Vanderbilt Manager Learning Series">
 <meta name="twitter:image" content="https://me5231979.github.io/AI_Classroom/assets/img/social-card.png">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="assets/img/favicon-96.png">
@@ -23,7 +23,7 @@
 <link rel="preload" href="assets/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
-<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/styles.css?v=8">
 </head>
 <body>
 <a class="skip-link" href="#s-agenda">Skip to content</a>
@@ -33,14 +33,9 @@
 
 <!-- ===================== NAV ===================== -->
 <header class="nav" id="nav">
-  <a class="nav__brand" href="#top" aria-label="Vanderbilt University — AI Basics, home">
+  <a class="nav__brand" href="#top" aria-label="Vanderbilt University, home">
     <img class="nav__lockup" src="assets/img/vu-lockup-white.png" alt="Vanderbilt University" width="250" height="65">
-    <img class="nav__vicon" src="assets/img/vu-v-icon-nav.png" alt="Vanderbilt" width="34" height="31">
-    <span class="nav__divider" aria-hidden="true"></span>
-    <span class="nav__series">
-      <b>AI&nbsp;Basics</b>
-      <span>Manager&nbsp;Series</span>
-    </span>
+    <img class="nav__vicon" src="assets/img/vu-v-icon-nav.png" alt="Vanderbilt University" width="34" height="25">
   </a>
   <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navlinks">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -77,14 +72,14 @@
         <div class="qr-card__code" id="qrBox" role="img" aria-label="QR code linking to this experience"></div>
         <p class="qr-card__url" id="qrUrl"></p>
       </div>
-      <p class="lead" data-reveal style="margin:1.5rem auto 0;max-width:44ch">Follow along on your own device — every demo here is hands-on. Or just watch the screen; we'll drive.</p>
+      <p class="lead" data-reveal style="margin:1.5rem auto 0;max-width:44ch">Follow along on your own device. Every demo here is hands-on. Or just watch the screen; we'll drive.</p>
       <div class="hero__meta" data-reveal style="justify-content:center">
         <div><b>9</b> Core concepts</div>
         <div><b>45</b> Minutes</div>
         <div><b>0</b> Prerequisites</div>
       </div>
       <div class="hero__cta" data-reveal style="justify-content:center">
-        <a class="btn" href="#s-hero">We're ready — begin</a>
+        <a class="btn" href="#s-hero">We're ready, let's begin</a>
       </div>
     </div>
   </section>
@@ -98,14 +93,14 @@
     <div class="wrap">
       <p class="eyebrow" data-reveal>AI Basics · For Vanderbilt Managers</p>
       <h1 class="h-hero" data-reveal>Understanding AI,<br><em class="gold-text">from the ground up.</em></h1>
-      <p class="lead" data-reveal style="margin-top:1.5rem">No code. No math. A working picture of what these systems are — so you can lead teams that use them well.</p>
+      <p class="lead" data-reveal style="margin-top:1.5rem">No code. No math. A working picture of what these systems are, so you can lead teams that use them well.</p>
       <div class="objectives" data-reveal>
         <p class="objectives__label">By the end of this session, you will be able to</p>
         <ol class="objectives__list">
-          <li>Explain what AI, machine learning, and generative AI actually are — and how they differ</li>
+          <li>Explain what AI, machine learning, and generative AI actually are, and how they differ</li>
           <li>Describe how a language model produces an answer, and why answers vary</li>
           <li>Write prompts that get useful, reliable results for everyday work</li>
-          <li>Judge when to trust AI output — and apply Vanderbilt-appropriate guardrails</li>
+          <li>Judge when to trust AI output, and apply Vanderbilt-appropriate guardrails</li>
         </ol>
       </div>
       <div class="hero__cta" data-reveal>
@@ -124,7 +119,7 @@
         <li data-reveal><span class="num">01</span><div><h3>What AI actually is</h3><p>Cutting through the hype: AI, machine learning, and deep learning, defined and distinguished.</p></div></li>
         <li data-reveal><span class="num">02</span><div><h3>How machines learn</h3><p>Data, patterns, and the three fundamental ways a model is trained.</p></div></li>
         <li data-reveal><span class="num">03</span><div><h3>Inside a neural network</h3><p>The structure behind modern AI, activated one layer at a time.</p></div></li>
-        <li data-reveal><span class="num">04</span><div><h3>Language models</h3><p>How tools like ChatGPT generate text — one word at a time.</p></div></li>
+        <li data-reveal><span class="num">04</span><div><h3>Language models</h3><p>How tools like ChatGPT generate text one word at a time.</p></div></li>
         <li data-reveal><span class="num">05</span><div><h3>Steering the output</h3><p>Temperature, randomness, and why the same question gives different answers.</p></div></li>
         <li data-reveal><span class="num">06</span><div><h3>Prompting well</h3><p>The anatomy of a request that actually gets useful results.</p></div></li>
         <li data-reveal><span class="num">07</span><div><h3>Strengths &amp; limits</h3><p>What AI does well, where it breaks, and what a "hallucination" is.</p></div></li>
@@ -141,7 +136,7 @@
       <h2 class="h2" data-reveal>It isn't one thing.<br>It's <em>nested</em>.</h2>
       <p class="lead" data-reveal style="margin-bottom:2.5rem">"AI" is a family of techniques, each one a more specialized way of doing the one around it. Tap a ring to see where it fits.</p>
       <div class="venn">
-        <div class="rings" data-reveal role="group" aria-label="AI concept rings — select one">
+        <div class="rings" data-reveal role="group" aria-label="AI concept rings. Select one.">
           <div class="ring" data-ring="ai" aria-pressed="false">Artificial Intelligence</div>
           <div class="ring" data-ring="ml" aria-pressed="false">Machine Learning</div>
           <div class="ring" data-ring="dl" aria-pressed="false">Deep Learning</div>
@@ -150,7 +145,7 @@
         <div class="venn__detail card" id="ringDetail" data-reveal aria-live="polite">
           <span class="tag">Start here</span>
           <h3>Four terms, one hierarchy</h3>
-          <p>People use these words interchangeably, but they nest inside one another. Select a ring on the left to see what each layer actually means — and how generative tools like ChatGPT sit at the very center.</p>
+          <p>People use these words interchangeably, but they nest inside one another. Select a ring on the left to see what each layer actually means, and where generative tools like ChatGPT sit at the very center.</p>
         </div>
       </div>
 
@@ -158,8 +153,8 @@
       <div class="quiz" data-quiz data-reveal style="margin-top:2rem">
         <p class="quiz__q">Quick check: A tool that writes a fresh, original paragraph on demand belongs in which ring?</p>
         <div class="quiz__options">
-          <button class="opt" data-correct="1" data-why="Creating new content is the generative layer, which runs on deep learning, inside ML, inside AI."><span class="mark">A</span><span>Generative AI — the innermost ring</span></button>
-          <button class="opt" data-correct="0" data-why="Rules can only replay what a person wrote. Producing new text requires the generative core."><span class="mark">B</span><span>Rule-based AI — the outermost ring</span></button>
+          <button class="opt" data-correct="1" data-why="Creating new content is the generative layer, which runs on deep learning, inside ML, inside AI."><span class="mark">A</span><span>Generative AI, the innermost ring</span></button>
+          <button class="opt" data-correct="0" data-why="Rules can only replay what a person wrote. Producing new text requires the generative core."><span class="mark">B</span><span>Rule-based AI, the outermost ring</span></button>
           <button class="opt" data-correct="0" data-why="Generating original language is the signature capability of modern generative AI."><span class="mark">C</span><span>It isn’t AI at all</span></button>
         </div>
         <p class="quiz__feedback" aria-live="polite"></p>
@@ -167,11 +162,11 @@
       <details class="deeper" data-reveal>
         <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
         <div class="deeper__body">
-          <div><h4>In practice</h4><p>Rule-based AI runs your out-of-office replies and expense-flag thresholds. Machine learning ranks your inbox, filters spam, and forecasts demand. Deep learning transcribes your meetings and unlocks your phone. Generative AI drafts your emails. You already manage with AI every day — the new part is that it now <em>writes</em>.</p></div>
+          <div><h4>In practice</h4><p>Rule-based AI runs your out-of-office replies and expense-flag thresholds. Machine learning ranks your inbox, filters spam, and forecasts demand. Deep learning transcribes your meetings and unlocks your phone. Generative AI drafts your emails. You already manage with AI every day. The new part is that it now <em>writes</em>.</p></div>
           <div class="deeper__ask"><h4><span class="mode">As a group</span> · 5 min</h4>
           <p class="why"><b>Why this matters:</b> Managers who can name where AI already sits in their stack make sharper tool and risk decisions.</p>
           <ol class="steps">
-            <li>Call out tools your team touches every day — someone capture the list.</li>
+            <li>Call out tools your team touches every day, and have someone capture the list.</li>
             <li>Sort each one: rule-based, machine learning, or generative AI.</li>
             <li>Agree on your team’s three most AI-dependent tools and share with the room.</li>
           </ol></div>
@@ -209,7 +204,7 @@
         <div class="card" data-reveal>
           <span class="tag">Reinforcement</span>
           <h3>Learn by reward</h3>
-          <p class="muted">Let the model act, then reward good moves and penalize bad ones. Over millions of tries it learns to win — at games, or steering a robot.</p>
+          <p class="muted">Let the model act, then reward good moves and penalize bad ones. Over millions of tries it learns to win at games or at steering a robot.</p>
         </div>
       </div>
 
@@ -229,16 +224,18 @@
       </div>
 
 
-      <div class="yt" data-reveal data-embed="https://www.youtube-nocookie.com/embed/R9OHn5ZF4Uo" data-yttitle="How Machines Learn — CGP Grey">
+      <div class="yt" data-reveal data-embed="https://www.youtube-nocookie.com/embed/R9OHn5ZF4Uo" data-yttitle="How Machines Learn (CGP Grey)">
         <button class="yt__load" type="button">
           <span class="yt__play" aria-hidden="true">▶</span>
-          <span><b>Watch in the flow:</b> How Machines Learn — CGP Grey · 9 min</span>
+          <span class="yt__title">Watch: how machines learn (9 min)</span>
+          <span class="yt__src">CGP Grey · Loads YouTube on click</span>
         </button>
-        <p class="why" style="margin:.6rem 0 0"><b>Why this video:</b> the friendliest visual of training there is — play 2 minutes in class, finish it later from the Watch slide.</p>
+        <p class="yt__alt">Prefer a new tab? <a href="https://www.youtube.com/watch?v=R9OHn5ZF4Uo" target="_blank" rel="noopener">Open on YouTube</a>.</p>
+        <p class="why" style="margin:.35rem 0 0"><b>Why this video:</b> the friendliest visual of training there is. Play the first two minutes in class and finish it later from the Watch slide.</p>
       </div>
       <div class="quiz" id="mlTrainer" data-reveal style="margin-top:2.5rem">
         <p class="eyebrow" style="margin-bottom:.5rem">Play · You be the ML engineer</p>
-        <p class="why" style="margin-top:0"><b>Why this matters:</b> scoping a real AI project starts with exactly this call — what data do we have, and what kind of learning fits it?</p>
+        <p class="why" style="margin-top:0"><b>Why this matters:</b> scoping a real AI project starts with exactly this call: what data do we have, and what kind of learning fits it?</p>
         <p class="quiz__progress" id="trainProgress"></p>
         <p class="quiz__q" id="trainQ" style="margin-top:.4rem"></p>
         <div class="quiz__options" id="trainOptions" role="group" aria-label="Learning type choices"></div>
@@ -257,7 +254,7 @@
           <p class="why"><b>Why this matters:</b> Matching your data to a learning type is the first question in any AI project-scoping conversation.</p>
           <ol class="steps">
             <li>Pick one dataset your unit already produces as a byproduct of normal work (tickets, requests, survey comments).</li>
-            <li>Decide together which of the three learning types could use it — and what it would predict.</li>
+            <li>Decide together which of the three learning types could use it, and what it would predict.</li>
             <li>Name one thing that goes wrong if the historical examples are biased or mislabeled.</li>
           </ol></div>
         </div>
@@ -272,7 +269,7 @@
       <h2 class="h2" data-reveal>Layers that <em>learn</em>.</h2>
       <div class="split">
         <div data-reveal>
-          <p class="lead">A neural network passes information through layers of tiny units called <em>neurons</em>. Each connection has a <em>weight</em> — a dial the network tunes during training. Early layers catch simple features; later layers combine them into an answer.</p>
+          <p class="lead">A neural network passes information through layers of tiny units called <em>neurons</em>. Each connection has a <em>weight</em>, a dial the network tunes during training. Early layers catch simple features; later layers combine them into an answer.</p>
           <p class="measure muted" style="margin-top:1rem">Press <b>Run</b> to send a signal forward through the network, left to right, and watch each layer light up as it activates.</p>
         </div>
         <div class="nn on-dark card" id="nn" data-reveal style="background:#1c1c1c">
@@ -289,7 +286,7 @@
         <p class="quiz__q">Quick check: During training, what actually changes inside the network?</p>
         <div class="quiz__options">
           <button class="opt" data-correct="1" data-why="Learning is millions of small adjustments to connection weights until predictions stop being wrong."><span class="mark">A</span><span>The weights on the connections</span></button>
-          <button class="opt" data-correct="0" data-why="The data stays fixed during a training pass — it’s the weights that move."><span class="mark">B</span><span>The training data</span></button>
+          <button class="opt" data-correct="0" data-why="The data stays fixed during a training pass. The weights are what move."><span class="mark">B</span><span>The training data</span></button>
           <button class="opt" data-correct="0" data-why="The architecture is chosen up front; training tunes the weights inside it."><span class="mark">C</span><span>The number of layers</span></button>
         </div>
         <p class="quiz__feedback" aria-live="polite"></p>
@@ -297,9 +294,9 @@
       <details class="deeper" data-reveal>
         <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
         <div class="deeper__body">
-          <div><h4>In practice</h4><p>No engineer writes “pointy ears = cat.” The network invents its own features by adjusting millions of weights until its guesses stop being wrong. That’s why even its builders often can’t fully explain one specific decision — the logic lives in the weights, not in readable rules. It’s also why “audit the code” is the wrong ask; “audit the training data and the outcomes” is the right one.</p></div>
+          <div><h4>In practice</h4><p>No engineer writes “pointy ears = cat.” The network invents its own features by adjusting millions of weights until its guesses stop being wrong. That’s why even its builders often can’t fully explain one specific decision. The logic lives in the weights, not in readable rules. It’s also why “audit the code” is the wrong ask; “audit the training data and the outcomes” is the right one.</p></div>
           <div class="deeper__ask"><h4><span class="mode">As a group</span> · 5 min</h4>
-          <p class="why"><b>Why this matters:</b> You will be the one asked “why did the system decide that?” — this builds your answer.</p>
+          <p class="why"><b>Why this matters:</b> You will be the one asked “why did the system decide that?” This builds your answer.</p>
           <ol class="steps">
             <li>One person names a consequential decision AI might help make at Vanderbilt (screening, routing, flagging).</li>
             <li>Discuss: if someone challenged that decision, what would “explain it” actually require?</li>
@@ -328,23 +325,25 @@
         </div>
       </div>
 
-      <div class="yt" data-reveal data-embed="https://www.youtube-nocookie.com/embed/LPZh9BOjkQs" data-yttitle="How LLMs work, visualized — 3Blue1Brown">
+      <div class="yt" data-reveal data-embed="https://www.youtube-nocookie.com/embed/LPZh9BOjkQs" data-yttitle="How LLMs work (3Blue1Brown)">
         <button class="yt__load" type="button">
           <span class="yt__play" aria-hidden="true">▶</span>
-          <span><b>Watch in the flow:</b> How LLMs work, visualized — 3Blue1Brown · 8 min</span>
+          <span class="yt__title">Watch: the best 8 minutes on how LLMs work</span>
+          <span class="yt__src">3Blue1Brown · Loads YouTube on click</span>
         </button>
-        <p class="why" style="margin:.6rem 0 0"><b>Why this video:</b> the best eight minutes on next-word prediction — it cements what you just did by hand.</p>
+        <p class="yt__alt">Prefer a new tab? <a href="https://www.youtube.com/watch?v=LPZh9BOjkQs" target="_blank" rel="noopener">Open on YouTube</a>.</p>
+        <p class="why" style="margin:.35rem 0 0"><b>Why this video:</b> it cements what you just did by hand with the token predictor.</p>
       </div>
 
       <details class="deeper" data-reveal>
         <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
         <div class="deeper__body">
-          <div><h4>In practice</h4><p>Two implications for work. First: the model has no database of facts — knowledge is baked in at training time, so it can’t “look up” your org chart or yesterday’s announcement unless you paste it in. Second: it never decides to stop and check — it just keeps predicting. Tools that search the web or your documents first (“retrieval”) bolt that checking on.</p></div>
+          <div><h4>In practice</h4><p>Two implications for work. First: the model has no database of facts. Knowledge is baked in at training time, so it can’t “look up” your org chart or yesterday’s announcement unless you paste it in. Second: it never decides to stop and check. It just keeps predicting. Tools that search the web or your documents first (“retrieval”) bolt that checking on.</p></div>
           <div class="deeper__ask"><h4><span class="mode">On your own</span> · 3 min</h4>
           <p class="why"><b>Why this matters:</b> The trust habit you sketch here becomes your verification plan in Section 07.</p>
           <ol class="steps">
             <li>Write down one task this week where you’d be tempted to use an AI answer as-is.</li>
-            <li>Note what a 30-second verification of that answer would look like — the source you’d check.</li>
+            <li>Note what a 30-second verification of that answer would look like: the source you’d check.</li>
             <li>Keep the note. You’ll use it again in Section 07.</li>
           </ol></div>
         </div>
@@ -359,7 +358,7 @@
       <h2 class="h2" data-reveal>Same question,<br><em>different answers</em>.</h2>
       <div class="split">
         <div data-reveal>
-          <p class="lead">A setting called <em>temperature</em> controls how adventurous the model is when it picks the next word. Low temperature plays it safe and repeatable. High temperature takes creative risks — and can wander off.</p>
+          <p class="lead">A setting called <em>temperature</em> controls how adventurous the model is when it picks the next word. Low temperature plays it safe and repeatable. High temperature takes creative risks, and it can wander off.</p>
           <p class="measure muted" style="margin-top:1rem">Drag the slider. The answer to "Why is the sky blue?" rewrites itself as the temperature climbs.</p>
         </div>
         <div class="temp card" id="temp" data-reveal>
@@ -374,8 +373,8 @@
       <div class="quiz" data-quiz data-reveal style="margin-top:2rem">
         <p class="quiz__q">Quick check: Your team needs the exact same policy summary every time it’s generated. Which setting?</p>
         <div class="quiz__options">
-          <button class="opt" data-correct="1" data-why="Repeatable, precise tasks want low randomness — the safest next word every time."><span class="mark">A</span><span>Low temperature</span></button>
-          <button class="opt" data-correct="0" data-why="High temperature invites variety — great for brainstorming, wrong for consistency."><span class="mark">B</span><span>High temperature</span></button>
+          <button class="opt" data-correct="1" data-why="Repeatable, precise tasks want low randomness: the safest next word every time."><span class="mark">A</span><span>Low temperature</span></button>
+          <button class="opt" data-correct="0" data-why="High temperature invites variety. Great for brainstorming, wrong for consistency."><span class="mark">B</span><span>High temperature</span></button>
           <button class="opt" data-correct="0" data-why="Temperature is exactly the dial that controls answer-to-answer variation."><span class="mark">C</span><span>Temperature doesn’t affect this</span></button>
         </div>
         <p class="quiz__feedback" aria-live="polite"></p>
@@ -383,12 +382,12 @@
       <details class="deeper" data-reveal>
         <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
         <div class="deeper__body">
-          <div><h4>In practice</h4><p>Match the dial to the task. Summarizing a policy, drafting minutes, extracting action items: <b>low</b> — you want the same right answer every time. Naming a program, brainstorming formats, writing a fresh opener: <b>higher</b> — you want surprises. Many tools hide the dial, but you can steer it with words: “give me the standard answer” vs. “give me ten wild options.”</p></div>
+          <div><h4>In practice</h4><p>Match the dial to the task. Summarizing a policy, drafting minutes, extracting action items: <b>low</b>, because you want the same right answer every time. Naming a program, brainstorming formats, writing a fresh opener: <b>higher</b>, because you want surprises. Many tools hide the dial, but you can steer it with words: “give me the standard answer” vs. “give me ten wild options.”</p></div>
           <div class="deeper__ask"><h4><span class="mode">On your own</span> · 3 min</h4>
           <p class="why"><b>Why this matters:</b> Knowing this dial exists turns “the AI is inconsistent” complaints into a control you manage.</p>
           <ol class="steps">
             <li>On your device, open your approved AI tool.</li>
-            <li>Ask the same question twice in two separate chats — something from your real work.</li>
+            <li>Ask the same question twice in two separate chats, using something from your real work.</li>
             <li>Compare the two answers. The differences are the randomness you just learned to control.</li>
           </ol></div>
         </div>
@@ -411,22 +410,22 @@
         </div>
         <div class="pkey" data-reveal>
           <button data-target="role"><span class="sw" style="background:#B3C9CD"></span><span><b>Role</b><p class="muted">Tell the model who to be. It shapes tone and depth.</p></span></button>
-          <button data-target="context"><span class="sw" style="background:#8BA18E"></span><span><b>Context</b><p class="muted">Give the background it can't guess — who you are, what you know.</p></span></button>
+          <button data-target="context"><span class="sw" style="background:#8BA18E"></span><span><b>Context</b><p class="muted">Give the background it can't guess: who you are, what you know.</p></span></button>
           <button data-target="task"><span class="sw" style="background:#CFAE70"></span><span><b>Task</b><p class="muted">State the one thing you actually want done. Be specific.</p></span></button>
-          <button data-target="format"><span class="sw" style="background:#ECB748"></span><span><b>Format</b><p class="muted">Say how the answer should look — length, structure, style.</p></span></button>
+          <button data-target="format"><span class="sw" style="background:#ECB748"></span><span><b>Format</b><p class="muted">Say how the answer should look: length, structure, style.</p></span></button>
         </div>
       </div>
 
       <details class="deeper" data-reveal>
         <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
         <div class="deeper__body">
-          <div><h4>In practice</h4><p>The fastest upgrade is iteration, not perfection. Treat the first answer as a draft from a capable new hire: “shorter,” “warmer,” “as a table,” “now for an audience of deans.” The <b>role</b> line is what Vanderbilt’s own <b>Dr. Jules White</b> calls the <em>Persona Pattern</em> — his research shows it’s one of the highest-leverage prompt moves there is. His Coursera course (on the Watch slide) teaches a full catalog of these patterns.</p></div>
+          <div><h4>In practice</h4><p>The fastest upgrade is iteration, not perfection. Treat the first answer as a draft from a capable new hire: “shorter,” “warmer,” “as a table,” “now for an audience of deans.” The <b>role</b> line is what Vanderbilt’s own <b>Dr. Jules White</b> calls the <em>Persona Pattern</em>. His research shows it’s one of the highest-leverage prompt moves there is. His Coursera course (on the Watch slide) teaches a full catalog of these patterns.</p></div>
           <div class="deeper__ask"><h4><span class="mode">On your own</span> · 5 min</h4>
-          <p class="why"><b>Why this matters:</b> A prompt that works is a reusable work asset — this is the highest-return skill in the session.</p>
+          <p class="why"><b>Why this matters:</b> A prompt that works is a reusable work asset. This is the highest-return skill in the session.</p>
           <ol class="steps">
             <li>Pick one real email or document you owe this week.</li>
             <li>Write a prompt for it with all four parts: role, context, task, format.</li>
-            <li>Run it, then refine twice — one correction per message (“shorter,” “warmer”).</li>
+            <li>Run it, then refine twice, one correction per message (“shorter,” “warmer”).</li>
             <li>If there’s time: trade screens with a neighbor and borrow one move from their prompt.</li>
           </ol></div>
         </div>
@@ -441,7 +440,7 @@
       <p class="eyebrow" data-reveal>Practice · Prompt Lab</p>
       <h2 class="h2" data-reveal>Build one that <em>works</em>.</h2>
       <p class="lead" data-reveal>Your task: get a strong first draft of a change announcement for your team. Choose one option for each part of the prompt, then run it and see what the model would give you back.</p>
-      <p class="why" data-reveal><b>Why this matters:</b> feeling the outcome change as each part improves is the fastest way to internalize the four-part structure — before you write your own from scratch.</p>
+      <p class="why" data-reveal><b>Why this matters:</b> feeling the outcome change as each part improves is the fastest way to internalize the four-part structure before you write your own from scratch.</p>
       <div class="lab" id="promptLab" data-reveal>
         <div class="lab__slots" id="labSlots"></div>
         <div class="lab__runrow">
@@ -471,7 +470,7 @@
         <div data-reveal>
           <p class="tag" style="background:#c76b5a;color:#1c1c1c">Unreliable at</p>
           <ul class="listcheck cant">
-            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Facts, dates, and citations — verify everything</li>
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Facts, dates, and citations: verify everything</li>
             <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Exact arithmetic and counting</li>
             <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Recent events after its training cutoff</li>
             <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Knowing when it's wrong</li>
@@ -481,14 +480,14 @@
 
       <div class="card" data-reveal style="margin-top:2rem;border-color:rgba(236,183,72,.4)">
         <span class="tag">Key term · Hallucination</span>
-        <p style="margin:.5rem 0 0;color:rgba(255,255,255,.85)">When a model states something false with total confidence, that's a <b>hallucination</b>. It isn't lying — it's predicting a plausible-sounding next word that happens to be wrong. This is exactly why a human has to check its work.</p>
+        <p style="margin:.5rem 0 0;color:rgba(255,255,255,.85)">When a model states something false with total confidence, that's a <b>hallucination</b>. It isn't lying. It's predicting a plausible-sounding next word that happens to be wrong. This is exactly why a human has to check its work.</p>
       </div>
 
       <div class="quiz" data-quiz data-reveal style="margin-top:2.5rem">
         <p class="quiz__q">Quick check: An AI tool cites a university policy with a specific title and effective date. What should you do?</p>
         <div class="quiz__options">
           <button class="opt" data-correct="1" data-why="Models frequently invent realistic-looking citations. Confirm against the actual policy library before acting."><span class="mark">A</span><span>Verify the policy exists before acting on it</span></button>
-          <button class="opt" data-correct="0" data-why="Confident phrasing is not evidence — models sound sure even when wrong."><span class="mark">B</span><span>Trust it — the specific detail means it's real</span></button>
+          <button class="opt" data-correct="0" data-why="Confident phrasing is not evidence. Models sound sure even when wrong."><span class="mark">B</span><span>Trust it, the specific detail means it's real</span></button>
           <button class="opt" data-correct="0" data-why="Asking again often just produces another confident guess, not a verified fact."><span class="mark">C</span><span>Ask the model if it's sure, then trust that</span></button>
         </div>
         <p class="quiz__feedback" aria-live="polite"></p>
@@ -497,12 +496,12 @@
       <details class="deeper" data-reveal>
         <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
         <div class="deeper__body">
-          <div><h4>In practice</h4><p>A working verification habit: <b>(1)</b> a fact, date, number, name, or citation — check the source. <b>(2)</b> a summary of a document you provided — spot-check two claims against the original. <b>(3)</b> a draft — you’re the editor; nothing ships unread. The model is a brilliant first-draft machine and an unreliable reference librarian.</p></div>
+          <div><h4>In practice</h4><p>A working verification habit: <b>(1)</b> a fact, date, number, name, or citation: check the source. <b>(2)</b> a summary of a document you provided: spot-check two claims against the original. <b>(3)</b> a draft: you’re the editor, and nothing ships unread. The model is a brilliant first-draft machine and an unreliable reference librarian.</p></div>
           <div class="deeper__ask"><h4><span class="mode">As a group</span> · 5 min</h4>
           <p class="why"><b>Why this matters:</b> Unverified AI output is the fastest way teams get burned; this creates your team’s named check.</p>
           <ol class="steps">
             <li>Each person shares the task they wrote down in Section 04.</li>
-            <li>As a table, pick the highest-stakes one — where an unverified AI answer costs the most.</li>
+            <li>As a table, pick the highest-stakes one, where an unverified AI answer costs the most.</li>
             <li>Agree on the check for it and who owns that check. Write both down.</li>
           </ol></div>
         </div>
@@ -519,7 +518,7 @@
         <div class="feature" data-reveal>
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
           <h3>Bias</h3>
-          <p class="muted">A model reflects the data it learned from — including society's blind spots. Its output can quietly repeat stereotypes. Read critically, especially about people.</p>
+          <p class="muted">A model reflects the data it learned from, including society's blind spots. Its output can quietly repeat stereotypes. Read critically, especially about people.</p>
         </div>
         <div class="feature" data-reveal>
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
@@ -529,7 +528,7 @@
         <div class="feature" data-reveal>
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-2 6a4 4 0 0 0 8 0z"/><path d="M19 7l2 6a4 4 0 0 1-8 0z"/></svg>
           <h3>Accountability</h3>
-          <p class="muted">AI drafts; you decide. Disclose AI use where your unit's policy asks for it, review everything before it ships, and own the final output — the tool is never the author of record.</p>
+          <p class="muted">AI drafts; you decide. Disclose AI use where your unit's policy asks for it, review everything before it ships, and own the final output. The tool is never the author of record.</p>
         </div>
       </div>
 
@@ -538,7 +537,7 @@
         <div class="quiz__options">
           <button class="opt" data-correct="1" data-why="General, non-identifying content carries no privacy risk."><span class="mark">A</span><span>A general question about how to structure a meeting agenda</span></button>
           <button class="opt" data-correct="0" data-why="Employee performance data is exactly what should never leave approved systems."><span class="mark">B</span><span>A spreadsheet of your team's performance ratings</span></button>
-          <button class="opt" data-correct="0" data-why="Confidential plans can be retained by the service — keep them in approved tools."><span class="mark">C</span><span>A draft of a confidential reorganization memo</span></button>
+          <button class="opt" data-correct="0" data-why="Confidential plans can be retained by the service. Keep them in approved tools."><span class="mark">C</span><span>A draft of a confidential reorganization memo</span></button>
         </div>
         <p class="quiz__feedback" aria-live="polite"></p>
       </div>
@@ -546,12 +545,12 @@
       <details class="deeper" data-reveal>
         <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
         <div class="deeper__body">
-          <div><h4>In practice</h4><p>Guardrails that scale for a team: use university-approved AI tools for anything touching university data; when in doubt, treat a prompt like a public post; agree where disclosure is expected (external communications, evaluations, anything signed with your name); and keep a human accountable for every output — “the AI wrote it” is never an acceptable answer.</p></div>
+          <div><h4>In practice</h4><p>Guardrails that scale for a team: use university-approved AI tools for anything touching university data; when in doubt, treat a prompt like a public post; agree where disclosure is expected (external communications, evaluations, anything signed with your name); and keep a human accountable for every output. “The AI wrote it” is never an acceptable answer.</p></div>
           <div class="deeper__ask"><h4><span class="mode">As a group</span> · 7 min</h4>
-          <p class="why"><b>Why this matters:</b> A shared sentence beats a policy nobody read — this becomes your team’s working agreement.</p>
+          <p class="why"><b>Why this matters:</b> A shared sentence beats a policy nobody read. This becomes your team’s working agreement.</p>
           <ol class="steps">
             <li>Draft one sentence of team policy together: “On our team, we use AI for ___, never for ___, and we disclose when ___.”</li>
-            <li>Test it against the three ideas on this slide — bias, privacy, accountability. Does the sentence still hold?</li>
+            <li>Test it against the three ideas on this slide: bias, privacy, accountability. Does the sentence still hold?</li>
             <li>Nominate one person to bring the draft to your next team meeting.</li>
           </ol></div>
         </div>
@@ -565,7 +564,7 @@
     <div class="wrap wrap-wide">
       <p class="eyebrow" data-reveal>Apply · Your toolkit</p>
       <h2 class="h2" data-reveal>Three platforms.<br>Know <em>which, when</em>.</h2>
-      <p class="lead" data-reveal>Vanderbilt gives you access to three AI platforms. The task — and the sensitivity of the data — decides which one you open.</p>
+      <p class="lead" data-reveal>Vanderbilt gives you access to three AI platforms. The task and the sensitivity of the data decide which one you open.</p>
       <div class="grid grid-3" style="margin-top:2rem">
         <div class="card" data-reveal>
           <span class="tag">Vanderbilt platform</span>
@@ -576,13 +575,13 @@
         <div class="card" data-reveal>
           <span class="tag">In Microsoft 365</span>
           <h3>Copilot</h3>
-          <p class="muted">AI inside the tools you already use — Word, Outlook, Excel, Teams — with enterprise data protection when you're signed in with your VU account.</p>
+          <p class="muted">AI inside the tools you already use (Word, Outlook, Excel, Teams) with enterprise data protection when you're signed in with your VU account.</p>
           <p class="toolkit__use"><b>Use when:</b> the work lives in a document, inbox, or meeting you already have open in M365.</p>
         </div>
         <div class="card" data-reveal>
           <span class="tag">General purpose</span>
           <h3>ChatGPT</h3>
-          <p class="muted">The general-purpose assistant. Great for learning, brainstorming, and drafting from public information — treat it as a public tool unless VU account protections apply.</p>
+          <p class="muted">The general-purpose assistant. Great for learning, brainstorming, and drafting from public information. Treat it as a public tool unless VU account protections apply.</p>
           <p class="toolkit__use"><b>Use when:</b> the content is public (green-level) and you want speed and breadth.</p>
         </div>
       </div>
@@ -590,13 +589,13 @@
       <div class="split" style="margin-top:2.5rem;align-items:start">
         <div data-reveal>
           <h3 style="margin-bottom:.75rem">Beyond the big three</h3>
-          <p class="measure" style="font-size:1rem">Other tools are genuinely good at specific jobs — <b>Claude</b> for long documents and careful writing, <b>Perplexity</b> for research with cited sources, <b>Gamma</b> for turning notes into slide decks. Using them is fine <em>for green-level content</em> — but they sit outside Vanderbilt's agreements, so the data rules below are the whole ballgame.</p>
+          <p class="measure" style="font-size:1rem">Other tools are genuinely good at specific jobs: <b>Claude</b> for long documents and careful writing, <b>Perplexity</b> for research with cited sources, <b>Gamma</b> for turning notes into slide decks. Using them is fine <em>for green-level content</em>, but they sit outside Vanderbilt's agreements, so the data rules below are the whole ballgame.</p>
         </div>
         <div class="datalevels" data-reveal>
           <h3 style="margin-bottom:.75rem">What can you paste? <em>The only question that matters.</em></h3>
-          <div class="dl dl--green"><b>🟢 Green — any approved tool.</b> Public information, general questions, drafts containing no names, IDs, or internal details.</div>
-          <div class="dl dl--yellow"><b>🟡 Yellow — Amplify or signed-in Copilot only.</b> Internal operational content: unpublished plans, internal processes, non-sensitive work drafts with VU context.</div>
-          <div class="dl dl--red"><b>🔴 Red — never in any generative AI tool.</b> Student records (FERPA) · health information (HIPAA) · salaries &amp; personnel files · donor records &amp; gift data · passwords, keys &amp; credentials · unpublished research data · contracts &amp; legal matters.</div>
+          <div class="dl dl--green"><b>🟢 Green: any approved tool.</b> Public information, general questions, drafts containing no names, IDs, or internal details.</div>
+          <div class="dl dl--yellow"><b>🟡 Yellow: Amplify or signed-in Copilot only.</b> Internal operational content: unpublished plans, internal processes, non-sensitive work drafts with VU context.</div>
+          <div class="dl dl--red"><b>🔴 Red: never in any generative AI tool.</b> Student records (FERPA) · health information (HIPAA) · salaries &amp; personnel files · donor records &amp; gift data · passwords, keys &amp; credentials · unpublished research data · contracts &amp; legal matters.</div>
           <p class="why" style="margin-top:.75rem"><b>When in doubt:</b> treat the prompt like a public post, and check Vanderbilt's AI Guidance and Data Classification Policy before sharing.</p>
         </div>
       </div>
@@ -604,9 +603,9 @@
       <div class="quiz" data-quiz data-reveal style="margin-top:2.25rem">
         <p class="quiz__q">Quick check: You want AI's help summarizing an internal draft of next year's staffing plan. Where can it go?</p>
         <div class="quiz__options">
-          <button class="opt" data-correct="1" data-why="Internal plans are yellow-level: Amplify (or Copilot signed in with your VU account) keeps them inside Vanderbilt's protections."><span class="mark">A</span><span>Amplify — it's internal university content</span></button>
-          <button class="opt" data-correct="0" data-why="A staffing plan is internal — public ChatGPT is for green-level content only."><span class="mark">B</span><span>ChatGPT — it's the fastest option</span></button>
-          <button class="opt" data-correct="0" data-why="If it names people and salaries it's red — that never goes in any generative AI tool."><span class="mark">C</span><span>Any tool, as long as you delete the chat after</span></button>
+          <button class="opt" data-correct="1" data-why="Internal plans are yellow-level: Amplify (or Copilot signed in with your VU account) keeps them inside Vanderbilt's protections."><span class="mark">A</span><span>Amplify, since it's internal university content</span></button>
+          <button class="opt" data-correct="0" data-why="A staffing plan is internal. Public ChatGPT is for green-level content only."><span class="mark">B</span><span>ChatGPT, it's the fastest option</span></button>
+          <button class="opt" data-correct="0" data-why="If it names people and salaries it's red, and that never goes in any generative AI tool."><span class="mark">C</span><span>Any tool, as long as you delete the chat after</span></button>
         </div>
         <p class="quiz__feedback" aria-live="polite"></p>
       </div>
@@ -618,12 +617,12 @@
     <div class="wrap">
       <p class="eyebrow" data-reveal>Section 09 · Wellbeing</p>
       <h2 class="h2" data-reveal>AI saves time,<br><em>if you let it</em>.</h2>
-      <p class="lead" data-reveal>Research says the time AI saves quietly refills — with more tasks, faster expectations, and invisible checking work. Protecting your team's gains is a management skill, not a nice-to-have. <span style="color:rgba(255,255,255,.55)">(See “AI Doesn't Reduce Work — It Intensifies It,” HBR.)</span></p>
+      <p class="lead" data-reveal>Research says the time AI saves quietly refills with more tasks, faster expectations, and invisible checking work. Protecting your team's gains is a management skill, not a nice-to-have. <span style="color:rgba(255,255,255,.55)">(See “AI Doesn't Reduce Work: It Intensifies It,” HBR.)</span></p>
       <div class="grid grid-3" style="margin-top:2rem">
         <div class="card" data-reveal>
           <span class="tag">Pattern 01</span>
           <h3>Workload creep</h3>
-          <p style="color:rgba(255,255,255,.7)">The hour AI saves gets silently backfilled with new tasks. Efficiency becomes intensification unless someone decides — out loud — where the saved time goes.</p>
+          <p style="color:rgba(255,255,255,.7)">The hour AI saves gets silently backfilled with new tasks. Efficiency becomes intensification unless someone decides, out loud, where the saved time goes.</p>
         </div>
         <div class="card" data-reveal>
           <span class="tag">Pattern 02</span>
@@ -633,7 +632,7 @@
         <div class="card" data-reveal>
           <span class="tag">Pattern 03</span>
           <h3>Invisible labor</h3>
-          <p style="color:rgba(255,255,255,.7)">Reviewing, verifying, and fixing AI output is real work — and it rarely shows up in workload conversations. Name it, or it gets absorbed for free.</p>
+          <p style="color:rgba(255,255,255,.7)">Reviewing, verifying, and fixing AI output is real work, and it rarely shows up in workload conversations. Name it, or it gets absorbed for free.</p>
         </div>
       </div>
       <div class="card" data-reveal style="margin-top:2rem;border-color:rgba(236,183,72,.4)">
@@ -643,11 +642,11 @@
       <details class="deeper" data-reveal>
         <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
         <div class="deeper__body">
-          <div><h4>In practice</h4><p>The managers who keep AI's gains do three things: they decide explicitly where saved time goes (deeper work, fewer weekend emails — not just more volume); they keep verification work visible in workload conversations; and they watch their own behavior, because a manager sending AI-fast replies at 9 p.m. resets the whole team's expectations.</p></div>
+          <div><h4>In practice</h4><p>The managers who keep AI's gains do three things: they decide explicitly where saved time goes (deeper work, fewer weekend emails, not just more volume); they keep verification work visible in workload conversations; and they watch their own behavior, because a manager sending AI-fast replies at 9 p.m. resets the whole team's expectations.</p></div>
           <div class="deeper__ask"><h4><span class="mode">On your own</span> · 3 min</h4>
           <p class="why"><b>Why this matters:</b> The research says AI’s time savings evaporate silently; deciding where the hour goes is how you keep it.</p>
           <ol class="steps">
-            <li>Private self-check — no sharing: in the last month, did time saved by tools become breathing room, or more tasks?</li>
+            <li>Private self-check, no sharing: in the last month, did time saved by tools become breathing room, or more tasks?</li>
             <li>Have response-time expectations on your team risen without anyone deciding they should?</li>
             <li>Write one sentence: where do you <em>want</em> your team's next saved hour to go?</li>
           </ol></div>
@@ -683,15 +682,15 @@
       <h2 class="h2" data-reveal style="margin-bottom:2rem">The <em>vocabulary</em>.</h2>
       <div class="glossary">
         <button class="flip" data-reveal aria-label="Algorithm, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Algorithm</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>A step-by-step set of instructions a computer follows to solve a problem.</p></div></div></button>
-        <button class="flip" data-reveal aria-label="Model, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Model</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>The trained system itself — the patterns learned from data, saved and reused to make predictions.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Model, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Model</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>The trained system itself: the patterns learned from data, saved and reused to make predictions.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Training data, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Training&nbsp;Data</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>The examples a model studies to learn. Its quality and bias shape everything the model does.</p></div></div></button>
-        <button class="flip" data-reveal aria-label="Token, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Token</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>A chunk of text — often a word or part of a word — that a language model reads and predicts one at a time.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Token, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Token</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>A chunk of text, often a word or part of a word, that a language model reads and predicts one at a time.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Parameter, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Parameter</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>One of the billions of internal "dials" a model tunes during training. More parameters, more capacity.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Neural network, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Neural&nbsp;Network</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>A model built from layers of connected units, loosely inspired by neurons in the brain.</p></div></div></button>
-        <button class="flip" data-reveal aria-label="L L M, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>LLM</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Large Language Model — a neural network trained on vast text to predict and generate language.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="L L M, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>LLM</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Large Language Model: a neural network trained on vast text to predict and generate language.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Prompt, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Prompt</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>The instruction or question you give an AI. Better prompts produce better output.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Hallucination, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Hallucination</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Confident output that is simply false. A byproduct of predicting plausible text rather than checking facts.</p></div></div></button>
-        <button class="flip" data-reveal aria-label="Inference, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Inference</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Using a trained model to produce an answer — what happens every time you send a prompt.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Inference, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Inference</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Using a trained model to produce an answer, which happens every time you send a prompt.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Fine-tuning, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Fine-tuning</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Extra training that adapts a general model to a specific task, tone, or domain.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Bias, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Bias</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Systematic skew in output that mirrors imbalances in the training data. Worth watching for actively.</p></div></div></button>
       </div>
@@ -707,7 +706,7 @@
         <a class="vidcard vidcard--feature" href="https://www.coursera.org/learn/prompt-engineering" target="_blank" rel="noopener" data-reveal>
           <div class="vidcard__top"><span class="vidcard__src">Coursera · Vanderbilt · Dr. Jules White</span><span class="vidcard__dur">~18 hrs · Free to audit</span></div>
           <h3>Prompt Engineering for ChatGPT</h3>
-          <p>Vanderbilt’s own Dr. Jules White teaches the definitive course on getting real work out of AI — including the Persona Pattern you practiced today. The natural next step after this session (pairs with Section 06).</p>
+          <p>Vanderbilt’s own Dr. Jules White teaches the definitive course on getting real work out of AI, including the Persona Pattern you practiced today. The natural next step after this session (pairs with Section 06).</p>
           <span class="vidcard__link">Watch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </a>
         <a class="vidcard" href="https://www.coursera.org/specializations/prompt-engineering" target="_blank" rel="noopener" data-reveal>
@@ -724,7 +723,7 @@
         </a>
         <a class="vidcard" href="https://www.youtube.com/watch?v=LPZh9BOjkQs" target="_blank" rel="noopener" data-reveal>
           <div class="vidcard__top"><span class="vidcard__src">3Blue1Brown · YouTube</span><span class="vidcard__dur">8 min</span></div>
-          <h3>How LLMs work — the best 8 minutes</h3>
+          <h3>How LLMs work: the best 8 minutes</h3>
           <p>Next-word prediction, visualized beautifully. Pairs with Section 04.</p>
           <span class="vidcard__link">Watch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </a>
@@ -737,7 +736,7 @@
         <a class="vidcard" href="https://www.youtube.com/watch?v=vmxHUiiHgNk" target="_blank" rel="noopener" data-reveal>
           <div class="vidcard__top"><span class="vidcard__src">Amy Edmondson · YouTube</span><span class="vidcard__dur">12 min</span></div>
           <h3>Psychological safety, explained</h3>
-          <p>Why teams that can say “I don’t know” learn faster — essential for leading AI adoption. Pairs with Section 09.</p>
+          <p>Why teams that can say “I don’t know” learn faster. Essential for leading AI adoption. Pairs with Section 09.</p>
           <span class="vidcard__link">Watch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </a>
         <a class="vidcard" href="https://www.youtube.com/watch?v=zjkBMFhNj_g" target="_blank" rel="noopener" data-reveal>
@@ -761,7 +760,7 @@
     <div class="wrap" style="text-align:center">
       <img src="assets/img/vu-centered-white.png" alt="Vanderbilt University" width="120" height="125" style="margin:0 auto 2rem;width:clamp(96px,10vw,130px);height:auto" data-reveal>
       <h2 class="h2 gold-text" data-reveal style="max-width:18ch;margin-inline:auto">Now you know how it <em>works</em>.</h2>
-      <p class="lead" data-reveal style="margin:1.25rem auto 0;color:rgba(255,255,255,.82)">The hype fades once you see the machinery. Keep experimenting — and keep a human in the loop.</p>
+      <p class="lead" data-reveal style="margin:1.25rem auto 0;color:rgba(255,255,255,.82)">The hype fades once you see the machinery. Keep experimenting, and keep a human in the loop.</p>
       <div class="hero__cta" data-reveal style="justify-content:center;margin-top:2rem">
         <a class="btn" href="#s-recap">Retake the quiz</a>
         <a class="btn btn--ghost" href="#top">Back to start</a>
@@ -807,7 +806,7 @@
   </div>
 </footer>
 
-<script src="assets/js/qrcode.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/qrcode.js?v=8"></script>
+<script src="assets/js/main.js?v=8"></script>
 </body>
 </html>

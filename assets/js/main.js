@@ -178,10 +178,10 @@
 
   /* ---------- INTERACTIVE: AI/ML/DL rings ---------- */
   var ringData = {
-    ai:  { tag: 'The whole field', h: 'Artificial Intelligence', p: 'Any technique that lets machines mimic human-like tasks — reasoning, perception, decision-making. Includes rule-based systems that never "learn."' },
+    ai:  { tag: 'The whole field', h: 'Artificial Intelligence', p: 'Any technique that lets machines mimic human-like tasks: reasoning, perception, decision-making. Includes rule-based systems that never "learn."' },
     ml:  { tag: 'A subset of AI', h: 'Machine Learning', p: 'Systems that improve at a task by finding patterns in data, rather than being explicitly programmed with rules. Learns from examples.' },
     dl:  { tag: 'A subset of ML', h: 'Deep Learning', p: 'Machine learning using many-layered neural networks. Powers image recognition, speech, and modern language models.' },
-    gen: { tag: 'A use of deep learning', h: 'Generative AI', p: 'Deep-learning models that create new content — text, images, code, audio — by predicting what plausibly comes next. ChatGPT lives here.' }
+    gen: { tag: 'A use of deep learning', h: 'Generative AI', p: 'Deep-learning models that create new content (text, images, code, audio) by predicting what plausibly comes next. ChatGPT lives here.' }
   };
   var ringDetail = $('#ringDetail');
   var rings = $$('.ring');
@@ -262,7 +262,7 @@
       var i = 0;
       (function tick() {
         if (i >= layers.length) {
-          running = false; status.textContent = 'Prediction ready — press again';
+          running = false; status.textContent = 'Prediction ready. Press again to rerun';
           setTimeout(function () { litLayer(-1); }, 700); return;
         }
         litLayer(i); status.textContent = names[i]; i++;
@@ -287,7 +287,7 @@
     function renderOptions() {
       if (!state || !chain[state]) {
         optEl.innerHTML = '';
-        hintEl.textContent = 'That is all a language model does — pick the next token, over and over, blindingly fast.';
+        hintEl.textContent = 'That is all a language model does: pick the next token, over and over, blindingly fast.';
         sentEl.innerHTML = built + ' <span class="cursor">▮</span>';
         return;
       }
@@ -306,7 +306,7 @@
         });
         optEl.appendChild(b);
       });
-      hintEl.textContent = 'Pick a word. The model assigns every option a probability — higher bar = more likely.';
+      hintEl.textContent = 'Pick a word. The model assigns every option a probability; a higher bar means more likely.';
     }
     $('#predictReset').addEventListener('click', function () {
       built = 'The best way to learn is to'; state = 'a'; renderOptions();
@@ -322,7 +322,7 @@
       { max: 15, label: '0.0 · Deterministic', text: 'The sky is blue because molecules scatter shorter blue wavelengths of sunlight more than longer red ones.' },
       { max: 45, label: '0.4 · Focused', text: 'The sky appears blue because tiny air molecules scatter the sun’s blue light in every direction.' },
       { max: 75, label: '0.8 · Balanced', text: 'Sunlight is a mix of colors, and our restless atmosphere flings the blue portion across the whole dome above us.' },
-      { max: 101, label: '1.2 · Creative', text: 'Picture sunlight shattering against the air like glass — the blue shards scatter farthest, painting the ceiling of the world.' }
+      { max: 101, label: '1.2 · Creative', text: 'Picture sunlight shattering against the air like glass, the blue shards scattering farthest, painting the ceiling of the world.' }
     ];
     function updTemp() {
       var v = +tSlider.value;
@@ -389,14 +389,14 @@
   var trainer = $('#mlTrainer');
   if (trainer) {
     var TRAINER = [
-      { q: 'Sort incoming HR emails into “benefits,” “payroll,” or “leave” — trained on thousands of past emails that staff already tagged.',
-        answer: 0, why: 'Labeled examples in, labels predicted out — that’s supervised learning.' },
+      { q: 'Sort incoming HR emails into “benefits,” “payroll,” or “leave,” trained on thousands of past emails that staff already tagged.',
+        answer: 0, why: 'Labeled examples in, labels predicted out. That’s supervised learning.' },
       { q: 'Take 2,000 open-ended survey comments and group them into themes nobody defined in advance.',
-        answer: 1, why: 'No labels, just structure discovered in raw data — unsupervised learning.' },
+        answer: 1, why: 'No labels, just structure discovered in raw data. That’s unsupervised learning.' },
       { q: 'A building-energy program tries settings, gets rewarded when energy drops and comfort complaints stay low, and improves over thousands of tries.',
-        answer: 2, why: 'Act, get rewarded or penalized, improve — reinforcement learning.' },
+        answer: 2, why: 'Act, get rewarded or penalized, improve. That’s reinforcement learning.' },
       { q: 'Predict which admitted students will enroll, trained on ten years of records marked “enrolled” or “didn’t.”',
-        answer: 0, why: 'Historical outcomes are the labels — supervised learning again. Most workplace ML is.' }
+        answer: 0, why: 'Historical outcomes are the labels, so it’s supervised learning again. Most workplace ML is.' }
     ];
     var LABELS = ['Supervised', 'Unsupervised', 'Reinforcement'];
     var tIdx = 0, tScore = 0, tLocked = false;
@@ -439,8 +439,8 @@
         tRes.hidden = false;
         tRes.innerHTML = '<div class="quiz__score gold-text">' + tScore + ' / ' + TRAINER.length + '</div>' +
           '<p style="margin-top:.75rem;color:rgba(255,255,255,.85)">' +
-          (tScore >= 3 ? 'You think like an ML engineer — you matched the training method to the data available.'
-                       : 'Close — the tell is the data: labels → supervised, no labels → unsupervised, rewards → reinforcement.') +
+          (tScore >= 3 ? 'You think like an ML engineer. You matched the training method to the data available.'
+                       : 'Close. The tell is the data: labels → supervised, no labels → unsupervised, rewards → reinforcement.') +
           '</p><button class="btn btn--ghost" id="trainRetry" style="margin-top:1rem">Run it again</button>';
         $('#trainRetry').addEventListener('click', function () {
           tIdx = 0; tScore = 0; tRes.hidden = true;
@@ -471,21 +471,21 @@
   if (lab) {
     var SLOTS = [
       { key: 'Role', opts: [
-        { t: '“You are an AI.”', pts: 1, coach: 'Role: “an AI” gives the model nothing to aim at — give it a profession and a disposition.' },
+        { t: '“You are an AI.”', pts: 1, coach: 'Role: “an AI” gives the model nothing to aim at. Give it a profession and a disposition.' },
         { t: '“You are a helpful assistant.”', pts: 2, coach: 'Role: helpful, but generic. A specific expertise sets tone and depth.' },
-        { t: '“You are an experienced internal-communications writer who explains change with empathy.”', pts: 3, coach: 'Role: expertise + disposition — the Persona Pattern at full strength.' }]},
+        { t: '“You are an experienced internal-communications writer who explains change with empathy.”', pts: 3, coach: 'Role: expertise plus disposition. That’s the Persona Pattern at full strength.' }]},
       { key: 'Context', opts: [
-        { t: '(no context — jump straight to the ask)', pts: 1, coach: 'Context: with nothing to go on, the model invents details — some will be wrong.' },
+        { t: '(no context, jump straight to the ask)', pts: 1, coach: 'Context: with nothing to go on, the model invents details, and some will be wrong.' },
         { t: '“My team is switching expense systems next month.”', pts: 2, coach: 'Context: the what is here; the who and the worry are missing.' },
-        { t: '“My 12-person team moves to a new expense system next month; several people are anxious; training is available before go-live.”', pts: 3, coach: 'Context: who, what, when, and the emotional temperature — everything the draft needs.' }]},
+        { t: '“My 12-person team moves to a new expense system next month; several people are anxious; training is available before go-live.”', pts: 3, coach: 'Context: who, what, when, and the emotional temperature. Everything the draft needs.' }]},
       { key: 'Task', opts: [
         { t: '“Write something about this.”', pts: 1, coach: 'Task: “something” gets you anything. Name the deliverable.' },
-        { t: '“Draft an announcement email.”', pts: 2, coach: 'Task: clear deliverable — adding its job (reassure, point to training) would sharpen it.' },
-        { t: '“Draft an announcement email that explains the timeline, reassures the team, and points to the training.”', pts: 3, coach: 'Task: deliverable + its three jobs. The model knows exactly what done looks like.' }]},
+        { t: '“Draft an announcement email.”', pts: 2, coach: 'Task: clear deliverable. Adding its job (reassure, point to training) would sharpen it.' },
+        { t: '“Draft an announcement email that explains the timeline, reassures the team, and points to the training.”', pts: 3, coach: 'Task: deliverable plus its three jobs. The model knows exactly what done looks like.' }]},
       { key: 'Format', opts: [
-        { t: '(no format — let it decide)', pts: 1, coach: 'Format: unspecified means you edit for length and structure later.' },
+        { t: '(no format, let it decide)', pts: 1, coach: 'Format: unspecified means you edit for length and structure later.' },
         { t: '“Keep it short.”', pts: 2, coach: 'Format: short compared to what? Numbers beat adjectives.' },
-        { t: '“Three short paragraphs, warm and direct, under 200 words, ending with one clear next step.”', pts: 3, coach: 'Format: shape, tone, length, and an ending — nothing left to chance.' }]}
+        { t: '“Three short paragraphs, warm and direct, under 200 words, ending with one clear next step.”', pts: 3, coach: 'Format: shape, tone, length, and an ending. Nothing left to chance.' }]}
     ];
     var picks = [null, null, null, null];
     var slotsEl = $('#labSlots'), runBtn = $('#labRun'), statusEl = $('#labStatus'), outEl = $('#labOutcome');
@@ -502,7 +502,7 @@
           $$('.opt', d).forEach(function (x, xi) { x.setAttribute('aria-pressed', String(xi === oi)); });
           var ready = picks.every(function (p) { return p !== null; });
           runBtn.disabled = !ready;
-          statusEl.textContent = ready ? 'Ready — run it' :
+          statusEl.textContent = ready ? 'Ready, run it' :
             'Choose ' + picks.filter(function (p) { return p === null; }).length + ' more part(s)';
           outEl.hidden = true;
         });
@@ -511,7 +511,7 @@
       slotsEl.appendChild(d);
     });
     var SAMPLES = {
-      strong: '“Team — starting next month we’re moving to our new expense system. Here’s the timeline, what’s changing, and what isn’t… Training is open now, and I’ve set aside time in Friday’s meeting for questions. One step for this week: log in once before the 1st.”',
+      strong: '“Team, starting next month we’re moving to our new expense system. Here’s the timeline, what’s changing, and what isn’t… Training is open now, and I’ve set aside time in Friday’s meeting for questions. One step for this week: log in once before the 1st.”',
       mid: '“Dear team, I am writing to inform you about an upcoming change to our expense system. Please be advised that training resources may be available. Do not hesitate to reach out with any questions…”',
       weak: '“Change can be challenging, but it is also an opportunity for growth! Exciting things are happening. Stay tuned for more information coming soon…”'
     };
@@ -519,16 +519,16 @@
       var score = picks.reduce(function (t, p, i) { return t + SLOTS[i].opts[p].pts; }, 0); // 4..12
       var pct = Math.round((score / 12) * 100);
       var tier = score >= 11 ? 'strong' : score >= 8 ? 'mid' : 'weak';
-      var head = tier === 'strong' ? 'Strong first draft — ready to edit, not rewrite.'
-               : tier === 'mid' ? 'Usable but generic — you’ll spend real time editing this.'
-               : 'Vague output — the model had to guess, and it guessed like a greeting card.';
+      var head = tier === 'strong' ? 'Strong first draft, ready to edit rather than rewrite.'
+               : tier === 'mid' ? 'Usable but generic. You’ll spend real time editing this.'
+               : 'Vague output. The model had to guess, and it guessed like a greeting card.';
       var coach = picks.map(function (p, i) { return '<div><b>' + SLOTS[i].key + ':</b> ' + SLOTS[i].opts[p].coach.replace(/^(Role|Context|Task|Format):\s*/, '') + '</div>'; }).join('');
       outEl.innerHTML = '<span class="tag">Outcome · ' + score + ' / 12</span>' +
         '<div class="lab__meter"><span style="width:0"></span></div>' +
         '<p style="margin:0;color:#fff;font-weight:500">' + head + '</p>' +
         '<div class="sample">' + SAMPLES[tier] + '</div>' +
         '<div class="lab__coach">' + coach + '</div>' +
-        (tier !== 'strong' ? '<p class="why" style="margin-top:1rem"><b>Try again:</b> upgrade your weakest part and re-run — watch the outcome change.</p>' : '<p class="why" style="margin-top:1rem"><b>Now the real thing:</b> use this structure on the email you picked in Section 06.</p>');
+        (tier !== 'strong' ? '<p class="why" style="margin-top:1rem"><b>Try again:</b> upgrade your weakest part and re-run, then watch the outcome change.</p>' : '<p class="why" style="margin-top:1rem"><b>Now the real thing:</b> use this structure on the email you picked in Section 06.</p>');
       outEl.hidden = false;
       requestAnimationFrame(function () {
         var bar = $('.lab__meter span', outEl);
@@ -550,7 +550,7 @@
         correct: 1, why: 'LLMs repeatedly predict the most plausible next token.' },
       { q: 'Raising the "temperature" of a model makes its output…',
         opts: ['More random and creative', 'More accurate and factual', 'Faster to compute', 'Shorter'],
-        correct: 0, why: 'Higher temperature = more randomness/variety; lower = more focused.' },
+        correct: 0, why: 'Higher temperature means more randomness and variety; lower means more focused.' },
       { q: 'A "hallucination" in AI refers to…',
         opts: ['A rendering bug', 'Confident output that is factually wrong', 'A privacy breach', 'Slow response time'],
         correct: 1, why: 'Models can state false information fluently and confidently.' },
@@ -559,7 +559,7 @@
         correct: 1, why: 'Structured prompts (role, context, task, format) drive better results.' },
       { q: 'Research on AI at work finds that the time it saves most often…',
         opts: ['Becomes guaranteed free time', 'Quietly refills with more tasks and faster expectations', 'Is tracked automatically by HR', 'Has no effect on workload'],
-        correct: 1, why: 'Workload creep is the default. Managers keep the gains by deciding — explicitly — where saved time goes.' }
+        correct: 1, why: 'Workload creep is the default. Managers keep the gains by deciding, explicitly, where saved time goes.' }
     ];
     var idx = 0, score = 0, locked = false;
     var qEl = $('#recapQ'), optEl2 = $('#recapOptions'), fbEl = $('#recapFeedback'),
@@ -604,7 +604,7 @@
       resultEl.hidden = false;
       var pct = Math.round((score / QUESTIONS.length) * 100);
       var msg = pct >= 80 ? 'You’ve got the fundamentals down.' :
-                pct >= 50 ? 'Solid start — revisit the sections you missed.' :
+                pct >= 50 ? 'Solid start. Revisit the sections you missed.' :
                             'Worth another pass through the deck.';
       resultEl.innerHTML = '<span class="eyebrow">Your result</span>' +
         '<div class="quiz__score gold-text">' + score + ' / ' + QUESTIONS.length + '</div>' +
