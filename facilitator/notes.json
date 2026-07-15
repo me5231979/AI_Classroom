@@ -15,7 +15,90 @@
         "minutes": 60,
         "description": "The 60-minute slot: every simulator, every check, the Lab, the capstone, and ONE group activity of the facilitator's choice; other group activities and videos become follow-ups. Per-section cuts are in each coreNote."
       }
-    }
+    },
+    "framework": "ATD facilitator-guide structure: per module SAY / DO / ASK (with anticipated responses) / DEBRIEF / TRANSITION, plus preparation checklists, materials, contingencies, and a tough-questions bank.",
+    "materials": [
+      "Projector or large display and the facilitator link open (this edition)",
+      "Facilitator laptop with arrow keys or clicker; all notifications off",
+      "Learner devices (BYOD) joining via the welcome-slide QR",
+      "A few printed cheat sheets (cheatsheet.html) for anyone without a device",
+      "Whiteboard or flip chart for the parking lot and group share-outs",
+      "Sticky notes and pens as the no-device fallback for solo activities"
+    ],
+    "prep": {
+      "weekBefore": [
+        "Read this guide end to end, then run BOTH editions start to finish, doing every activity yourself, including a deliberate weak run of the Prompt Lab.",
+        "Build your own AI Plan in the capstone; you will demo with a real example, not a hypothetical.",
+        "Book a room with tables of 3 to 6 and confirm guest wifi works for personal devices.",
+        "Decide your path now: Full (90-minute slot) or Core (60). Mark your one keeper group activity for Core.",
+        "Rehearse the three scripted moments out loud: the banana moment (04), the weak Lab run, and the red-list reading (Toolkit)."
+      ],
+      "dayBefore": [
+        "Test the projector with the facilitator link; confirm the notes rail is readable from where you will stand.",
+        "Scan the welcome QR from the back of the room with your own phone; it must land on the learner edition.",
+        "Print 5 to 10 cheat sheets and this guide's run-of-show table.",
+        "Re-read the tough-questions bank below; say the answers out loud once."
+      ],
+      "thirtyMinBefore": [
+        "Welcome slide up as people arrive; it does the enrolling for you.",
+        "Close every other tab and app; silence the machine.",
+        "Test arrow-key navigation and one simulator (press Run on the network).",
+        "Write 'PARKING LOT' at the top of the whiteboard.",
+        "Breathe. The deck carries the content; you carry the room."
+      ]
+    },
+    "contingencies": [
+      {
+        "if": "Projector or the site fails mid-session",
+        "then": "Teach from the printed run-of-show: rings, the three learning types, the four-part prompt, and the red list all work on a whiteboard. The printed cheat sheet carries every core model."
+      },
+      {
+        "if": "Learner devices can't join (wifi/filters)",
+        "then": "Run facilitator-only: every simulator happens on the projector with volunteers shouting choices; solo activities move to sticky notes. The session still works; you lose nothing but typing."
+      },
+      {
+        "if": "You're 10+ minutes behind by Prompting (slide 06)",
+        "then": "Declare the Core path silently: cut every remaining group debrief. Never cut the Lab, the recap, or the capstone; they carry objectives 3 to 5."
+      },
+      {
+        "if": "Silence after you ask a question",
+        "then": "Count seven full seconds before rescuing; thinking looks like silence. If it holds, narrow it: 'This table: which one?' Never answer your own question first."
+      },
+      {
+        "if": "One voice dominates the room",
+        "then": "'Hold that; parking lot.' Write it up, then: 'I need two voices we haven't heard yet.' Revisit the lot at the close or by follow-up email."
+      },
+      {
+        "if": "Someone discloses real distress in Wellbeing (09)",
+        "then": "Do not process it in the room. Acknowledge briefly, continue, and connect them with EAP resources privately after. This is in your watch-fors; be ready for it."
+      }
+    ],
+    "toughQuestions": [
+      {
+        "q": "Is AI going to take my job?",
+        "a": "Honest answer: it changes tasks faster than it changes jobs. This session is the hedge; the person who can route, prompt, and verify becomes more valuable, not less. Vanderbilt is investing work time in you learning it, which tells you the institution's intent."
+      },
+      {
+        "q": "Is this session official university policy?",
+        "a": "No. This is training, and it points at the official sources: vanderbilt.ai and the data classification guidance. Where training and policy ever differ, policy wins."
+      },
+      {
+        "q": "These tools are wrong all the time. Why bother?",
+        "a": "They're unreliable encyclopedias and excellent first-draft machines. Section 07 is built on exactly that distinction; the verification habit is the price of the speed."
+      },
+      {
+        "q": "Can I use AI for performance reviews or hiring decisions?",
+        "a": "Personnel information is red-level data, so it stops at the data rule before we even reach judgment. Decisions about people stay with people. If you're tempted, talk to HR first."
+      },
+      {
+        "q": "Can I use my personal ChatGPT/Claude subscription for work?",
+        "a": "Green-level content only, with the disclosure norms your team sets in Section 08. Anything internal belongs in Amplify or VU-signed Copilot."
+      },
+      {
+        "q": "Isn't using AI cheating?",
+        "a": "A calculator isn't cheating at math at work. The line is accountability: you verify and own everything that ships. 'The AI wrote it' is never a defense, and that's the standard we set today."
+      }
+    ]
   },
   "sections": [
     {
@@ -31,7 +114,9 @@
       "validate": "80%+ of the room has the deck open on a device.",
       "watchFor": "Anyone without a device — pair them with a neighbor now so the later solo activities still work.",
       "coreMinutes": 2,
-      "coreNote": "Core: one scan prompt, move on."
+      "coreNote": "Core: one scan prompt, move on.",
+      "say": "Welcome. Before anything else, point your camera at that code. Everything we do today is hands-on, and that puts the controls in your hands.",
+      "transition": "Everyone in? Good. Let me make you five promises about the next hour."
     },
     {
       "id": "s-hero",
@@ -45,7 +130,17 @@
       "validate": "Objectives acknowledged; note which one the room cares most about.",
       "watchFor": "Anxiety about being 'behind' on AI — name it: this session assumes zero background.",
       "coreMinutes": 1,
-      "coreNote": "Core: read objectives 1, 3, 5 only."
+      "coreNote": "Core: read objectives 1, 3, 5 only.",
+      "say": "Here's the contract. Five things you'll be able to DO when we finish, not five things you'll have heard about. Number five matters most: you'll leave with a plan you built for your own work.",
+      "ask": {
+        "q": "Which of the five brought you here? Hold up the number.",
+        "expect": [
+          "Most rooms show 3 (prompting) and 4 (trust)",
+          "A few 5s from the pragmatists"
+        ],
+        "respond": "Perfect. Prompting and trust are exactly where we spend the most minutes."
+      },
+      "transition": "Nine ideas get us there. Here's the map, thirty seconds."
     },
     {
       "id": "s-agenda",
@@ -58,7 +153,9 @@
       "validate": "None needed.",
       "watchFor": "",
       "coreMinutes": 0,
-      "coreNote": "Core: skip; the progress bar orients."
+      "coreNote": "Core: skip; the progress bar orients.",
+      "say": "Nine ideas, in order. Notice where we end: your wellbeing, not just capability. That's deliberate, and there's research behind it.",
+      "transition": "Idea one: what IS this thing, actually?"
     },
     {
       "id": "s-what",
@@ -73,7 +170,18 @@
       "validate": "Inline quick check on the slide (generative-AI ring question) — watch the room's first-click accuracy; re-teach if wrong answers dominate.",
       "watchFor": "People equating AI with only ChatGPT — the rings exist to break exactly that.",
       "coreMinutes": 4,
-      "coreNote": "Core: rings + check; skip the group sort."
+      "coreNote": "Core: rings + check; skip the group sort.",
+      "say": "'AI' is like the word 'vehicle': technically true of a skateboard and a truck, useless until you know which one you mean. There are four rings. Let's walk in from the outside.",
+      "ask": {
+        "q": "Where does your spam filter live in these rings?",
+        "expect": [
+          "Most say 'AI' vaguely",
+          "Some say it isn't AI at all"
+        ],
+        "respond": "It's machine learning: nobody wrote a rule for football-Saturday phishing. It learned from examples. You've used ML for years without the label."
+      },
+      "debrief": "One habit to take: when anyone says 'we should use AI for this,' your first question is now 'which ring?'",
+      "transition": "Machine learning is the engine of the modern rings. So how does a machine actually learn anything?"
     },
     {
       "id": "s-learn",
@@ -89,7 +197,18 @@
       "validate": "ML trainer score visible per learner (3/4+ = got it); group share-out names a plausible dataset + type pairing.",
       "watchFor": "The supervised/unsupervised distinction is the common stumble — the tell is 'were there labels?'",
       "coreMinutes": 4,
-      "coreNote": "Core: trainer with hand-votes; assign video and group match as follow-ups."
+      "coreNote": "Core: trainer with hand-votes; assign video and group match as follow-ups.",
+      "say": "Machines learn the way new employees do: from examples, not from the manual. There are exactly three ways, and one question separates them: what data did it get?",
+      "ask": {
+        "q": "Scenario one, vote by hands: supervised, unsupervised, or reinforcement?",
+        "expect": [
+          "Most get scenario 1 right",
+          "Scenarios 2 and 4 split the room"
+        ],
+        "respond": "The tell is labels. Emails already tagged by humans means supervised. No labels, just structure? Unsupervised. Rewards over many tries? Reinforcement."
+      },
+      "debrief": "Next vendor meeting, you now ask: learned from what examples, labeled by whom, and what happens when the labels were biased?",
+      "transition": "All three run on the same machinery underneath. Ninety seconds from now the black box won't be black. Let's open it."
     },
     {
       "id": "s-nn",
@@ -104,7 +223,18 @@
       "validate": "Inline quick check (what changes during training) + each table produces a vendor question.",
       "watchFor": "Don't let the math-curious drag the room into gradient descent. The 3Blue1Brown series link now lives in this section's Go deeper for exactly them.",
       "coreMinutes": 4,
-      "coreNote": "Core: run the network + check; skip the vendor discussion."
+      "coreNote": "Core: run the network + check; skip the vendor discussion.",
+      "say": "This is the part everyone calls a black box. Watch the screen; I'm going to push a signal through a real network shape, layer by layer.",
+      "ask": {
+        "q": "If a network like this denies someone's application, what would 'explain the decision' even mean?",
+        "expect": [
+          "'Show them the code'",
+          "'You can't, it's a black box'"
+        ],
+        "respond": "The code is fully visible; that's the trap. The logic lives in millions of weights. So the right audit question is about training data and outcomes, not source code."
+      },
+      "debrief": "Collect one vendor question per table on the whiteboard; photograph it for the follow-up email.",
+      "transition": "Now the network you'll actually touch every week: the one that predicts words."
     },
     {
       "id": "s-llm",
@@ -119,7 +249,18 @@
       "validate": "Ask 2-3 volunteers to read their task + check aloud; recap-quiz question 2 covers the concept.",
       "watchFor": "'So it's just autocomplete?' — yes, and: scale makes prediction surprisingly capable. Both halves are true.",
       "coreMinutes": 5,
-      "coreNote": "Core: keep the solo note; it feeds Section 07."
+      "coreNote": "Core: keep the solo note; it feeds Section 07.",
+      "say": "Everything ChatGPT does is one move: guess the next word, then do it again, absurdly fast. For the next two minutes, you do its job.",
+      "ask": {
+        "q": "What happens if I pick 'banana' here?",
+        "expect": [
+          "Laughter",
+          "'It breaks' / 'it errors'"
+        ],
+        "respond": "It doesn't break. It commits. It builds the most plausible sentence CONTAINING banana. Confidence without knowledge; hold onto that for Section 07."
+      },
+      "debrief": "This is why it never says 'I don't know' on its own: prediction always produces something.",
+      "transition": "If it's rolling dice over probabilities, who loads the dice? You do. Next."
     },
     {
       "id": "s-temp",
@@ -134,7 +275,16 @@
       "validate": "Inline quick check (policy summary = low temperature); volunteers describe what differed between their two answers.",
       "watchFor": "Clarify most tools hide the dial — the words 'standard answer' vs 'ten wild options' ARE the dial.",
       "coreMinutes": 2,
-      "coreNote": "Core: slider demo + check only."
+      "coreNote": "Core: slider demo + check only.",
+      "say": "Same question, different answers. Not a bug: a dial. Watch the answer rewrite itself as I drag from precise to creative.",
+      "ask": {
+        "q": "Which end for summarizing a policy? Which end for naming a program?",
+        "expect": [
+          "Nearly everyone gets this"
+        ],
+        "respond": "Right. And since most tools hide the dial, your words ARE the dial: 'give me the standard answer' versus 'give me ten wild options.'"
+      },
+      "transition": "You know how it thinks and how it varies. Time to learn to speak to it properly. This is the skill of the day."
     },
     {
       "id": "s-prompt",
@@ -149,7 +299,18 @@
       "validate": "Screen-swap peer review; ask for one 'move I'm stealing' from the room. Recap questions 5 covers structure.",
       "watchFor": "Perfectionists writing one giant prompt — push iteration: 'correct it like you'd coach a new hire.'",
       "coreMinutes": 5,
-      "coreNote": "Core: 3-minute draft instead of 5; skip screen-swap."
+      "coreNote": "Core: 3-minute draft instead of 5; skip screen-swap.",
+      "say": "Highest-return skill of the session: four parts. And the first one has a Vanderbilt name on it: Dr. Jules White proved the Persona Pattern, right here.",
+      "ask": {
+        "q": "Look at your last real prompt to any AI. Which of the four parts was missing?",
+        "expect": [
+          "Context, overwhelmingly",
+          "Format second"
+        ],
+        "respond": "Almost everyone skips context, then blames the tool for guessing. The model can't know what you didn't say."
+      },
+      "debrief": "After the solo draft: what did your second refinement fix that your first prompt missed?",
+      "transition": "You've written yours. Now let's run a build where the machine grades you."
     },
     {
       "id": "s-lab",
@@ -165,7 +326,10 @@
       "validate": "Learners reach 11-12/12 within two runs; ask for a show of hands. The per-slot coaching is the reteach.",
       "watchFor": "Anyone gaming it by picking all C's without reading — ask them to say WHY the strong context wins.",
       "coreMinutes": 5,
-      "coreNote": "Core: one projector build + one personal build."
+      "coreNote": "Core: one projector build + one personal build.",
+      "say": "Same announcement task, but scored. I'll go first, and I'm going to build it badly on purpose. Listen to what bad sounds like.",
+      "debrief": "Which single upgrade moved your score most? It's almost always context. Say that sentence to yourself Monday.",
+      "transition": "You can get strong output now. Harder question: when do you trust it?"
     },
     {
       "id": "s-limits",
@@ -180,7 +344,18 @@
       "validate": "Inline check + each table states task/check/owner aloud. This is the session's core transfer moment — don't rush it.",
       "watchFor": "Cynics ('so it's useless') and enthusiasts ('it's always right') — the answer to both is the verification habit.",
       "coreMinutes": 4,
-      "coreNote": "Core: keep; this is the transfer spine."
+      "coreNote": "Core: keep; this is the transfer spine.",
+      "say": "This tool is two things at once: a brilliant first-draft machine and an unreliable reference librarian. Your skill is knowing which one you're holding.",
+      "ask": {
+        "q": "The check on screen: your AI cites a policy with a title and date. Hands: A, B, or C?",
+        "expect": [
+          "Most pick A",
+          "A confident minority picks B"
+        ],
+        "respond": "A. Models invent realistic citations without blinking. Confident phrasing is not evidence; it's the house style."
+      },
+      "debrief": "Each table: your highest-stakes task, its check, and who owns it. Say all three out loud; the owner part is where this becomes real.",
+      "transition": "Verification protects your work. The next two slides protect your people and this university."
     },
     {
       "id": "s-ethics",
@@ -195,7 +370,18 @@
       "validate": "Every table produces a policy sentence and names who takes it to their team meeting.",
       "watchFor": "Questions about specific Vanderbilt policy — point to official university AI guidance rather than improvising.",
       "coreMinutes": 4,
-      "coreNote": "Core: 4-minute policy sentence; one table reads theirs."
+      "coreNote": "Core: 4-minute policy sentence; one table reads theirs.",
+      "say": "Three duties, none optional, none requiring a CS degree: watch the bias, guard the data, own the output.",
+      "ask": {
+        "q": "The privacy check on screen: which is safe to paste? Vote before you click.",
+        "expect": [
+          "Most get A",
+          "Someone defends C 'because it's a draft'"
+        ],
+        "respond": "Drafts are retained like everything else. If you'd wince seeing it quoted back publicly, it doesn't go in."
+      },
+      "debrief": "Two tables read their policy sentence. Notice how similar they are; that convergence IS the norm forming.",
+      "transition": "Duties clear. Now the everyday question: which tool for which work?"
     },
     {
       "id": "s-toolkit",
@@ -211,7 +397,18 @@
       "validate": "Inline check first-click accuracy; then cold-call one scenario per table: 'donor thank-you letter — which tool?'",
       "watchFor": "'But I already pasted X into ChatGPT once' confessions — respond with the fix (report per policy, change practice), not shame. Point to VU AI Guidance + Data Classification Policy.",
       "coreMinutes": 5,
-      "coreNote": "Core: keep; read the red list verbatim regardless."
+      "coreNote": "Core: keep; read the red list verbatim regardless.",
+      "say": "The most common AI question on this campus: does this task go in ChatGPT, Amplify, or Copilot? Two seconds from now, you'll route it by one thing: the data.",
+      "ask": {
+        "q": "Cold call, one per table: a donor thank-you letter draft. Which tool?",
+        "expect": [
+          "Confusion between yellow and red",
+          "'ChatGPT, it's just a letter'"
+        ],
+        "respond": "Contains donor data? Red: nowhere. A generic template with no names? Green. The DATA decides, never the task. Now read the red list with me, slowly."
+      },
+      "debrief": "Point at the links on the cards: these are live. Amplify is one click from this page.",
+      "transition": "Last idea, and it might matter most: keeping what the machine just gave you."
     },
     {
       "id": "s-wellbeing",
@@ -226,7 +423,10 @@
       "validate": "Do NOT collect answers — validation here is the recap-quiz wellbeing question only. Privacy is the point.",
       "watchFor": "This section can surface real strain. If someone discloses distress, connect them to EAP resources after the session — never process it in the room.",
       "coreMinutes": 3,
-      "coreNote": "Core: patterns + EAP card; self-check as homework."
+      "coreNote": "Core: patterns + EAP card; self-check as homework.",
+      "say": "The research is blunt: AI doesn't reduce work by default, it intensifies it. The hour it saves silently refills unless someone decides otherwise. On your team, that someone is you.",
+      "debrief": "No share-out here, deliberately. The self-check is between you and you.",
+      "transition": "That's all nine ideas. Ninety seconds to prove it stuck, then we build your plan."
     },
     {
       "id": "s-recap",
@@ -240,7 +440,10 @@
       "validate": "Quiz score = the session's learning evidence. 5/6 room-wide is the pass signal; below that, reteach the weakest section using its simulator.",
       "watchFor": "Keep it light — this validates the teaching, not the learner.",
       "coreMinutes": 4,
-      "coreNote": "Core: keep whole."
+      "coreNote": "Core: keep whole.",
+      "say": "Six questions on your own device. This checks MY teaching, not your memory. Go.",
+      "debrief": "Which question did the room miss? Reopen that slide's simulator for sixty seconds and fix it now, not by email later.",
+      "transition": "Knowledge confirmed. Now the only slide that matters on Monday morning."
     },
     {
       "id": "s-plan",
@@ -258,7 +461,18 @@
       "validate": "Scan the room for plan cards on screens; show of hands for 'copied and pasted it somewhere real.' The plan IS the session's performance assessment.",
       "watchFor": "Vague tasks ('email') produce vague plans. Push for one specific recurring artifact: 'the Thursday status note to my director.'",
       "coreMinutes": 6,
-      "coreNote": "Core: keep whole; this is the payoff."
+      "coreNote": "Core: keep whole; this is the payoff.",
+      "say": "Everything so far was rehearsal. This is the real thing: one task, one tool, one plan, four minutes. I'll build mine first so you can see it; then it's yours.",
+      "ask": {
+        "q": "Pairs: read your plan's first line to your neighbor.",
+        "expect": [
+          "Vague tasks like 'email'",
+          "A few red-level picks"
+        ],
+        "respond": "If yours was vague, name ONE recurring artifact: 'the Thursday status note.' If your plan said STOP for red data, say so proudly; that's the system working."
+      },
+      "debrief": "Hands: who copied their plan somewhere they'll see Monday? That number is this session's real score.",
+      "transition": "Plans made. Two gifts before you go."
     },
     {
       "id": "s-glossary",
@@ -271,7 +485,9 @@
       "validate": "None — reference material.",
       "watchFor": "",
       "coreMinutes": 0,
-      "coreNote": "Core: skip; reference only."
+      "coreNote": "Core: skip; reference only.",
+      "say": "This one's a reference, not a lesson. Flip 'hallucination' once for the callback, move on.",
+      "transition": "And finally: your one next step."
     },
     {
       "id": "s-close",
@@ -287,7 +503,16 @@
       "validate": "Show of hands: who enrolled or bookmarked? Fist-to-five reaction score. Three spoken commitments.",
       "watchFor": "",
       "coreMinutes": 2,
-      "coreNote": "Core: enroll ask + one commitment."
+      "coreNote": "Core: enroll ask + one commitment.",
+      "say": "One next step, not eight: Dr. Jules White's course. Free, Vanderbilt-taught, ten times deeper on today's Section 06. Open it now if you mean it; watching you enroll beats hoping you will. And take the cheat sheet; it's built to live beside your monitor.",
+      "ask": {
+        "q": "Fist to five: was this worth your hour?",
+        "expect": [
+          "3s to 5s in a decent room"
+        ],
+        "respond": "Thank you. Last thing: tell me one thing you'll do differently this week. Three voices, then we're done."
+      },
+      "transition": ""
     }
   ]
 }
