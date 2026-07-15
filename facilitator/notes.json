@@ -4,7 +4,8 @@
     "totalMinutes": 60,
     "audience": "Vanderbilt staff, no technical prerequisites",
     "roomSetup": "Projector + presenter device; learners on their own devices via the Welcome-slide QR; tables of 3-6 for group activities.",
-    "futureUse": "The facilitator version of the site will mirror the learner deck with these notes rendered in a rail to the right of each slide. Keys map to slide section ids."
+    "futureUse": "The facilitator version of the site will mirror the learner deck with these notes rendered in a rail to the right of each slide. Keys map to slide section ids.",
+    "postSession": "Two weeks out, send one line to attendees (or their managers): 'Did your first rep happen? Reply with one sentence.' That reply is your Kirkpatrick Level 3 evidence; collect and tally."
   },
   "sections": [
     {
@@ -24,9 +25,9 @@
       "id": "s-hero",
       "title": "Objectives",
       "minutes": 2,
-      "purpose": "Set the contract: four objectives, no code, no math.",
+      "purpose": "Set the contract: five objectives, no code, no math.",
       "facilitate": [
-        "Read the four objectives aloud — they are the assessment map for the recap quiz.",
+        "Read the five objectives aloud; they are the assessment map (quiz validates 1-4, the capstone plan validates 5).",
         "Say: 'If any of these is the one you came for, tell me at the break and I'll go deeper there.'"
       ],
       "validate": "Objectives acknowledged; note which one the room cares most about.",
@@ -116,7 +117,7 @@
       "purpose": "The four-part prompt; credit Vanderbilt's Dr. Jules White for the Persona Pattern.",
       "facilitate": [
         "Hover each part of the example prompt on the projector.",
-        "Name-drop deliberately: 'The role line is the Persona Pattern — invented and taught by our own Dr. Jules White. His course is on the Watch slide.'",
+        "Name-drop deliberately: 'The role line is the Persona Pattern — invented and taught by our own Dr. Jules White. His course is the featured next step on the closing slide.'",
         "Run the ON YOUR OWN activity (5 min): a real email, four parts, two refinements. Neighbor screen-swap if time allows."
       ],
       "validate": "Screen-swap peer review; ask for one 'move I'm stealing' from the room. Recap questions 5 covers structure.",
@@ -236,9 +237,10 @@
       "facilitate": [
         "Point at the featured card: 'Free to audit, taught by Vanderbilt faculty, ten times deeper on today's Section 06.'",
         "Ask people to open it and enroll now if they mean it. Watching them do it beats hoping they will.",
-        "Close with one ask: 'Tell me one thing you'll do differently this week.' Take three answers and end."
+        "Close with one ask: 'Tell me one thing you'll do differently this week.' Take three answers and end.",
+        "Kirkpatrick L1, fist-to-five: 'Was this worth your hour? Zero to five fingers up, right now.' Note the room's number in your own log."
       ],
-      "validate": "Show of hands: who enrolled or bookmarked? Plus the three spoken commitments.",
+      "validate": "Show of hands: who enrolled or bookmarked? Fist-to-five reaction score. Three spoken commitments.",
       "watchFor": ""
     }
   ]

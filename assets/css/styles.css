@@ -549,7 +549,7 @@ em, .italic { font-style: italic; }
 .on-dark .why { color: var(--vu-gold-flat); }
 .why b { font-weight: 600; }
 
-.yt { margin-top: 1.75rem; max-width: 860px; }
+.yt { margin-top: 1.75rem; max-width: 860px; margin-inline: auto; }
 .yt__load {
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.1rem;
   width: 100%; aspect-ratio: 16 / 9;
