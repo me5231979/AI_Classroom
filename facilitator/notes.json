@@ -1,7 +1,7 @@
 {
   "meta": {
     "program": "AI Basics — Vanderbilt Manager Learning Series",
-    "totalMinutes": 50,
+    "totalMinutes": 60,
     "audience": "Vanderbilt managers and staff, no technical prerequisites",
     "roomSetup": "Projector + presenter device; learners on their own devices via the Welcome-slide QR; tables of 3-6 for group activities.",
     "futureUse": "The facilitator version of the site will mirror the learner deck with these notes rendered in a rail to the right of each slide. Keys map to slide section ids."
@@ -37,7 +37,9 @@
       "title": "The plan",
       "minutes": 1,
       "purpose": "Orient: nine ideas in order, ending with wellbeing — not just capability.",
-      "facilitate": ["Point out 09: 'We end with what AI does to your workload, not just what it can do.'"],
+      "facilitate": [
+        "Point out 09: 'We end with what AI does to your workload, not just what it can do.'"
+      ],
       "validate": "None needed.",
       "watchFor": ""
     },
@@ -60,6 +62,7 @@
       "minutes": 7,
       "purpose": "The three training paradigms, anchored to workplace data.",
       "facilitate": [
+        "Optional in-flow video: play the first 2 minutes of 'How Machines Learn' (embedded on the slide) as a hook; assign the rest as homework.",
         "Walk the three cards, then say: 'Now you be the ML engineer.'",
         "Run the PLAY widget (4 scenarios) together on the projector — vote by hands for each scenario before revealing.",
         "Run the AS A GROUP activity: teams pick a dataset their unit already produces and match a learning type to it."
@@ -87,7 +90,8 @@
       "purpose": "One idea: it predicts the next word. Everything else follows.",
       "facilitate": [
         "Build the sentence live on the projector — pick the low-probability word once ('banana') for the laugh and the lesson.",
-        "Run the ON YOUR OWN activity: each person writes their tempted-to-trust task and its 30-second check. Tell them to keep the note for Section 07."
+        "Run the ON YOUR OWN activity: each person writes their tempted-to-trust task and its 30-second check. Tell them to keep the note for Section 07.",
+        "Close the section with the embedded 8-minute 3Blue1Brown LLM video if time allows, or assign it — it consolidates the token predictor exercise."
       ],
       "validate": "Ask 2-3 volunteers to read their task + check aloud; recap-quiz question 2 covers the concept.",
       "watchFor": "'So it's just autocomplete?' — yes, and: scale makes prediction surprisingly capable. Both halves are true."
@@ -118,6 +122,20 @@
       "watchFor": "Perfectionists writing one giant prompt — push iteration: 'correct it like you'd coach a new hire.'"
     },
     {
+      "id": "s-lab",
+      "title": "Prompt Lab (simulator: task → choices → outcome)",
+      "minutes": 7,
+      "purpose": "Learners feel the outcome quality change as each prompt part improves — cause and effect, before writing their own.",
+      "facilitate": [
+        "Frame the task aloud: 'Same announcement email — but this time the machine grades your build.'",
+        "Run it once on the projector choosing the WEAK options deliberately; read the greeting-card output for the laugh.",
+        "Everyone rebuilds on their own device aiming for 11+; on your own, ~4 min.",
+        "Debrief: which single upgrade moved your score most? (It's almost always Context.)"
+      ],
+      "validate": "Learners reach 11-12/12 within two runs; ask for a show of hands. The per-slot coaching is the reteach.",
+      "watchFor": "Anyone gaming it by picking all C's without reading — ask them to say WHY the strong context wins."
+    },
+    {
       "id": "s-limits",
       "title": "07 · Strengths & limits (hallucination)",
       "minutes": 6,
@@ -142,6 +160,20 @@
       ],
       "validate": "Every table produces a policy sentence and names who takes it to their team meeting.",
       "watchFor": "Questions about specific Vanderbilt policy — point to official university AI guidance rather than improvising."
+    },
+    {
+      "id": "s-toolkit",
+      "title": "Your toolkit (Amplify / Copilot / ChatGPT + data levels)",
+      "minutes": 6,
+      "purpose": "Route every task to the right platform, gated by data sensitivity. This is the slide that prevents incidents.",
+      "facilitate": [
+        "Walk the three platforms with a one-line scenario each: internal draft → Amplify; email cleanup in Outlook → Copilot; public-info brainstorm → ChatGPT.",
+        "Acknowledge the wider world honestly: Claude, Perplexity, Gamma are good tools — green-level content only, because they sit outside VU agreements.",
+        "Read the RED list slowly, verbatim. Say: 'If it's on this list, it never touches a generative AI tool. Not once, not partially, not anonymized-ish.'",
+        "Run the inline check (staffing-plan question) as a room vote before revealing."
+      ],
+      "validate": "Inline check first-click accuracy; then cold-call one scenario per table: 'donor thank-you letter — which tool?'",
+      "watchFor": "'But I already pasted X into ChatGPT once' confessions — respond with the fix (report per policy, change practice), not shame. Point to VU AI Guidance + Data Classification Policy."
     },
     {
       "id": "s-wellbeing",
@@ -173,7 +205,9 @@
       "title": "Glossary",
       "minutes": 2,
       "purpose": "Reference, not teaching. Flip two or three live.",
-      "facilitate": ["Flip 'hallucination' and 'token' as a callback; leave the rest for self-paced review."],
+      "facilitate": [
+        "Flip 'hallucination' and 'token' as a callback; leave the rest for self-paced review."
+      ],
       "validate": "None — reference material.",
       "watchFor": ""
     },
@@ -194,7 +228,9 @@
       "title": "Closing",
       "minutes": 1,
       "purpose": "Land the plane: hype fades when you see the machinery; keep a human in the loop.",
-      "facilitate": ["Close with one ask: 'Tell me one thing you'll do differently this week.' Take three answers and end."],
+      "facilitate": [
+        "Close with one ask: 'Tell me one thing you'll do differently this week.' Take three answers and end."
+      ],
       "validate": "Verbal commitments = the session's transfer evidence.",
       "watchFor": ""
     }

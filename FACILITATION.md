@@ -1,6 +1,8 @@
 # Facilitation Guide — AI Basics
 
-The learner experience is fully facilitatable: every teaching section has
+Every activity carries a learner-visible **"Why this matters"** line — the reason
+is on the slide, not just in these notes. The learner experience is fully
+facilitatable: every teaching section has
 (1) a **simulator or play moment**, (2) a **labeled, timed activity** — *As a
 group* or *On your own* — and (3) a **validation point** that tells you whether
 learning landed before you move on.
@@ -11,7 +13,7 @@ planned **facilitator version** of the site will mirror the learner deck with
 those notes rendered in a rail to the right of each slide — keep the JSON in
 sync whenever slides change.
 
-## Run of show (~50 min)
+## Run of show (~60 min)
 
 | # | Slide | Min | Interaction (practice / play) | Validation point |
 |---|---|---|---|---|
@@ -24,8 +26,10 @@ sync whenever slides change.
 | 04 | Language models | 6 | **Token predictor** + solo trust/check note | Volunteers share; recap Q2 |
 | 05 | Temperature | 4 | **Slider** + same-question-twice experiment | Inline check (low temp) |
 | 06 | Prompting | 8 | **Anatomy highlighter** + real-email prompt practice | Peer screen-swap; recap Q5 |
+| — | **Prompt Lab** | 7 | **Simulator: build a prompt, run it, graded outcome /12 + coaching** | 11+/12 within two runs |
 | 07 | Strengths & limits | 6 | Group risk-ranking (uses Section 04 notes) | Inline check + task/check/owner stated |
 | 08 | Responsible use | 6 | Group policy-sentence drafting | Every table produces a sentence |
+| — | **Your toolkit** | 6 | Amplify/Copilot/ChatGPT routing + 🟢🟡🔴 data levels | Inline check + table cold-calls |
 | 09 | Wellbeing | 5 | Private self-check (never shared) | Recap wellbeing question only |
 | — | Recap quiz | 4 | **Scored 6-question quiz** | 5/6 room-wide = pass signal |
 | — | Glossary / Watch / Close | 5 | Flip cards; homework commitment | Verbal commitments |

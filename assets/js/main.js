@@ -452,6 +452,92 @@
     tRender();
   }
 
+  /* ---------- In-flow video embeds (click-to-load, privacy-friendly) ---------- */
+  $$('.yt').forEach(function (box) {
+    var btn = $('.yt__load', box);
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = box.getAttribute('data-embed') + '?autoplay=1&rel=0';
+      f.title = box.getAttribute('data-yttitle') || 'Video';
+      f.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture';
+      f.setAttribute('allowfullscreen', '');
+      btn.replaceWith(f);
+    });
+  });
+
+  /* ---------- INTERACTIVE: Prompt Lab (task -> choices -> graded outcome) ---------- */
+  var lab = $('#promptLab');
+  if (lab) {
+    var SLOTS = [
+      { key: 'Role', opts: [
+        { t: '“You are an AI.”', pts: 1, coach: 'Role: “an AI” gives the model nothing to aim at — give it a profession and a disposition.' },
+        { t: '“You are a helpful assistant.”', pts: 2, coach: 'Role: helpful, but generic. A specific expertise sets tone and depth.' },
+        { t: '“You are an experienced internal-communications writer who explains change with empathy.”', pts: 3, coach: 'Role: expertise + disposition — the Persona Pattern at full strength.' }]},
+      { key: 'Context', opts: [
+        { t: '(no context — jump straight to the ask)', pts: 1, coach: 'Context: with nothing to go on, the model invents details — some will be wrong.' },
+        { t: '“My team is switching expense systems next month.”', pts: 2, coach: 'Context: the what is here; the who and the worry are missing.' },
+        { t: '“My 12-person team moves to a new expense system next month; several people are anxious; training is available before go-live.”', pts: 3, coach: 'Context: who, what, when, and the emotional temperature — everything the draft needs.' }]},
+      { key: 'Task', opts: [
+        { t: '“Write something about this.”', pts: 1, coach: 'Task: “something” gets you anything. Name the deliverable.' },
+        { t: '“Draft an announcement email.”', pts: 2, coach: 'Task: clear deliverable — adding its job (reassure, point to training) would sharpen it.' },
+        { t: '“Draft an announcement email that explains the timeline, reassures the team, and points to the training.”', pts: 3, coach: 'Task: deliverable + its three jobs. The model knows exactly what done looks like.' }]},
+      { key: 'Format', opts: [
+        { t: '(no format — let it decide)', pts: 1, coach: 'Format: unspecified means you edit for length and structure later.' },
+        { t: '“Keep it short.”', pts: 2, coach: 'Format: short compared to what? Numbers beat adjectives.' },
+        { t: '“Three short paragraphs, warm and direct, under 200 words, ending with one clear next step.”', pts: 3, coach: 'Format: shape, tone, length, and an ending — nothing left to chance.' }]}
+    ];
+    var picks = [null, null, null, null];
+    var slotsEl = $('#labSlots'), runBtn = $('#labRun'), statusEl = $('#labStatus'), outEl = $('#labOutcome');
+    SLOTS.forEach(function (slot, si) {
+      var d = document.createElement('div');
+      d.className = 'slot';
+      d.innerHTML = '<h3>' + (si + 1) + ' · ' + slot.key + '</h3>';
+      slot.opts.forEach(function (o, oi) {
+        var b = document.createElement('button');
+        b.className = 'opt'; b.setAttribute('aria-pressed', 'false');
+        b.innerHTML = '<span class="mark">' + String.fromCharCode(65 + oi) + '</span><span>' + o.t + '</span>';
+        b.addEventListener('click', function () {
+          picks[si] = oi;
+          $$('.opt', d).forEach(function (x, xi) { x.setAttribute('aria-pressed', String(xi === oi)); });
+          var ready = picks.every(function (p) { return p !== null; });
+          runBtn.disabled = !ready;
+          statusEl.textContent = ready ? 'Ready — run it' :
+            'Choose ' + picks.filter(function (p) { return p === null; }).length + ' more part(s)';
+          outEl.hidden = true;
+        });
+        d.appendChild(b);
+      });
+      slotsEl.appendChild(d);
+    });
+    var SAMPLES = {
+      strong: '“Team — starting next month we’re moving to our new expense system. Here’s the timeline, what’s changing, and what isn’t… Training is open now, and I’ve set aside time in Friday’s meeting for questions. One step for this week: log in once before the 1st.”',
+      mid: '“Dear team, I am writing to inform you about an upcoming change to our expense system. Please be advised that training resources may be available. Do not hesitate to reach out with any questions…”',
+      weak: '“Change can be challenging, but it is also an opportunity for growth! Exciting things are happening. Stay tuned for more information coming soon…”'
+    };
+    runBtn.addEventListener('click', function () {
+      var score = picks.reduce(function (t, p, i) { return t + SLOTS[i].opts[p].pts; }, 0); // 4..12
+      var pct = Math.round((score / 12) * 100);
+      var tier = score >= 11 ? 'strong' : score >= 8 ? 'mid' : 'weak';
+      var head = tier === 'strong' ? 'Strong first draft — ready to edit, not rewrite.'
+               : tier === 'mid' ? 'Usable but generic — you’ll spend real time editing this.'
+               : 'Vague output — the model had to guess, and it guessed like a greeting card.';
+      var coach = picks.map(function (p, i) { return '<div><b>' + SLOTS[i].key + ':</b> ' + SLOTS[i].opts[p].coach.replace(/^(Role|Context|Task|Format):\s*/, '') + '</div>'; }).join('');
+      outEl.innerHTML = '<span class="tag">Outcome · ' + score + ' / 12</span>' +
+        '<div class="lab__meter"><span style="width:0"></span></div>' +
+        '<p style="margin:0;color:#fff;font-weight:500">' + head + '</p>' +
+        '<div class="sample">' + SAMPLES[tier] + '</div>' +
+        '<div class="lab__coach">' + coach + '</div>' +
+        (tier !== 'strong' ? '<p class="why" style="margin-top:1rem"><b>Try again:</b> upgrade your weakest part and re-run — watch the outcome change.</p>' : '<p class="why" style="margin-top:1rem"><b>Now the real thing:</b> use this structure on the email you picked in Section 06.</p>');
+      outEl.hidden = false;
+      requestAnimationFrame(function () {
+        var bar = $('.lab__meter span', outEl);
+        if (bar) requestAnimationFrame(function () { bar.style.width = pct + '%'; });
+      });
+      outEl.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+    });
+  }
+
   /* ---------- INTERACTIVE: scored recap quiz ---------- */
   var recap = $('#recap');
   if (recap) {
