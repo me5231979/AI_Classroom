@@ -169,7 +169,8 @@
             <li>Call out tools your team touches every day, and have someone capture the list.</li>
             <li>Sort each one: rule-based, machine learning, or generative AI.</li>
             <li>Agree on your team’s three most AI-dependent tools and share with the room.</li>
-          </ol></div>
+          </ol>
+          <p class="why" style="margin-top:.6rem"><b>Flying solo?</b> Sort your own five most-used tools into the rings, then take the quick check below.</p></div>
         </div>
       </details>
     </div>
@@ -256,7 +257,8 @@
             <li>Pick one dataset your unit already produces as a byproduct of normal work (tickets, requests, survey comments).</li>
             <li>Decide together which of the three learning types could use it, and what it would predict.</li>
             <li>Name one thing that goes wrong if the historical examples are biased or mislabeled.</li>
-          </ol></div>
+          </ol>
+          <p class="why" style="margin-top:.6rem"><b>Flying solo?</b> Pick one dataset your own work produces and decide which learning type fits it.</p></div>
         </div>
       </details>
     </div>
@@ -301,7 +303,8 @@
             <li>One person names a consequential decision AI might help make at Vanderbilt (screening, routing, flagging).</li>
             <li>Discuss: if someone challenged that decision, what would “explain it” actually require?</li>
             <li>Agree on one question your team would ask any vendor selling you an AI decision tool.</li>
-          </ol></div>
+          </ol>
+          <p class="why" style="margin-top:.6rem"><b>Flying solo?</b> Write the one question you would ask a vendor selling an AI decision tool.</p></div>
         </div>
       </details>
     </div>
@@ -321,6 +324,7 @@
           <div class="predict__sentence" id="predictSentence" aria-live="polite"></div>
           <div class="predict__options" id="predictOptions" role="group" aria-label="Next-token choices"></div>
           <p class="predict__hint" id="predictHint"></p>
+          <p class="predict__hint" style="font-size:.85rem;opacity:.75">Simulated for teaching; probabilities are illustrative, not a live model.</p>
           <button class="btn btn--ghost" id="predictReset" style="margin-top:1rem">Start over</button>
         </div>
       </div>
@@ -366,6 +370,7 @@
           <p class="temp__readout" id="tempReadout"></p>
           <input class="slider" type="range" id="tempSlider" min="0" max="120" value="30" aria-label="Model temperature">
           <div class="slider-scale"><span>Precise</span><span>Balanced</span><span>Creative</span></div>
+          <p class="why" style="font-size:.85rem;margin-top:.75rem">Simulated answers for teaching, not a live model.</p>
         </div>
       </div>
 
@@ -441,7 +446,7 @@
       <p class="eyebrow" data-reveal>Practice · Prompt Lab</p>
       <h2 class="h2" data-reveal>Build one that <em>works</em>.</h2>
       <p class="lead" data-reveal>Your task: get a strong first draft of a change announcement for your team. Choose one option for each part of the prompt, then run it and see what the model would give you back.</p>
-      <p class="why" data-reveal><b>Why this matters:</b> feeling the outcome change as each part improves is the fastest way to internalize the four-part structure before you write your own from scratch.</p>
+      <p class="why" data-reveal><b>Why this matters:</b> feeling the outcome change as each part improves is the fastest way to internalize the four-part structure before you write your own from scratch. The graded responses are simulated for teaching.</p>
       <div class="lab" id="promptLab" data-reveal>
         <div class="lab__slots" id="labSlots"></div>
         <div class="lab__runrow">
@@ -504,7 +509,8 @@
             <li>Each person shares the task they wrote down in Section 04.</li>
             <li>As a table, pick the highest-stakes one, where an unverified AI answer costs the most.</li>
             <li>Agree on the check for it and who owns that check. Write both down.</li>
-          </ol></div>
+          </ol>
+          <p class="why" style="margin-top:.6rem"><b>Flying solo?</b> Take your Section 04 note and write the check and the day you'll do it.</p></div>
         </div>
       </details>
     </div>
@@ -553,7 +559,8 @@
             <li>Draft one sentence of team policy together: “On our team, we use AI for ___, never for ___, and we disclose when ___.”</li>
             <li>Test it against the three ideas on this slide: bias, privacy, accountability. Does the sentence still hold?</li>
             <li>Nominate one person to bring the draft to your next team meeting.</li>
-          </ol></div>
+          </ol>
+          <p class="why" style="margin-top:.6rem"><b>Flying solo?</b> Draft the sentence yourself and email it to your team lead as a conversation starter.</p></div>
         </div>
       </details>
     </div>
@@ -572,18 +579,21 @@
           <h3>Amplify</h3>
           <p class="muted">Vanderbilt's own AI platform. Reach for it first for university work: drafting with internal context, exploring multiple models, work you want inside VU's walls.</p>
           <p class="toolkit__use"><b>Use when:</b> the task touches university business or internal (yellow-level) information.</p>
+          <p class="toolkit__use"><a href="https://www.vanderbilt.ai/" target="_blank" rel="noopener" style="color:var(--vu-oak);text-decoration:underline">Open Amplify</a></p>
         </div>
         <div class="card" data-reveal>
           <span class="tag">In Microsoft 365</span>
           <h3>Copilot</h3>
           <p class="muted">AI inside the tools you already use (Word, Outlook, Excel, Teams) with enterprise data protection when you're signed in with your VU account.</p>
           <p class="toolkit__use"><b>Use when:</b> the work lives in a document, inbox, or meeting you already have open in M365.</p>
+          <p class="toolkit__use"><a href="https://copilot.microsoft.com" target="_blank" rel="noopener" style="color:var(--vu-oak);text-decoration:underline">Open Copilot</a> (sign in with your VU account)</p>
         </div>
         <div class="card" data-reveal>
           <span class="tag">General purpose</span>
           <h3>ChatGPT</h3>
           <p class="muted">The general-purpose assistant. Great for learning, brainstorming, and drafting from public information. Treat it as a public tool unless VU account protections apply.</p>
           <p class="toolkit__use"><b>Use when:</b> the content is public (green-level) and you want speed and breadth.</p>
+          <p class="toolkit__use"><a href="https://chat.openai.com" target="_blank" rel="noopener" style="color:var(--vu-oak);text-decoration:underline">Open ChatGPT</a></p>
         </div>
       </div>
 
@@ -597,7 +607,7 @@
           <div class="dl dl--green"><b>🟢 Green: any approved tool.</b> Public information, general questions, drafts containing no names, IDs, or internal details.</div>
           <div class="dl dl--yellow"><b>🟡 Yellow: Amplify or signed-in Copilot only.</b> Internal operational content: unpublished plans, internal processes, non-sensitive work drafts with VU context.</div>
           <div class="dl dl--red"><b>🔴 Red: never in any generative AI tool.</b> Student records (FERPA) · health information (HIPAA) · salaries &amp; personnel files · donor records &amp; gift data · passwords, keys &amp; credentials · unpublished research data · contracts &amp; legal matters.</div>
-          <p class="why" style="margin-top:.75rem"><b>When in doubt:</b> treat the prompt like a public post, and check Vanderbilt's AI Guidance and Data Classification Policy before sharing.</p>
+          <p class="why" style="margin-top:.75rem"><b>When in doubt:</b> treat the prompt like a public post, and check <a href="https://www.vanderbilt.ai/" target="_blank" rel="noopener" style="color:var(--vu-oak);text-decoration:underline">Vanderbilt's AI hub</a> and the <a href="https://it.vanderbilt.edu/" target="_blank" rel="noopener" style="color:var(--vu-oak);text-decoration:underline">data classification guidance</a><!-- [EDIT] swap for the exact policy URLs --> before sharing.</p>
         </div>
       </div>
 
@@ -742,6 +752,7 @@
         <button class="flip" data-reveal aria-label="Hallucination, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Hallucination</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Confident output that is simply false. A byproduct of predicting plausible text rather than checking facts.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Inference, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Inference</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Using a trained model to produce an answer, which happens every time you send a prompt.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Fine-tuning, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Fine-tuning</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Extra training that adapts a general model to a specific task, tone, or domain.</p></div></div></button>
+                <button class="flip" data-reveal aria-label="Agentic A I, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Agentic&nbsp;AI</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>AI that acts, not just answers: given a goal, it takes multiple steps and uses tools on its own. More independence means more checkpoints, not fewer.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Bias, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Bias</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Systematic skew in output that mirrors imbalances in the training data. Worth watching for actively.</p></div></div></button>
       </div>
     </div>
@@ -761,7 +772,8 @@
       </a>
       <p class="why" data-reveal style="margin:1.5rem auto 0;max-width:52ch;text-align:center"><b>Before you go:</b> read the first line of your AI plan out loud. Spoken commitments stick.</p>
       <div class="hero__cta" data-reveal style="justify-content:center;margin-top:1.75rem">
-        <a class="btn" href="#s-recap">Retake the quiz</a>
+        <a class="btn" href="cheatsheet.html" target="_blank" rel="noopener">Take the cheat sheet</a>
+        <a class="btn btn--ghost" href="#s-recap">Retake the quiz</a>
         <a class="btn btn--ghost" href="#top">Back to start</a>
       </div>
     </div>
@@ -800,7 +812,7 @@
     </div>
     <div class="footer__legal">
       <span>© <span id="year">2026</span> Vanderbilt University. For classroom and self-paced learning.</span>
-      <span>AI Basics · A Vanderbilt learning experience</span>
+      <span>Questions? <a href="mailto:chart@vanderbilt.edu" style="color:rgba(255,255,255,.7);text-decoration:underline">chart@vanderbilt.edu</a><!-- [EDIT] program contact --> · AI Basics · A Vanderbilt learning experience</span>
     </div>
   </div>
 </footer>
